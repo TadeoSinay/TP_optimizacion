@@ -669,7 +669,7 @@
         flags = flags || Array(12).fill(false);
         let html = `<tr class="input-row"><td class="row-label">${etiqueta}<small>${ayuda}</small></td><td class="readonly-cell">${anterior || '-'}</td>`;
         for (let i = 0; i < 12; i++) {
-            html += `<td><input type="number" value="${valorInput(clave, i)}" oninput="actualizarSerie('${clave}', ${i}, this.value)" class="${flags[i] ? 'error' : ''}"></td>`;
+            html += `<td><input type="text" inputmode="numeric" data-clave="${clave}" data-mes="${i}" value="${valorInput(clave, i)}" oninput="actualizarSerie('${clave}', ${i}, this.value)" class="${flags[i] ? 'error' : ''}"></td>`;
         }
         return html + `</tr>`;
     }
@@ -862,12 +862,26 @@
 
     function recalcularYRenderizar() {
         const r = calcularPlanilla();
+        // Recordar qué casillero de la planilla estás editando para no perder el foco al redibujar.
+        const activo = document.activeElement;
+        let foco = null;
+        if (activo && activo.tagName === 'INPUT' && activo.dataset && activo.dataset.clave) {
+            foco = { clave: activo.dataset.clave, mes: activo.dataset.mes };
+        }
         construirCabeceraPlanilla();
         renderizarPlanilla(r);
         actualizarResumen(r);
         actualizarPanelCostos(r);
         actualizarPanelAlertas(r);
         actualizarGraficos(r);
+        if (foco) {
+            const sel = document.querySelector(`#sheetBody input[data-clave="${foco.clave}"][data-mes="${foco.mes}"]`);
+            if (sel) {
+                sel.focus();
+                const val = sel.value;
+                try { sel.setSelectionRange(val.length, val.length); } catch (e) {}
+            }
+        }
     }
 
     function sincronizarInputs() {
