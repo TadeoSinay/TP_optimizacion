@@ -466,7 +466,7 @@
                         <div class="exp-card">
                             <h4>👷 ¿Gente fija o gente al pico?</h4>
                             <div class="proba"><strong>Probá:</strong> subí operarios en jun–ago y desvinculá después vs. mantener la dotación pareja.</div>
-                            <div class="observa">Mirá en <b>Sensibilidad</b> si pesan más los sueldos, las horas extra o las contrataciones.</div>
+                            <div class="observa">Mirá en <b>Sensibilidad</b> qué estrategia cubre la demanda más barato: gente, horas extra o tercerizar.</div>
                         </div>
                         <div class="exp-card">
                             <h4>📦 ¿Producir antes y guardar?</h4>
@@ -739,11 +739,60 @@
         lista.innerHTML = r.violaciones.map(v => `<li>${v}</li>`).join('');
     }
 
+    // Costo total del año dado un plan completo (mismo modelo que la planilla).
+    function costoAnual(serie) {
+        const p = obtenerParametros();
+        let total = 0, stockPrev = p.inventarioInicial;
+        for (let i = 0; i < 12; i++) {
+            const operarios = serie.operarios[i], turnos = serie.turnos[i];
+            const opPrev = i === 0 ? p.operariosPrev : serie.operarios[i - 1];
+            const contratado = Math.max(0, operarios - opPrev);
+            const despedido = Math.max(0, opPrev - operarios);
+            const horasNormales = operarios * p.horasTurno * turnos;
+            const produccion = p.piezasPorHora * (horasNormales + serie.horasExtra[i]);
+            const stock = Math.max(0, stockPrev + produccion + serie.tercerizacion[i] - serie.demanda[i]);
+            total += produccion * p.costUnidadProd + horasNormales * p.costHoraNormal + serie.horasExtra[i] * p.costHoraExtra
+                + serie.tercerizacion[i] * p.costTercerizado + stock * p.costUnidadAlmac
+                + contratado * p.costContratar + despedido * p.costDespedir;
+            stockPrev = stock;
+        }
+        return total;
+    }
+
+    // Estrategia "pura": dada la gente/turnos/horas extra, terceriza lo justo para cubrir la demanda.
+    function planCubierto(opArr, turArr, heArr) {
+        const p = obtenerParametros();
+        const demanda = state.series.demanda.map(num);
+        const tercerizacion = [];
+        let stockPrev = p.inventarioInicial;
+        for (let i = 0; i < 12; i++) {
+            const produccion = p.piezasPorHora * (opArr[i] * p.horasTurno * turArr[i] + heArr[i]);
+            const t = Math.max(0, demanda[i] - stockPrev - produccion);
+            tercerizacion.push(t);
+            stockPrev = Math.max(0, stockPrev + produccion + t - demanda[i]);
+        }
+        return { demanda, operarios: opArr, turnos: turArr, horasExtra: heArr, tercerizacion };
+    }
+
+    // Toma el plan del alumno y completa con tercerización solo lo que le falte para cubrir la demanda.
+    function completarFaltante(serie) {
+        const p = obtenerParametros();
+        const tercerizacion = serie.tercerizacion.slice();
+        let stockPrev = p.inventarioInicial;
+        for (let i = 0; i < 12; i++) {
+            const produccion = p.piezasPorHora * (serie.operarios[i] * p.horasTurno * serie.turnos[i] + serie.horasExtra[i]);
+            const necesita = serie.demanda[i] - stockPrev - produccion - tercerizacion[i];
+            if (necesita > 0) tercerizacion[i] += necesita;
+            stockPrev = Math.max(0, stockPrev + produccion + tercerizacion[i] - serie.demanda[i]);
+        }
+        return Object.assign({}, serie, { tercerizacion });
+    }
+
     const GRAF_CAPTIONS = {
         evolucion: 'Mirá si tu producción (verde) le sigue el ritmo a la demanda (naranja). La línea punteada es el stock que arrastrás de un mes al otro.',
         operarios: 'Las barras son la gente que tenés cada mes; la línea es el costo de ese mes. ¿Los meses caros coinciden con más operarios, con horas extra o con tercerización?',
         composicion: 'En qué se te va la plata en todo el año. Lo más grande es donde más conviene buscar ahorros.',
-        sensibilidad: 'Si cada costo unitario cambiara un ±20% (manteniendo tu plan actual), esto es cuánto se movería tu costo total del año. Cuanto más larga la barra, más depende tu resultado de ese costo.'
+        sensibilidad: 'Para cubrir la MISMA demanda, ¿cuánto cuesta cada estrategia? Comparamos tu plan contra tres formas "puras" de llegar: apoyarte en más gente + stock, en horas extra, o en tercerizar. La barra más baja es la más barata — mirá qué palanca te conviene y por qué.'
     };
 
     function actualizarGraficos(r) {
@@ -811,27 +860,39 @@
                 } }
             });
         } else if (tipo === 'sensibilidad') {
-            const drivers = [
-                ['Producción', suma(r.costoProduccion)],
-                ['Sueldos', suma(r.costoMODNormal)],
-                ['Horas extra', suma(r.costoMODExtra)],
-                ['Tercerización', suma(r.costoTercerizado)],
-                ['Guardar stock', suma(r.costoStock)],
-                ['Contrataciones', suma(r.costoContratacion)],
-                ['Desvinculaciones', suma(r.costoDesvinculacion)]
-            ].map(d => [d[0], d[1] * 0.2]).sort((a, b) => b[1] - a[1]);
+            const p = obtenerParametros();
+            const maxOp = p.maxOperarios || 0;
+            const minOp = p.minOperarios || 0;
+            const heCap = maxOp * p.maxHorasExtra * 2;
+            const arr = v => Array(12).fill(v);
+            const serieTu = {
+                demanda: state.series.demanda.map(num),
+                operarios: state.series.operarios.map(num),
+                turnos: state.series.turnos.map(num),
+                horasExtra: state.series.horasExtra.map(num),
+                tercerizacion: state.series.tercerizacion.map(num)
+            };
+            const escenarios = [
+                ['Tu plan', costoAnual(completarFaltante(serieTu)), true],
+                ['Toda la gente + stock', costoAnual(planCubierto(arr(maxOp), arr(2), arr(0))), false],
+                ['Gente + horas extra', costoAnual(planCubierto(arr(maxOp), arr(2), arr(heCap))), false],
+                ['Poca gente, tercerizar', costoAnual(planCubierto(arr(minOp), arr(1), arr(0))), false]
+            ];
             chartMain = new Chart(el.getContext('2d'), {
                 type: 'bar',
-                data: { labels: drivers.map(d => d[0]), datasets: [
-                    { label: 'Si baja 20%', data: drivers.map(d => -d[1]), backgroundColor: 'rgba(34,197,94,0.55)', borderColor: '#22c55e', borderWidth: 1, stack: 's' },
-                    { label: 'Si sube 20%', data: drivers.map(d => d[1]), backgroundColor: 'rgba(239,68,68,0.55)', borderColor: '#ef4444', borderWidth: 1, stack: 's' }
-                ]},
-                options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: {
-                    legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' },
-                    tooltip: { callbacks: { label: c => `${c.dataset.label}: ${formatMoney(Math.abs(c.parsed.x))}` } }
+                data: { labels: escenarios.map(e => e[0]), datasets: [{
+                    label: 'Costo del año para cubrir la demanda',
+                    data: escenarios.map(e => Math.round(e[1])),
+                    backgroundColor: escenarios.map(e => e[2] ? 'rgba(45,212,191,0.8)' : 'rgba(56,189,248,0.42)'),
+                    borderColor: escenarios.map(e => e[2] ? '#2dd4bf' : '#38bdf8'),
+                    borderWidth: 2, borderRadius: 6, maxBarThickness: 90
+                }]},
+                options: { responsive: true, maintainAspectRatio: false, plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: c => formatMoney(c.parsed.y) } }
                 }, scales: {
-                    x: { stacked: true, ticks: { color: CHART_THEME.label, callback: v => '$' + Math.abs(v).toLocaleString('es-AR') }, grid: { color: CHART_THEME.grid } },
-                    y: { stacked: true, ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }
+                    y: { ticks: { color: CHART_THEME.label, callback: v => '$' + (v / 1e6).toLocaleString('es-AR', { maximumFractionDigits: 1 }) + 'M' }, grid: { color: CHART_THEME.grid }, title: { display: true, text: 'Costo del año', color: CHART_THEME.label } },
+                    x: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }
                 } }
             });
         }
