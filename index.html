@@ -231,6 +231,12 @@
     .chart-tab.active { background: linear-gradient(135deg, #0f766e, #0284c7); border-color: transparent; color: #ffffff; box-shadow: 0 8px 16px rgba(2,132,199,0.3); }
     .chart-big-wrap { position: relative; height: 460px; }
     .chart-caption { margin-top: 12px; color: #93b7d6; font-size: 0.86rem; line-height: 1.5; }
+    #sensControls { margin-bottom: 14px; padding: 12px 14px; border: 1px solid #2f4a68; border-radius: 12px; background: rgba(13, 30, 50, 0.6); }
+    .sens-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .sens-row label { color: #9ec0dd; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+    .sens-row select { background: #0e1b2f; color: #dbe9fb; border: 1px solid #355170; border-radius: 8px; padding: 8px 10px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; cursor: pointer; }
+    .sens-row input[type=range] { flex: 1; min-width: 180px; accent-color: var(--accent-1); cursor: pointer; }
+    .sens-val { font-family: 'JetBrains Mono', monospace; color: var(--accent-1); font-weight: 700; min-width: 78px; text-align: right; font-size: 0.9rem; }
 
     @media (max-width: 1450px) { .sidebar { display: grid; grid-template-columns: repeat(3, minmax(240px, 1fr)); } }
     @media (max-width: 1200px) {
@@ -424,6 +430,20 @@
                     <button type="button" class="chart-tab" data-graf="composicion">🧩 En qué se va la plata</button>
                     <button type="button" class="chart-tab" data-graf="sensibilidad">🧪 Sensibilidad</button>
                 </div>
+                <div id="sensControls" style="display:none;">
+                    <div class="sens-row">
+                        <label for="sensQue">¿Qué querés cambiar?</label>
+                        <select id="sensQue" onchange="onSensQue(this.value)">
+                            <option value="costTercerizado">Costo de tercerizar</option>
+                            <option value="costHoraExtra">Costo de hora extra</option>
+                            <option value="costHoraNormal">Costo de hora normal (sueldos)</option>
+                            <option value="costUnidadProd">Costo de producir</option>
+                            <option value="costUnidadAlmac">Costo de guardar stock</option>
+                        </select>
+                        <input type="range" id="sensValor" min="-50" max="50" step="5" value="0" oninput="onSensVal(this.value)">
+                        <span id="sensValorTxt" class="sens-val">0%</span>
+                    </div>
+                </div>
                 <div class="chart-big-wrap"><canvas id="chartMain"></canvas></div>
                 <p class="chart-caption" id="chartCaption"></p>
             </div>
@@ -466,7 +486,7 @@
                         <div class="exp-card">
                             <h4>👷 ¿Gente fija o gente al pico?</h4>
                             <div class="proba"><strong>Probá:</strong> subí operarios en jun–ago y desvinculá después vs. mantener la dotación pareja.</div>
-                            <div class="observa">Mirá en <b>Sensibilidad</b> si pesan más los sueldos, las horas extra o las contrataciones.</div>
+                            <div class="observa">Mirá en <b>Sensibilidad</b> qué estrategia cubre la demanda más barato: gente, horas extra o tercerizar.</div>
                         </div>
                         <div class="exp-card">
                             <h4>📦 ¿Producir antes y guardar?</h4>
@@ -519,6 +539,8 @@
         grupo: '',
         justificacion: '',
         grafActual: 'evolucion',
+        sensQue: 'costTercerizado',
+        sensVal: 0,
         params: {
             piezasPorHora: '', horasTurno: '', maxHorasExtra: '', minOperarios: '', maxOperarios: '',
             operariosPrev: '', inventarioInicial: '', capacidadMax: '', costContratar: '', costDespedir: '',
@@ -669,7 +691,7 @@
         flags = flags || Array(12).fill(false);
         let html = `<tr class="input-row"><td class="row-label">${etiqueta}<small>${ayuda}</small></td><td class="readonly-cell">${anterior || '-'}</td>`;
         for (let i = 0; i < 12; i++) {
-            html += `<td><input type="number" value="${valorInput(clave, i)}" oninput="actualizarSerie('${clave}', ${i}, this.value)" class="${flags[i] ? 'error' : ''}"></td>`;
+            html += `<td><input type="text" inputmode="numeric" data-clave="${clave}" data-mes="${i}" value="${valorInput(clave, i)}" oninput="actualizarSerie('${clave}', ${i}, this.value)" class="${flags[i] ? 'error' : ''}"></td>`;
         }
         return html + `</tr>`;
     }
@@ -739,11 +761,57 @@
         lista.innerHTML = r.violaciones.map(v => `<li>${v}</li>`).join('');
     }
 
+    // Costo de cada mes dado un plan completo y (opcional) parámetros modificados.
+    function simularMensual(serie, ov) {
+        const p = Object.assign({}, obtenerParametros(), ov || {});
+        const totalMes = [];
+        let stockPrev = p.inventarioInicial;
+        for (let i = 0; i < 12; i++) {
+            const operarios = serie.operarios[i], turnos = serie.turnos[i];
+            const opPrev = i === 0 ? p.operariosPrev : serie.operarios[i - 1];
+            const contratado = Math.max(0, operarios - opPrev);
+            const despedido = Math.max(0, opPrev - operarios);
+            const horasNormales = operarios * p.horasTurno * turnos;
+            const produccion = p.piezasPorHora * (horasNormales + serie.horasExtra[i]);
+            const stock = Math.max(0, stockPrev + produccion + serie.tercerizacion[i] - serie.demanda[i]);
+            totalMes.push(produccion * p.costUnidadProd + horasNormales * p.costHoraNormal + serie.horasExtra[i] * p.costHoraExtra
+                + serie.tercerizacion[i] * p.costTercerizado + stock * p.costUnidadAlmac
+                + contratado * p.costContratar + despedido * p.costDespedir);
+            stockPrev = stock;
+        }
+        return totalMes;
+    }
+
+    const SENS_OPCIONES = {
+        costTercerizado: { label: 'Costo de tercerizar' },
+        costHoraExtra: { label: 'Costo de hora extra' },
+        costHoraNormal: { label: 'Costo de hora normal (sueldos)' },
+        costUnidadProd: { label: 'Costo de producir' },
+        costUnidadAlmac: { label: 'Costo de guardar stock' }
+    };
+
+    function actualizarSensTxt() {
+        const el = document.getElementById('sensValorTxt');
+        if (!el) return;
+        const v = state.sensVal;
+        el.textContent = `${v > 0 ? '+' : ''}${v}%`;
+    }
+    function configurarSlider() {
+        const s = document.getElementById('sensValor');
+        if (!s) return;
+        s.min = -50; s.max = 50; s.step = 5;
+        if (Number(state.sensVal) < -50 || Number(state.sensVal) > 50) state.sensVal = 0;
+        s.value = state.sensVal;
+        actualizarSensTxt();
+    }
+    function onSensQue(v) { state.sensQue = v; state.sensVal = 0; configurarSlider(); renderGraficoActual(); }
+    function onSensVal(v) { state.sensVal = Number(v); actualizarSensTxt(); renderGraficoActual(); }
+
     const GRAF_CAPTIONS = {
         evolucion: 'Mirá si tu producción (verde) le sigue el ritmo a la demanda (naranja). La línea punteada es el stock que arrastrás de un mes al otro.',
         operarios: 'Las barras son la gente que tenés cada mes; la línea es el costo de ese mes. ¿Los meses caros coinciden con más operarios, con horas extra o con tercerización?',
         composicion: 'En qué se te va la plata en todo el año. Lo más grande es donde más conviene buscar ahorros.',
-        sensibilidad: 'Si cada costo unitario cambiara un ±20% (manteniendo tu plan actual), esto es cuánto se movería tu costo total del año. Cuanto más larga la barra, más depende tu resultado de ese costo.'
+        sensibilidad: 'Tocá el control de arriba y mirá, mes a mes, cómo tu cambio afecta el costo.'
     };
 
     function actualizarGraficos(r) {
@@ -764,6 +832,8 @@
         if (!el) return;
         r = r || calcularPlanilla();
         const tipo = state.grafActual || 'evolucion';
+        const sc = document.getElementById('sensControls');
+        if (sc) sc.style.display = (tipo === 'sensibilidad') ? 'block' : 'none';
         const cap = document.getElementById('chartCaption');
         if (cap) cap.textContent = GRAF_CAPTIONS[tipo] || '';
 
@@ -811,29 +881,42 @@
                 } }
             });
         } else if (tipo === 'sensibilidad') {
-            const drivers = [
-                ['Producción', suma(r.costoProduccion)],
-                ['Sueldos', suma(r.costoMODNormal)],
-                ['Horas extra', suma(r.costoMODExtra)],
-                ['Tercerización', suma(r.costoTercerizado)],
-                ['Guardar stock', suma(r.costoStock)],
-                ['Contrataciones', suma(r.costoContratacion)],
-                ['Desvinculaciones', suma(r.costoDesvinculacion)]
-            ].map(d => [d[0], d[1] * 0.2]).sort((a, b) => b[1] - a[1]);
+            const que = state.sensQue, val = state.sensVal, opt = SENS_OPCIONES[que];
+            const p = obtenerParametros();
+            const serie = {
+                demanda: state.series.demanda.map(num), operarios: state.series.operarios.map(num),
+                turnos: state.series.turnos.map(num), horasExtra: state.series.horasExtra.map(num),
+                tercerizacion: state.series.tercerizacion.map(num)
+            };
+            const ov = {}; ov[que] = p[que] * (1 + val / 100);
+            const cBase = simularMensual(serie, {});
+            const cMod = simularMensual(serie, ov);
+            const totB = suma(cBase), totM = suma(cMod), delta = totM - totB;
+            const cambios = cMod.map((v, i) => ({ m: i, d: v - cBase[i] })).filter(x => Math.abs(x.d) > 0.5).sort((a, b) => Math.abs(b.d) - Math.abs(a.d));
+            const topMeses = cambios.slice(0, 3).map(x => MESES[x.m]);
+
             chartMain = new Chart(el.getContext('2d'), {
                 type: 'bar',
-                data: { labels: drivers.map(d => d[0]), datasets: [
-                    { label: 'Si baja 20%', data: drivers.map(d => -d[1]), backgroundColor: 'rgba(34,197,94,0.55)', borderColor: '#22c55e', borderWidth: 1, stack: 's' },
-                    { label: 'Si sube 20%', data: drivers.map(d => d[1]), backgroundColor: 'rgba(239,68,68,0.55)', borderColor: '#ef4444', borderWidth: 1, stack: 's' }
+                data: { labels: MESES_CORTOS, datasets: [
+                    { label: 'Tu plan', data: cBase.map(v => Math.round(v)), backgroundColor: 'rgba(45,212,191,0.45)', borderColor: '#2dd4bf', borderWidth: 1.5 },
+                    { label: 'Con tu cambio', data: cMod.map(v => Math.round(v)), backgroundColor: 'rgba(245,158,11,0.6)', borderColor: '#f59e0b', borderWidth: 1.5 }
                 ]},
-                options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: {
+                options: { responsive: true, maintainAspectRatio: false, plugins: {
                     legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' },
-                    tooltip: { callbacks: { label: c => `${c.dataset.label}: ${formatMoney(Math.abs(c.parsed.x))}` } }
+                    tooltip: { callbacks: { label: c => `${c.dataset.label}: ${formatMoney(c.parsed.y)}` } }
                 }, scales: {
-                    x: { stacked: true, ticks: { color: CHART_THEME.label, callback: v => '$' + Math.abs(v).toLocaleString('es-AR') }, grid: { color: CHART_THEME.grid } },
-                    y: { stacked: true, ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }
+                    y: { ticks: { color: CHART_THEME.label, callback: v => '$' + (v / 1e6).toLocaleString('es-AR', { maximumFractionDigits: 1 }) + 'M' }, grid: { color: CHART_THEME.grid }, title: { display: true, text: 'Costo del mes', color: CHART_THEME.label } },
+                    x: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }
                 } }
             });
+
+            if (cap) {
+                const etq = `${val > 0 ? '+' : ''}${val}%`;
+                const dTxt = `${delta >= 0 ? '+' : '−'}${formatMoney(Math.abs(delta))}`;
+                if (val === 0) cap.textContent = `Elegí qué costo cambiar y mové el control: vas a ver, mes a mes, cómo afecta tu plan. (Ahora "${opt.label}" está sin cambios.)`;
+                else if (cambios.length === 0) cap.textContent = `Subiste/bajaste "${opt.label}" (${etq}), pero no cambia ningún mes: ese costo no aparece en tu plan actual.`;
+                else cap.textContent = `"${opt.label}" ${etq}: tu costo del año pasa de ${formatMoney(totB)} a ${formatMoney(totM)} (${dTxt}). Los meses que más cambian: ${topMeses.join(', ')}.`;
+            }
         }
     }
 
@@ -862,12 +945,26 @@
 
     function recalcularYRenderizar() {
         const r = calcularPlanilla();
+        // Recordar qué casillero de la planilla estás editando para no perder el foco al redibujar.
+        const activo = document.activeElement;
+        let foco = null;
+        if (activo && activo.tagName === 'INPUT' && activo.dataset && activo.dataset.clave) {
+            foco = { clave: activo.dataset.clave, mes: activo.dataset.mes };
+        }
         construirCabeceraPlanilla();
         renderizarPlanilla(r);
         actualizarResumen(r);
         actualizarPanelCostos(r);
         actualizarPanelAlertas(r);
         actualizarGraficos(r);
+        if (foco) {
+            const sel = document.querySelector(`#sheetBody input[data-clave="${foco.clave}"][data-mes="${foco.mes}"]`);
+            if (sel) {
+                sel.focus();
+                const val = sel.value;
+                try { sel.setSelectionRange(val.length, val.length); } catch (e) {}
+            }
+        }
     }
 
     function sincronizarInputs() {
@@ -1024,6 +1121,8 @@
         sincronizarInputs();
         document.querySelectorAll('.workspace-sidebar .nav-link').forEach(b => b.addEventListener('click', function () { mostrarSeccion(this.dataset.section); }));
         document.querySelectorAll('#chartTabs .chart-tab').forEach(b => b.addEventListener('click', function () { mostrarGrafico(this.dataset.graf); }));
+        const sq = document.getElementById('sensQue'); if (sq) sq.value = state.sensQue;
+        configurarSlider();
         recalcularYRenderizar();
     });
 </script>
