@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Planificación Agregada - Optimización de Costos</title>
+<title>Planificación Agregada · Tu plan de producción</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
     :root {
@@ -28,11 +28,7 @@
         --radius-sm: 10px;
     }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
         font-family: 'Outfit', sans-serif;
@@ -44,8 +40,7 @@
         overflow-x: auto;
     }
 
-    body::before,
-    body::after {
+    body::before, body::after {
         content: '';
         position: fixed;
         width: 360px;
@@ -54,42 +49,12 @@
         z-index: -1;
         filter: blur(10px);
     }
+    body::before { background: radial-gradient(circle, rgba(15, 118, 110, 0.22) 0%, rgba(15, 118, 110, 0) 72%); top: -90px; right: -80px; }
+    body::after { background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0) 75%); bottom: -120px; left: -70px; }
 
-    body::before {
-        background: radial-gradient(circle, rgba(15, 118, 110, 0.22) 0%, rgba(15, 118, 110, 0) 72%);
-        top: -90px;
-        right: -80px;
-    }
+    .container { max-width: 1620px; margin: 0 auto; }
 
-    body::after {
-        background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0) 75%);
-        bottom: -120px;
-        left: -70px;
-    }
-
-    .container {
-        max-width: 1620px;
-        margin: 0 auto;
-    }
-
-    .header,
-    .main-grid,
-    .charts-section,
-    .button-group {
-        animation: rise-in 700ms ease both;
-    }
-
-    .main-grid {
-        animation-delay: 100ms;
-    }
-
-    .charts-section {
-        animation-delay: 180ms;
-    }
-
-    .button-group {
-        animation-delay: 260ms;
-    }
+    .header, .charts-section, .button-group { animation: rise-in 700ms ease both; }
 
     .header {
         display: flex;
@@ -105,7 +70,6 @@
         position: relative;
         overflow: hidden;
     }
-
     .header::after {
         content: '';
         position: absolute;
@@ -113,1167 +77,202 @@
         background: linear-gradient(90deg, rgba(15, 118, 110, 0) 5%, rgba(15, 118, 110, 0.09) 45%, rgba(249, 115, 22, 0.08) 100%);
         pointer-events: none;
     }
+    .header-title { display: flex; flex-direction: column; gap: 8px; position: relative; z-index: 1; }
+    .header-title h1 { font-size: clamp(1.35rem, 2.7vw, 2.1rem); font-weight: 800; letter-spacing: 0.01em; color: var(--ink-strong); }
+    .header-title p { font-size: 0.96rem; color: var(--ink-muted); max-width: 640px; }
 
-    .header-title {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        position: relative;
-        z-index: 1;
-    }
+    .header-stats { display: flex; gap: 14px; align-items: stretch; justify-content: flex-end; flex-wrap: wrap; position: relative; z-index: 1; }
+    .stat-card { padding: 12px 14px; min-width: 172px; border-radius: var(--radius-md); background: var(--surface-1); border: 1px solid var(--border-soft); box-shadow: var(--shadow-card); }
+    .stat-label { font-size: 0.69rem; text-transform: uppercase; letter-spacing: 0.11em; color: var(--ink-muted); font-weight: 700; }
+    .stat-value { margin-top: 7px; font-family: 'JetBrains Mono', monospace; font-size: 1.24rem; color: var(--accent-1); font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.2; }
+    .stat-value.stat-compact { font-size: 1rem; }
 
-    .header-title h1 {
-        font-size: clamp(1.35rem, 2.7vw, 2.1rem);
-        font-weight: 800;
-        letter-spacing: 0.01em;
-        color: var(--ink-strong);
-    }
+    .valid-badge, .invalid-badge { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border-radius: 999px; font-size: 0.73rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .valid-badge { color: #ffffff; background: linear-gradient(135deg, #16a34a, #15803d); box-shadow: 0 8px 18px rgba(21, 128, 61, 0.28); }
+    .invalid-badge { color: #ffffff; background: linear-gradient(135deg, #ef4444, #b91c1c); box-shadow: 0 8px 18px rgba(185, 28, 28, 0.3); animation: pulse 2s infinite; }
 
-    .header-title p {
-        font-size: 0.96rem;
-        color: var(--ink-muted);
-        max-width: 640px;
-    }
+    .table-section, .panel, .chart-container { background: var(--surface-1); border: 1px solid var(--border-soft); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); }
+    .table-section { padding: 20px; }
+    .table-section h2 { color: var(--ink-strong); font-size: 0.98rem; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 8px; }
+    .section-hint { color: var(--ink-muted); font-size: 0.87rem; margin-bottom: 16px; line-height: 1.5; }
 
-    .header-stats {
-        display: flex;
-        gap: 14px;
-        align-items: stretch;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        position: relative;
-        z-index: 1;
-    }
+    .table-wrap { overflow-x: auto; overflow-y: visible; -webkit-overflow-scrolling: touch; border-radius: var(--radius-md); border: 1px solid rgba(56, 189, 248, 0.2); background: var(--surface-2); }
 
-    .stat-card {
-        padding: 12px 14px;
-        min-width: 172px;
-        border-radius: var(--radius-md);
-        background: var(--surface-1);
-        border: 1px solid var(--border-soft);
-        box-shadow: var(--shadow-card);
-    }
-
-    .stat-label {
-        font-size: 0.69rem;
-        text-transform: uppercase;
-        letter-spacing: 0.11em;
-        color: var(--ink-muted);
-        font-weight: 700;
-    }
-
-    .stat-value {
-        margin-top: 7px;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 1.24rem;
-        color: var(--accent-1);
-        font-weight: 700;
-        font-variant-numeric: tabular-nums;
-        line-height: 1.2;
-    }
-
-    .stat-value.stat-compact {
-        font-size: 1rem;
-    }
-
-    .flash {
-        animation: flash-update 450ms ease;
-    }
-
-    .valid-badge,
-    .invalid-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 16px;
-        border-radius: 999px;
-        font-size: 0.73rem;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-    }
-
-    .valid-badge {
-        color: #ffffff;
-        background: linear-gradient(135deg, #16a34a, #15803d);
-        box-shadow: 0 8px 18px rgba(21, 128, 61, 0.28);
-    }
-
-    .invalid-badge {
-        color: #ffffff;
-        background: linear-gradient(135deg, #ef4444, #b91c1c);
-        box-shadow: 0 8px 18px rgba(185, 28, 28, 0.3);
-        animation: pulse 2s infinite;
-    }
-
-    .main-grid {
-        display: grid;
-        grid-template-columns: 1fr 340px;
-        gap: 18px;
-        margin-bottom: 24px;
-    }
-
-    .table-section,
-    .panel,
-    .chart-container {
-        background: var(--surface-1);
-        border: 1px solid var(--border-soft);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-card);
-    }
-
-    .table-section {
-        padding: 20px;
-    }
-
-    .table-section h2 {
-        color: var(--ink-strong);
-        font-size: 0.98rem;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-        margin-bottom: 8px;
-    }
-
-    .section-hint {
-        color: var(--ink-muted);
-        font-size: 0.87rem;
-        margin-bottom: 16px;
-        line-height: 1.5;
-    }
-
-    .table-wrap {
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
-        border-radius: var(--radius-md);
-        border: 1px solid rgba(56, 189, 248, 0.2);
-        background: var(--surface-2);
-    }
-
-    .mobile-editor {
-        display: none;
-    }
-
-    .mobile-card {
-        border: 1px solid #2a425f;
-        border-radius: var(--radius-md);
-        padding: 12px;
-        background: linear-gradient(155deg, rgba(12, 28, 47, 0.95), rgba(14, 37, 61, 0.9));
-        box-shadow: 0 8px 18px rgba(2, 6, 23, 0.35);
-    }
-
-    .mobile-card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 8px;
-        margin-bottom: 10px;
-    }
-
-    .mobile-month {
-        color: #b9eeff;
-        font-size: 0.86rem;
-        font-weight: 800;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-    }
-
-    .mobile-demand {
-        color: #a9c2dd;
-        font-size: 0.74rem;
-        font-family: 'JetBrains Mono', monospace;
-    }
-
-    .mobile-inputs {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
-        margin-bottom: 9px;
-    }
-
-    .mobile-field {
-        display: grid;
-        gap: 4px;
-    }
-
-    .mobile-field label {
-        color: #9db7d3;
-        font-size: 0.69rem;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-
-    .mobile-field input {
-        width: 100%;
-        min-height: 36px;
-        font-size: 0.8rem;
-    }
-
-    .mobile-metrics {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 6px;
-        margin-top: 8px;
-    }
-
-    .mobile-metric {
-        border: 1px solid #284260;
-        background: rgba(9, 23, 39, 0.72);
-        border-radius: 8px;
-        padding: 7px 8px;
-    }
-
-    .mobile-metric-label {
-        display: block;
-        color: #8ea7c2;
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 2px;
-    }
-
-    .mobile-metric-value {
-        color: #d2e7ff;
-        font-size: 0.75rem;
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 700;
-    }
-
-    .mobile-alert {
-        margin-top: 8px;
-        border-radius: 8px;
-        padding: 7px 8px;
-        font-size: 0.72rem;
-        font-weight: 700;
-        border: 1px solid #305174;
-        color: #a8c6e8;
-        background: rgba(16, 33, 55, 0.85);
-    }
-
-    .mobile-alert.mobile-alert-error {
-        color: #fecaca;
-        background: rgba(127, 29, 29, 0.28);
-        border-color: rgba(248, 113, 113, 0.38);
-    }
-
-    table {
-        width: 100%;
-        min-width: 1080px;
-        border-collapse: collapse;
-        font-size: 0.81rem;
-    }
-
-    thead {
-        background: linear-gradient(180deg, #132742, #102137);
-        border-bottom: 1px solid #294565;
-    }
-
-    th {
-        padding: 12px 10px;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        font-weight: 700;
-        color: #cfe3f8;
-        position: sticky;
-        top: 0;
-        z-index: 2;
-    }
-
-    td {
-        padding: 11px 8px;
-        text-align: center;
-        border-bottom: 1px solid #233850;
-        color: #d3dfef;
-    }
-
-    tbody tr:nth-child(even) {
-        background: rgba(56, 189, 248, 0.035);
-    }
-
-    tbody tr:hover {
-        background: rgba(56, 189, 248, 0.11);
-    }
-
-    .mes-col {
-        position: sticky;
-        left: 0;
-        z-index: 1;
-        font-weight: 700;
-        color: var(--accent-1);
-        background: #132238;
-        width: 56px;
-    }
+    table { width: 100%; min-width: 1080px; border-collapse: collapse; font-size: 0.81rem; }
+    thead { background: linear-gradient(180deg, #132742, #102137); border-bottom: 1px solid #294565; }
+    th { padding: 12px 10px; text-align: center; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #cfe3f8; position: sticky; top: 0; z-index: 2; }
+    td { padding: 11px 8px; text-align: center; border-bottom: 1px solid #233850; color: #d3dfef; }
+    tbody tr:nth-child(even) { background: rgba(56, 189, 248, 0.035); }
+    tbody tr:hover { background: rgba(56, 189, 248, 0.11); }
 
     input {
-        width: 82px;
-        padding: 7px 8px;
-        border: 1px solid #355170;
-        border-radius: 8px;
-        background: #0e1b2f;
-        color: #d7e9ff;
-        text-align: center;
-        font-size: 0.84rem;
-        font-weight: 700;
-        font-family: 'JetBrains Mono', monospace;
-        transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        width: 82px; padding: 7px 8px; border: 1px solid #355170; border-radius: 8px;
+        background: #0e1b2f; color: #d7e9ff; text-align: center; font-size: 0.84rem; font-weight: 700;
+        font-family: 'JetBrains Mono', monospace; transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
+    input:hover { border-color: #63b6dd; }
+    input:focus { outline: none; border-color: var(--accent-3); box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.16); transform: translateY(-1px); }
+    input.error { border-color: var(--danger); background: rgba(220, 38, 38, 0.12); color: #fecaca; }
 
-    input:hover {
-        border-color: #63b6dd;
-    }
+    .cell-value { font-weight: 600; color: #cae0f8; }
+    .cell-error { color: var(--danger); font-weight: 700; }
 
-    input:focus {
-        outline: none;
-        border-color: var(--accent-3);
-        box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.16);
-        transform: translateY(-1px);
-    }
+    .sidebar { display: flex; flex-direction: column; gap: 14px; }
+    .analysis-panels { display: grid; grid-template-columns: repeat(3, minmax(230px, 1fr)); gap: 14px; margin-bottom: 18px; }
+    .panel { padding: 16px; }
+    .panel h3 { color: var(--ink-strong); font-size: 0.8rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.09em; display: flex; align-items: center; gap: 7px; border-left: 4px solid var(--accent-2); padding-left: 8px; }
 
-    input.error {
-        border-color: var(--danger);
-        background: rgba(220, 38, 38, 0.08);
-        color: #7f1d1d;
-    }
+    .cost-item { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 9px; padding: 8px 10px; border-radius: var(--radius-sm); background: #0f1e33; border: 1px solid #27405d; }
+    .cost-label { font-size: 0.75rem; color: #9fb8d3; font-weight: 600; }
+    .cost-value { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--accent-1); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+    .cost-bar { width: 100%; height: 7px; margin-bottom: 10px; border-radius: 999px; overflow: hidden; background: #1b3048; }
+    .cost-bar-fill { height: 100%; width: 0%; border-radius: inherit; transition: width 0.35s ease; background: linear-gradient(90deg, var(--accent-1), var(--accent-3)); }
 
-    .cell-value {
-        font-weight: 600;
-        color: #cae0f8;
-    }
+    .violations-list { list-style: none; display: grid; gap: 8px; }
+    .violations-list li { font-size: 0.76rem; line-height: 1.45; color: #fecaca; background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.28); border-radius: 9px; padding: 8px; }
+    .violations-list li.ok-item { color: #bbf7d0; background: rgba(22, 163, 74, 0.12); border-color: rgba(22, 163, 74, 0.3); }
 
-    .cell-error {
-        color: var(--danger);
-        font-weight: 700;
-        font-size: 0.76rem;
-        margin-top: 4px;
-    }
+    .constraints { font-size: 0.78rem; line-height: 1.6; color: #b2c7de; display: grid; gap: 6px; }
+    .constraints strong { color: #7dd3fc; }
 
-    .cell-warning {
-        color: var(--warning);
-        font-weight: 700;
-    }
+    .charts-section { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 4px; }
+    .chart-container { height: 405px; padding: 17px 17px 14px; }
+    .chart-container h3 { font-size: 0.83rem; margin-bottom: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #d7e6f8; }
+    .chart-wrapper { position: relative; height: calc(100% - 24px); }
 
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .analysis-panels {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(230px, 1fr));
-        gap: 14px;
-        margin-bottom: 18px;
-    }
-
-    .panel {
-        padding: 16px;
-    }
-
-    .panel h3 {
-        color: var(--ink-strong);
-        font-size: 0.8rem;
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.09em;
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        border-left: 4px solid var(--accent-2);
-        padding-left: 8px;
-    }
-
-    .cost-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 9px;
-        padding: 8px 10px;
-        border-radius: var(--radius-sm);
-        background: #0f1e33;
-        border: 1px solid #27405d;
-    }
-
-    .cost-label {
-        font-size: 0.75rem;
-        color: #9fb8d3;
-        font-weight: 600;
-    }
-
-    .cost-value {
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 700;
-        color: var(--accent-1);
-        font-size: 0.78rem;
-        font-variant-numeric: tabular-nums;
-    }
-
-    .cost-bar {
-        width: 100%;
-        height: 7px;
-        margin-bottom: 10px;
-        border-radius: 999px;
-        overflow: hidden;
-        background: #1b3048;
-    }
-
-    .cost-bar-fill {
-        height: 100%;
-        width: 0%;
-        border-radius: inherit;
-        transition: width 0.35s ease;
-        background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
-    }
-
-    #barManoObraNormal {
-        background: linear-gradient(90deg, #0f766e, #2dd4bf);
-    }
-
-    #barExtras {
-        background: linear-gradient(90deg, #b45309, #f59e0b);
-    }
-
-    #barContratacion {
-        background: linear-gradient(90deg, #7c3aed, #3b82f6);
-    }
-
-    #barProduccion {
-        background: linear-gradient(90deg, #2563eb, #0ea5e9);
-    }
-
-    #barTercerizado {
-        background: linear-gradient(90deg, #e11d48, #fb7185);
-    }
-
-    #barAlmacenamiento {
-        background: linear-gradient(90deg, #0f766e, #f97316);
-    }
-
-    .violations-list {
-        list-style: none;
-        display: grid;
-        gap: 8px;
-    }
-
-    .violations-list li {
-        font-size: 0.76rem;
-        line-height: 1.45;
-        color: #7f1d1d;
-        background: rgba(220, 38, 38, 0.08);
-        border: 1px solid rgba(220, 38, 38, 0.25);
-        border-radius: 9px;
-        padding: 8px;
-    }
-
-    .violations-list li.ok-item {
-        color: #bbf7d0;
-        background: rgba(22, 163, 74, 0.12);
-        border-color: rgba(22, 163, 74, 0.3);
-    }
-
-    .constraints {
-        font-size: 0.78rem;
-        line-height: 1.6;
-        color: #b2c7de;
-        display: grid;
-        gap: 6px;
-    }
-
-    .constraints strong {
-        color: #7dd3fc;
-    }
-
-    .charts-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-        margin-bottom: 24px;
-    }
-
-    .chart-container {
-        height: 405px;
-        padding: 17px 17px 14px;
-    }
-
-    .chart-container h3 {
-        font-size: 0.83rem;
-        margin-bottom: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #d7e6f8;
-    }
-
-    .chart-wrapper {
-        position: relative;
-        height: calc(100% - 24px);
-    }
-
-    .button-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        align-items: center;
-        margin-top: 2px;
-    }
-
+    .button-group { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 16px; }
     button {
-        border: none;
-        border-radius: 999px;
-        padding: 12px 18px;
-        min-width: 178px;
-        cursor: pointer;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        font-size: 0.76rem;
-        font-weight: 800;
-        font-family: 'Outfit', sans-serif;
-        transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        border: none; border-radius: 999px; padding: 12px 18px; min-width: 178px; cursor: pointer;
+        text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.76rem; font-weight: 800;
+        font-family: 'Outfit', sans-serif; transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
     }
+    button:hover { transform: translateY(-2px); filter: saturate(1.06); }
+    button:active { transform: translateY(0); }
+    .btn-primary { color: #ffffff; background: linear-gradient(135deg, #0f766e, #0284c7); box-shadow: 0 9px 20px rgba(2, 132, 199, 0.25); }
+    .btn-excel { color: #ffffff; background: linear-gradient(135deg, #15803d, #22c55e); box-shadow: 0 9px 20px rgba(21, 128, 61, 0.28); }
+    .btn-secondary { color: #d5e7f8; background: linear-gradient(135deg, #1e324e, #18304d); box-shadow: 0 8px 16px rgba(2, 6, 23, 0.35); }
 
-    button:hover {
-        transform: translateY(-2px);
-        filter: saturate(1.06);
+    .workspace-shell { display: grid; grid-template-columns: 250px 1fr; gap: 16px; align-items: start; }
+    .workspace-sidebar { position: sticky; top: 14px; padding: 14px; display: grid; gap: 10px; }
+    .workspace-content { display: grid; gap: 14px; }
+    .workspace-section { display: none; gap: 14px; }
+    .workspace-section.active { display: grid; }
+
+    .nav-link { display: block; text-decoration: none; border: 1px solid #2f4a68; background: #102338; color: #cbe2f8; border-radius: 999px; padding: 10px 14px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; text-align: center; transition: all 0.2s ease; cursor: pointer; }
+    .nav-link:hover, .nav-link.active { background: linear-gradient(135deg, #0f766e, #0284c7); border-color: transparent; color: #ffffff; box-shadow: 0 8px 16px rgba(2, 132, 199, 0.3); }
+
+    .param-grid { display: grid; grid-template-columns: repeat(4, minmax(170px, 1fr)); gap: 10px; }
+    .param-item { display: grid; gap: 5px; padding: 9px; border: 1px solid #2a425f; background: rgba(15, 30, 49, 0.8); border-radius: 10px; }
+    .param-item label { color: #9ec0dd; font-size: 0.69rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700; }
+    .param-item input { width: 100%; min-height: 36px; font-size: 0.82rem; }
+
+    .sheet-table { width: 100%; min-width: 1200px; }
+    .sheet-table .row-label { text-align: left; font-weight: 700; color: #d8e8f8; background: rgba(8, 17, 30, 0.85); position: sticky; left: 0; z-index: 2; min-width: 210px; }
+    .sheet-table .row-label small { display: block; font-weight: 500; color: #7f9bbb; font-size: 0.68rem; text-transform: none; letter-spacing: 0; margin-top: 2px; }
+    .sheet-table .readonly-cell { font-family: 'JetBrains Mono', monospace; font-size: 0.77rem; color: #9ec0dd; background: rgba(10, 23, 39, 0.75); }
+    .sheet-table .input-row td:not(.row-label) { background: rgba(45, 212, 191, 0.05); }
+    .sheet-table .section-row td { background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(45, 212, 191, 0.15)); color: #dff5ff; text-transform: uppercase; letter-spacing: 0.07em; font-size: 0.73rem; font-weight: 800; text-align: left; }
+    .sheet-table .total-row td { background: rgba(15, 118, 110, 0.14); border-top: 1px solid rgba(45, 212, 191, 0.5); border-bottom: 1px solid rgba(45, 212, 191, 0.5); font-weight: 700; }
+
+    .neutral-badge { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border-radius: 999px; font-size: 0.73rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #d7e8f8; background: linear-gradient(135deg, #334155, #1e293b); box-shadow: 0 8px 18px rgba(15, 23, 42, 0.45); }
+
+    /* ---- Consigna narrativa ---- */
+    .story { line-height: 1.7; color: #cbdcee; }
+    .story h3 { color: var(--ink-strong); font-size: 1rem; margin: 18px 0 8px; display: flex; align-items: center; gap: 8px; }
+    .story h3:first-child { margin-top: 4px; }
+    .story p { margin-bottom: 12px; color: #b9cee4; font-size: 0.94rem; }
+    .story strong { color: #e8f1fb; }
+    .story .accent { color: var(--accent-1); font-weight: 700; }
+
+    .story-card { border: 1px solid #2f4a68; border-left: 4px solid var(--accent-3); border-radius: 12px; background: rgba(10, 26, 43, 0.7); padding: 14px 16px; margin-bottom: 12px; }
+    .formula-card { border: 1px solid #2f4a68; border-left: 4px solid var(--accent-1); border-radius: 12px; background: rgba(9, 22, 38, 0.85); padding: 14px 16px; margin-bottom: 12px; }
+    .formula-card .titulo { color: #9ad8ff; font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; }
+    .formula { font-family: 'JetBrains Mono', monospace; font-size: 0.86rem; color: #dbeafe; background: rgba(4, 12, 22, 0.7); border: 1px solid #26405d; border-radius: 8px; padding: 10px 12px; margin: 8px 0; overflow-x: auto; }
+    .formula-card p { font-size: 0.88rem; color: #b9cee4; margin: 6px 0 0; line-height: 1.6; }
+
+    .costo-lista { list-style: none; display: grid; gap: 8px; margin-top: 4px; }
+    .costo-lista li { display: flex; gap: 10px; align-items: baseline; padding: 9px 12px; border: 1px solid #27405d; border-radius: 10px; background: rgba(15, 30, 49, 0.7); font-size: 0.9rem; color: #c3d6ea; }
+    .costo-lista li b { color: var(--accent-1); font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
+
+    .demanda-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+    .demanda-item { border: 1px solid #30506f; border-radius: 9px; background: rgba(13, 34, 57, 0.78); padding: 8px; text-align: center; font-size: 0.78rem; color: #a9c2dd; }
+    .demanda-item span { display: block; font-family: 'JetBrains Mono', monospace; color: #d8ecff; margin-top: 2px; font-size: 0.82rem; font-weight: 700; }
+
+    .exp-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 6px; }
+    .exp-card { border: 1px solid #2f4a68; border-radius: 12px; background: rgba(13, 30, 50, 0.72); padding: 14px; }
+    .exp-card h4 { font-size: 0.84rem; color: #ffd9a1; margin-bottom: 8px; display: flex; gap: 6px; align-items: center; }
+    .exp-card .proba { color: #d7e6f8; font-size: 0.86rem; margin-bottom: 8px; line-height: 1.5; }
+    .exp-card .observa { color: #93b7d6; font-size: 0.82rem; line-height: 1.5; border-top: 1px dashed #3a5f86; padding-top: 8px; }
+    .exp-card .observa b { color: var(--accent-1); }
+
+    .entregable-box { border: 1px solid #2f6b4a; border-left: 4px solid var(--ok); border-radius: 12px; background: rgba(16, 44, 30, 0.5); padding: 16px; margin-top: 6px; }
+    .entregable-box p { color: #cde8d6; font-size: 0.92rem; line-height: 1.6; margin-bottom: 8px; }
+
+    /* ---- Justificación ---- */
+    .justif-intro { color: #b9cee4; font-size: 0.92rem; line-height: 1.6; margin-bottom: 12px; }
+    .justif-questions { list-style: none; display: grid; gap: 8px; margin-bottom: 16px; }
+    .justif-questions li { padding: 9px 12px; border: 1px solid #27405d; border-radius: 10px; background: rgba(15, 30, 49, 0.6); font-size: 0.88rem; color: #c3d6ea; }
+    .justif-questions li::before { content: '💬 '; }
+    textarea.justif {
+        width: 100%; min-height: 260px; resize: vertical; border: 1px solid #355170; border-radius: 12px;
+        background: #0e1b2f; color: #dbe9fb; padding: 14px 16px; font-family: 'Outfit', sans-serif;
+        font-size: 0.95rem; line-height: 1.6;
     }
+    textarea.justif:focus { outline: none; border-color: var(--accent-3); box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.16); }
 
-    button:active {
-        transform: translateY(0);
-    }
+    .grupo-input { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .grupo-input label { color: #9ec0dd; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+    .grupo-input input { width: 120px; }
 
-    .btn-primary {
-        color: #ffffff;
-        background: linear-gradient(135deg, #0f766e, #0284c7);
-        box-shadow: 0 9px 20px rgba(2, 132, 199, 0.25);
-    }
-
-    .btn-secondary {
-        color: #d5e7f8;
-        background: linear-gradient(135deg, #1e324e, #18304d);
-        box-shadow: 0 8px 16px rgba(2, 6, 23, 0.35);
-    }
-
-    .btn-warning {
-        color: #ffe4bd;
-        background: linear-gradient(135deg, #8c3e05, #b45309);
-        box-shadow: 0 8px 16px rgba(120, 53, 15, 0.35);
-    }
-
-    .button-note {
-        margin-top: 9px;
-        color: var(--ink-muted);
-        font-size: 0.83rem;
-    }
-
-    .tooltip {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        border: 1px solid #335174;
-        color: #9ad8ff;
-        font-size: 0.67rem;
-        background: #102238;
-        cursor: help;
-    }
-
-    .tooltip:hover::after {
-        content: attr(data-tooltip);
-        position: absolute;
-        bottom: 132%;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 8px 10px;
-        border-radius: 8px;
-        font-size: 0.69rem;
-        white-space: nowrap;
-        z-index: 1000;
-        border: 1px solid #314f70;
-        color: #d4e7fb;
-        background: #102137;
-        box-shadow: 0 10px 20px rgba(2, 6, 23, 0.5);
-    }
-
-    .workspace-shell {
-        display: grid;
-        grid-template-columns: 250px 1fr;
-        gap: 16px;
-        align-items: start;
-    }
-
-    .workspace-sidebar {
-        position: sticky;
-        top: 14px;
-        padding: 14px;
-        display: grid;
-        gap: 10px;
-    }
-
-    .workspace-content {
-        display: grid;
-        gap: 14px;
-    }
-
-    .workspace-section {
-        display: none;
-        gap: 14px;
-    }
-
-    .workspace-section.active {
-        display: grid;
-    }
-
-    .nav-link {
-        display: block;
-        text-decoration: none;
-        border: 1px solid #2f4a68;
-        background: #102338;
-        color: #cbe2f8;
-        border-radius: 999px;
-        padding: 10px 14px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        text-align: center;
-        transition: all 0.2s ease;
-        cursor: pointer;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-        background: linear-gradient(135deg, #0f766e, #0284c7);
-        border-color: transparent;
-        color: #ffffff;
-        box-shadow: 0 8px 16px rgba(2, 132, 199, 0.3);
-    }
-
-    .param-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(170px, 1fr));
-        gap: 10px;
-    }
-
-    .param-item {
-        display: grid;
-        gap: 5px;
-        padding: 9px;
-        border: 1px solid #2a425f;
-        background: rgba(15, 30, 49, 0.8);
-        border-radius: 10px;
-    }
-
-    .param-item label {
-        color: #9ec0dd;
-        font-size: 0.69rem;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-
-    .param-item input {
-        width: 100%;
-        min-height: 36px;
-        font-size: 0.82rem;
-    }
-
-    .sheet-table {
-        width: 100%;
-        min-width: 1340px;
-    }
-
-    .sheet-table .row-label {
-        text-align: left;
-        font-weight: 700;
-        color: #d8e8f8;
-        background: rgba(8, 17, 30, 0.85);
-        position: sticky;
-        left: 0;
-        z-index: 2;
-        min-width: 210px;
-    }
-
-    .sheet-table .readonly-cell {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.77rem;
-        color: #9ec0dd;
-        background: rgba(10, 23, 39, 0.75);
-    }
-
-    .sheet-table .section-row td {
-        background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(45, 212, 191, 0.15));
-        color: #dff5ff;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-        font-size: 0.73rem;
-        font-weight: 800;
-        text-align: left;
-    }
-
-    .sheet-table .total-row td {
-        background: rgba(15, 118, 110, 0.14);
-        border-top: 1px solid rgba(45, 212, 191, 0.5);
-        border-bottom: 1px solid rgba(45, 212, 191, 0.5);
-    }
-
-    .neutral-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 16px;
-        border-radius: 999px;
-        font-size: 0.73rem;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #d7e8f8;
-        background: linear-gradient(135deg, #334155, #1e293b);
-        box-shadow: 0 8px 18px rgba(15, 23, 42, 0.45);
-    }
-
-    .consigna-panel {
-        line-height: 1.65;
-        color: #d5e5f5;
-    }
-
-    .consigna-panel h3 {
-        margin-top: 6px;
-        margin-bottom: 8px;
-    }
-
-    .consigna-panel p {
-        margin-bottom: 10px;
-        color: #b9cee4;
-        font-size: 0.9rem;
-    }
-
-    .consigna-highlight {
-        border: 1px solid #2f4a68;
-        border-radius: 12px;
-        background: rgba(10, 26, 43, 0.7);
-        padding: 12px;
-        margin-top: 8px;
-    }
-
-    .consigna-demanda {
-        display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        gap: 8px;
-        margin-top: 10px;
-    }
-
-    .consigna-demand-item {
-        border: 1px solid #30506f;
-        border-radius: 9px;
-        background: rgba(13, 34, 57, 0.78);
-        padding: 8px;
-        text-align: center;
-    }
-
-    .consigna-demand-item span {
-        display: block;
-        font-family: 'JetBrains Mono', monospace;
-        color: #d8ecff;
-        margin-top: 2px;
-        font-size: 0.8rem;
-    }
-
-    /* --- Enriquecimiento de la consigna (modelo, variables, análisis) --- */
-    .consigna-badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin: 4px 0 14px;
-    }
-
-    .consigna-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 5px 11px;
-        border-radius: 999px;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        border: 1px solid #2f4a68;
-        background: rgba(13, 34, 57, 0.7);
-        color: #b9d4ef;
-    }
-
-    .model-block {
-        border: 1px solid #2f4a68;
-        border-left: 4px solid var(--accent-1);
-        border-radius: 12px;
-        background: rgba(9, 22, 38, 0.8);
-        padding: 14px 16px;
-        margin-top: 8px;
-    }
-
-    .model-eq {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.82rem;
-        color: #dbeafe;
-        background: rgba(4, 12, 22, 0.7);
-        border: 1px solid #26405d;
-        border-radius: 8px;
-        padding: 10px 12px;
-        margin: 8px 0;
-        overflow-x: auto;
-        line-height: 1.7;
-        white-space: pre;
-    }
-
-    .model-eq .cmt {
-        color: #7f9bbb;
-    }
-
-    .var-table {
-        width: 100%;
-        min-width: unset;
-        margin-top: 8px;
-        font-size: 0.8rem;
-    }
-
-    .var-table th,
-    .var-table td {
-        text-align: left;
-        padding: 8px 10px;
-        border-bottom: 1px solid #233850;
-    }
-
-    .var-table th {
-        position: static;
-        color: #cfe3f8;
-    }
-
-    .var-table code {
-        font-family: 'JetBrains Mono', monospace;
-        color: var(--accent-1);
-        font-weight: 700;
-    }
-
-    .analysis-cards {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-        margin-top: 8px;
-    }
-
-    .analysis-card {
-        border: 1px solid #2f4a68;
-        border-radius: 11px;
-        background: rgba(13, 30, 50, 0.72);
-        padding: 12px;
-    }
-
-    .analysis-card h4 {
-        font-size: 0.76rem;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: #9ad8ff;
-        margin-bottom: 8px;
-    }
-
-    .analysis-card ul {
-        margin: 0;
-        padding-left: 16px;
-        color: #b9cee4;
-        font-size: 0.82rem;
-        line-height: 1.55;
-        display: grid;
-        gap: 5px;
-    }
-
-    .deliver-table {
-        width: 100%;
-        min-width: unset;
-        font-size: 0.82rem;
-        margin-top: 8px;
-    }
-
-    .deliver-table th,
-    .deliver-table td {
-        text-align: left;
-        padding: 8px 10px;
-        border-bottom: 1px solid #233850;
-    }
-
-    .deliver-table th {
-        position: static;
-        color: #cfe3f8;
-    }
-
-    .rubric-bar {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 7px;
-    }
-
-    .rubric-label {
-        flex: 1;
-        font-size: 0.8rem;
-        color: #b9cee4;
-    }
-
-    .rubric-track {
-        width: 120px;
-        height: 7px;
-        border-radius: 999px;
-        background: #1b3048;
-        overflow: hidden;
-    }
-
-    .rubric-fill {
-        height: 100%;
-        border-radius: inherit;
-        background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
-    }
-
-    .rubric-pct {
-        width: 42px;
-        text-align: right;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.78rem;
-        color: var(--accent-1);
-        font-weight: 700;
-    }
-
-    .consigna-note {
-        border: 1px dashed #3a5f86;
-        border-radius: 10px;
-        background: rgba(245, 158, 11, 0.07);
-        padding: 10px 12px;
-        margin-top: 10px;
-        font-size: 0.84rem;
-        color: #ecd6a8;
-    }
-
-    .doc-link {
-        color: var(--accent-3);
-        text-decoration: none;
-        font-weight: 700;
-    }
-
-    .doc-link:hover {
-        text-decoration: underline;
-    }
-
-    @media (max-width: 1450px) {
-        .main-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .sidebar {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(240px, 1fr));
-        }
-    }
-
+    @media (max-width: 1450px) { .sidebar { display: grid; grid-template-columns: repeat(3, minmax(240px, 1fr)); } }
     @media (max-width: 1200px) {
-        .workspace-shell {
-            grid-template-columns: 1fr;
-        }
-
-        .workspace-sidebar {
-            position: static;
-            grid-template-columns: repeat(3, minmax(150px, 1fr));
-        }
-
-        .charts-section {
-            grid-template-columns: 1fr;
-        }
-
-        .sidebar {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .param-grid {
-            grid-template-columns: repeat(3, minmax(170px, 1fr));
-        }
-
-        .consigna-demanda {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-
-        .analysis-panels {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .analysis-cards {
-            grid-template-columns: 1fr;
-        }
+        .workspace-shell { grid-template-columns: 1fr; }
+        .workspace-sidebar { position: static; grid-template-columns: repeat(4, minmax(120px, 1fr)); }
+        .charts-section { grid-template-columns: 1fr; }
+        .sidebar { grid-template-columns: 1fr 1fr; }
+        .param-grid { grid-template-columns: repeat(3, minmax(170px, 1fr)); }
+        .demanda-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .analysis-panels { grid-template-columns: 1fr 1fr; }
+        .exp-cards { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 860px) {
-        body {
-            padding: 14px;
-        }
-
-        .header {
-            flex-direction: column;
-            align-items: stretch;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .header-stats {
-            justify-content: center;
-        }
-
-        .stat-card {
-            min-width: 154px;
-        }
-
-        .sidebar {
-            grid-template-columns: 1fr;
-        }
-
-        .table-wrap {
-            display: block;
-        }
-
-        .mobile-editor {
-            display: none;
-        }
-
-        .header-stats {
-            gap: 10px;
-        }
-
-        .stat-card {
-            min-width: calc(50% - 10px);
-        }
-
-        #validationBadge {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .param-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .workspace-sidebar {
-            grid-template-columns: 1fr;
-        }
-
-        .analysis-panels {
-            grid-template-columns: 1fr;
-        }
-
-        .chart-container {
-            height: 330px;
-        }
+        body { padding: 14px; }
+        .header { flex-direction: column; align-items: stretch; text-align: center; padding: 20px; }
+        .header-stats { justify-content: center; gap: 10px; }
+        .stat-card { min-width: calc(50% - 10px); }
+        #validationBadge { width: 100%; display: flex; justify-content: center; }
+        .sidebar { grid-template-columns: 1fr; }
+        .param-grid { grid-template-columns: 1fr 1fr; }
+        .workspace-sidebar { grid-template-columns: 1fr 1fr; }
+        .analysis-panels { grid-template-columns: 1fr; }
+        .demanda-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .chart-container { height: 330px; }
     }
-
     @media (max-width: 620px) {
-        .table-section {
-            padding: 14px;
-        }
-
-        table {
-            font-size: 0.75rem;
-        }
-
-        th,
-        td {
-            padding: 8px 6px;
-        }
-
-        input {
-            width: 68px;
-            font-size: 0.73rem;
-        }
-
-        .stat-card {
-            min-width: 100%;
-        }
-
-        .mobile-inputs {
-            grid-template-columns: 1fr;
-            gap: 9px;
-        }
-
-        .mobile-metrics {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .param-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .consigna-demanda {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .chart-container {
-            height: 300px;
-        }
-
-        button {
-            width: 100%;
-        }
+        .table-section { padding: 14px; }
+        table { font-size: 0.75rem; }
+        th, td { padding: 8px 6px; }
+        input { width: 68px; font-size: 0.73rem; }
+        .stat-card { min-width: 100%; }
+        .param-grid { grid-template-columns: 1fr; }
+        .demanda-grid { grid-template-columns: 1fr 1fr; }
+        button { width: 100%; }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-            animation: none !important;
-            transition: none !important;
-            scroll-behavior: auto !important;
-        }
-    }
-
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5);
-        }
-        70% {
-            box-shadow: 0 0 0 11px rgba(220, 38, 38, 0);
-        }
-        100% {
-            box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
-        }
-    }
-
-    @keyframes rise-in {
-        from {
-            transform: translateY(12px);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes flash-update {
-        0% {
-            color: var(--accent-2);
-        }
-        100% {
-            color: var(--accent-1);
-        }
-    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); } 70% { box-shadow: 0 0 0 11px rgba(220, 38, 38, 0); } 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); } }
+    @keyframes rise-in { from { transform: translateY(12px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 </style>
 </head>
 <body>
 <div class="container">
     <div class="header">
         <div class="header-title">
-            <h1>Plan Maestro de Producción · Optimización</h1>
-            <p>Planificación agregada anual de costo mínimo. Cargá los parámetros y la planilla mensual para validar restricciones y visualizar el desglose de costos en vivo.</p>
+            <h1>🏭 Tu plan de producción · Planificación Agregada</h1>
+            <p>Sos el equipo de planeamiento de la fábrica. Tu misión: cubrir la venta de todo el año gastando lo menos posible. Cargá tus decisiones, mirá cómo evoluciona el plan y descargá tu entregable.</p>
         </div>
         <div class="header-stats">
             <div class="stat-card">
-                <div class="stat-label">Costo Total</div>
+                <div class="stat-label">Costo Total del año</div>
                 <div class="stat-value" id="totalCostDisplay">$0</div>
             </div>
             <div class="stat-card">
@@ -1291,323 +290,213 @@
     <div class="workspace-shell">
         <aside class="workspace-sidebar panel">
             <h3>🧭 Secciones</h3>
-            <button type="button" class="nav-link active" data-section="consigna">Consigna</button>
-            <button type="button" class="nav-link" data-section="datos-entrada">Datos de entrada</button>
-            <button type="button" class="nav-link" data-section="analisis">Desglose y gráfico</button>
+            <button type="button" class="nav-link active" data-section="consigna">La consigna</button>
+            <button type="button" class="nav-link" data-section="planilla">Tu planilla</button>
+            <button type="button" class="nav-link" data-section="evolucion">Evolución</button>
+            <button type="button" class="nav-link" data-section="justificacion">Justificación</button>
         </aside>
 
         <div class="workspace-content">
+
+        <!-- ======================= CONSIGNA (cuento) ======================= -->
         <section class="workspace-section active" id="consigna">
-            <div class="panel consigna-panel">
-                <h3>📄 Consigna — Planificación Agregada de la Producción</h3>
-                <div class="consigna-badges">
-                    <span class="consigna-tag">🟫 Investigación Operativa I4051</span>
-                    <span class="consigna-tag">🔵 MILP · Aggregate Planning</span>
-                    <span class="consigna-tag">Horizonte 12 meses</span>
-                </div>
-                <p>Partiendo de datos iniciales, se pide realizar la <strong>planificación agregada</strong> de la empresa con un horizonte de un año y períodos mensuales. El objetivo es hallar el plan de <strong>costo total mínimo</strong> que satisfaga la demanda, decidiendo mes a mes la cantidad de operarios (contrataciones/desvinculaciones), los turnos, las horas extra, la tercerización y el inventario.</p>
-                <p>Cada grupo debe armar su esquema y luego darlo a conocer al resto de los equipos, explicando las decisiones tomadas. La consigna completa (con la formulación matemática y la guía de implementación en PuLP) está en <a class="doc-link" href="CONSIGNA.md">CONSIGNA.md</a>.</p>
+            <div class="panel story">
+                <h3>📖 La situación</h3>
+                <p>Trabajás en una fábrica que hace un solo producto. El año que viene tenés que <strong>planificar mes a mes</strong> cómo vas a producir para <strong>cubrir todas las ventas</strong>. Podés jugar con varias palancas: cuánta gente tenés, si abrís uno o dos turnos, si hacés horas extra, si comprás afuera (tercerizás) o si producís de más y guardás para después.</p>
+                <p>Todas esas decisiones <strong>cuestan plata</strong>. Tu trabajo es encontrar la combinación que cubra la demanda y que te haga gastar <span class="accent">lo menos posible en todo el año</span>. No hay una única respuesta "correcta": hay decisiones mejores y peores, y vas a tener que <strong>justificar las tuyas</strong>.</p>
 
-                <div class="consigna-highlight">
-                    <p>Datos principales:</p>
-                    <p>Cada operario puede producir 20 piezas por hora. Se trabaja 20 días al mes con uno o dos turnos de 6 horas cada uno (120 horas por turno-mes). Cada hora normal cuesta $100 y cada hora extra $120, con un máximo de 32 horas extra por operario y por turno.</p>
-                    <p>Restricciones: mínimo 8 operarios, máximo 18, operarios año anterior 10, inventario inicial 8.000 unidades y capacidad máxima 45.000 unidades.</p>
-                    <p>Costos: contratar $25.000, desvincular $50.000, producir $20 por unidad, almacenar $7 por unidad y tercerizar $100 por unidad.</p>
+                <div class="story-card">
+                    <strong>Con qué arrancás (datos que ya te damos):</strong>
+                    <p style="margin-top:8px;">Cada operario produce <b class="accent">20 piezas por hora</b>. Se trabaja 20 días al mes, en turnos de 6 horas → <b class="accent">120 horas por turno al mes</b>. Podés tener entre <b class="accent">8 y 18 operarios</b> (el año pasado había 10). Arrancás el año con <b class="accent">8.000 unidades</b> en el depósito, y no podés guardar más de <b class="accent">45.000</b>.</p>
                 </div>
 
-                <h3>📦 Plan de ventas mensual informado</h3>
-                <div class="consigna-demanda">
-                    <div class="consigna-demand-item">Enero<span>65.000</span></div>
-                    <div class="consigna-demand-item">Febrero<span>68.000</span></div>
-                    <div class="consigna-demand-item">Marzo<span>70.000</span></div>
-                    <div class="consigna-demand-item">Abril<span>72.000</span></div>
-                    <div class="consigna-demand-item">Mayo<span>90.000</span></div>
-                    <div class="consigna-demand-item">Junio<span>130.000</span></div>
-                    <div class="consigna-demand-item">Julio<span>175.000</span></div>
-                    <div class="consigna-demand-item">Agosto<span>178.000</span></div>
-                    <div class="consigna-demand-item">Septiembre<span>145.000</span></div>
-                    <div class="consigna-demand-item">Octubre<span>85.000</span></div>
-                    <div class="consigna-demand-item">Noviembre<span>77.000</span></div>
-                    <div class="consigna-demand-item">Diciembre<span>62.000</span></div>
+                <h3>🧮 Las dos cuentas que ya vienen resueltas</h3>
+                <p>No tenés que deducir nada raro: estas son las dos relaciones con las que funciona la fábrica. Vos solo elegís las cantidades y la planilla hace las cuentas sola.</p>
+
+                <div class="formula-card">
+                    <div class="titulo">1) ¿Cuánto produzco en un mes?</div>
+                    <div class="formula">Producción = ( operarios × 120 horas × turnos + horas extra ) × 20 piezas</div>
+                    <p>Es decir: cuánta gente pusiste a trabajar, por cuántas horas (según si abriste 1 o 2 turnos), más las horas extra que le sumes, todo multiplicado por las 20 piezas que sale cada hora de trabajo.</p>
                 </div>
 
-                <h3>🧮 Modelo matemático (MILP)</h3>
-                <p>Formulación del problema — es el <strong>enunciado</strong>, no la solución. Se pide comprenderla e implementarla.</p>
-
-                <h4 style="color:#9ad8ff; font-size:0.82rem; margin:10px 0 4px;">Variables de decisión (mes <code>t = 1..12</code>)</h4>
-                <div class="table-wrap" style="min-width:unset;">
-                    <table class="var-table">
-                        <thead>
-                            <tr><th>Variable</th><th>Descripción</th><th>Dominio</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td><code>W_t</code></td><td>operarios activos en el mes</td><td>entero, 8 ≤ W_t ≤ 18</td></tr>
-                            <tr><td><code>H_t</code></td><td>operarios contratados</td><td>entero ≥ 0</td></tr>
-                            <tr><td><code>F_t</code></td><td>operarios desvinculados</td><td>entero ≥ 0</td></tr>
-                            <tr><td><code>s_t</code></td><td>turnos activos</td><td>entero, s_t ∈ {1, 2}</td></tr>
-                            <tr><td><code>O_t</code></td><td>horas extra totales</td><td>continuo ≥ 0</td></tr>
-                            <tr><td><code>T_t</code></td><td>unidades tercerizadas</td><td>continuo ≥ 0</td></tr>
-                            <tr><td><code>I_t</code></td><td>inventario al cierre del mes</td><td>continuo ≥ 0</td></tr>
-                            <tr><td><code>P_t</code></td><td>producción propia (auxiliar)</td><td>continuo ≥ 0</td></tr>
-                        </tbody>
-                    </table>
+                <div class="formula-card">
+                    <div class="titulo">2) ¿Qué pasa con el stock cada mes?</div>
+                    <div class="formula">Stock final = stock del mes anterior + lo que producís + lo que tercerizás − lo que vendés</div>
+                    <p>Arrancás cada mes con lo que te sobró del anterior. Le sumás lo que fabricaste y lo que compraste afuera, y le restás la venta del mes. Lo que queda pasa al mes siguiente. <strong>Ojo:</strong> ese stock final <span class="accent">no puede ser negativo</span> (siempre tenés que llegar a cubrir la venta) ni pasarse de 45.000.</p>
                 </div>
 
-                <div class="model-block">
-                    <p style="color:#9ad8ff; margin-bottom:4px; font-weight:700;">Función objetivo — minimizar el costo total anual</p>
-                    <div class="model-eq">min Z = Σ_t ( 20·P_t          <span class="cmt"># producción</span>
-            + 100·(120·W_t·s_t)  <span class="cmt"># mano de obra normal</span>
-            + 120·O_t            <span class="cmt"># horas extra</span>
-            + 100·T_t            <span class="cmt"># tercerización</span>
-            +   7·I_t            <span class="cmt"># almacenamiento</span>
-            + 25000·H_t          <span class="cmt"># contratación</span>
-            + 50000·F_t )        <span class="cmt"># desvinculación</span></div>
+                <h3>💸 De dónde sale el costo</h3>
+                <p>Tu costo del año es la suma de estas siete cosas, todos los meses:</p>
+                <ul class="costo-lista">
+                    <li><b>$20</b> por cada unidad que <strong>producís</strong>.</li>
+                    <li><b>$100</b> por cada hora <strong>normal</strong> de trabajo de tus operarios.</li>
+                    <li><b>$120</b> por cada <strong>hora extra</strong> (máximo 32 h por operario y por turno).</li>
+                    <li><b>$100</b> por cada unidad que <strong>tercerizás</strong> (comprás afuera).</li>
+                    <li><b>$7</b> por cada unidad que te queda <strong>guardada</strong> a fin de mes.</li>
+                    <li><b>$25.000</b> cada vez que <strong>contratás</strong> un operario.</li>
+                    <li><b>$50.000</b> cada vez que <strong>desvinculás</strong> un operario.</li>
+                </ul>
 
-                    <p style="color:#9ad8ff; margin:10px 0 4px; font-weight:700;">Sujeto a</p>
-                    <div class="model-eq">(R1) W_t = W_{t-1} + H_t - F_t        <span class="cmt"># balance de personal, W_0 = 10</span>
-(R2) 8 ≤ W_t ≤ 18                     <span class="cmt"># límites de plantilla</span>
-(R3) s_t ∈ {1, 2}                     <span class="cmt"># turnos discretos</span>
-(R4) O_t ≤ 32·W_t·s_t                 <span class="cmt"># tope de horas extra</span>
-(R5) P_t = 20·(120·W_t·s_t + O_t)     <span class="cmt"># producción propia</span>
-(R6) I_t = I_{t-1} + P_t + T_t - D_t  <span class="cmt"># balance de inventario, I_0 = 8000</span>
-(R7) 0 ≤ I_t ≤ 45000                  <span class="cmt"># capacidad de almacenamiento</span>
-(R8) I_t ≥ 0                          <span class="cmt"># demanda cubierta, sin faltantes</span>
-(R9) W_t,H_t,F_t ∈ Z⁺ ; O_t,T_t,I_t,P_t ≥ 0</div>
+                <h3>📦 La demanda que tenés que cubrir</h3>
+                <div class="demanda-grid">
+                    <div class="demanda-item">Enero<span>65.000</span></div>
+                    <div class="demanda-item">Febrero<span>68.000</span></div>
+                    <div class="demanda-item">Marzo<span>70.000</span></div>
+                    <div class="demanda-item">Abril<span>72.000</span></div>
+                    <div class="demanda-item">Mayo<span>90.000</span></div>
+                    <div class="demanda-item">Junio<span>130.000</span></div>
+                    <div class="demanda-item">Julio<span>175.000</span></div>
+                    <div class="demanda-item">Agosto<span>178.000</span></div>
+                    <div class="demanda-item">Septiembre<span>145.000</span></div>
+                    <div class="demanda-item">Octubre<span>85.000</span></div>
+                    <div class="demanda-item">Noviembre<span>77.000</span></div>
+                    <div class="demanda-item">Diciembre<span>62.000</span></div>
                 </div>
+                <p style="margin-top:14px;">Fijate que la demanda <strong>no es pareja</strong>: hay un pico fuerte en el invierno (jul–ago) y meses bajos en verano. Ahí está el desafío: ¿producís de más antes y guardás? ¿contratás gente para el pico y después la desvinculás? ¿hacés horas extra? ¿tercerizás? Cada camino cuesta distinto.</p>
 
-                <div class="consigna-note">💡 <strong>Nota de modelado:</strong> los términos <code>W_t·s_t</code> (R4, R5 y FO) son bilineales. Para resolverlo como MILP puro se puede linealizar con una binaria de "segundo turno" (big-M) o redefinir la unidad como "operario-turno" acotada por 8 ≤ Ŵ_t ≤ 36. Justificar la elección en el informe.</div>
-
-                <h3>🔎 Actividades y análisis de alto valor</h3>
-                <div class="analysis-cards">
-                    <div class="analysis-card">
-                        <h4>Parte A · Plan óptimo</h4>
-                        <ul>
-                            <li>Completar la planilla buscando el costo mínimo.</li>
-                            <li>Presentar el plan agregado mes a mes.</li>
-                            <li>Informe con desglose y justificación.</li>
-                        </ul>
-                    </div>
-                    <div class="analysis-card">
-                        <h4>Parte B · Sensibilidad</h4>
-                        <ul>
-                            <li>Precio sombra de la capacidad de depósito.</li>
-                            <li>¿Está activo el tope de 18 operarios en jul–ago?</li>
-                            <li>Umbral de costo para dejar de tercerizar.</li>
-                        </ul>
-                    </div>
-                    <div class="analysis-card">
-                        <h4>Parte C · Estrategias</h4>
-                        <ul>
-                            <li>Óptimo vs. nivelada (level) vs. persecución (chase).</li>
-                            <li>Escenario: demanda pico +10 %.</li>
-                            <li>Parámetros más sensibles del costo total.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h3>📦 Entregables</h3>
-                <div class="table-wrap" style="min-width:unset;">
-                    <table class="deliver-table">
-                        <thead><tr><th>#</th><th>Entregable</th><th>Formato</th></tr></thead>
-                        <tbody>
-                            <tr><td>1</td><td>Plan agregado óptimo (planilla completa)</td><td>index.html / Excel / PDF</td></tr>
-                            <tr><td>2</td><td>Informe con justificación de decisiones</td><td>PDF</td></tr>
-                            <tr><td>3</td><td>Análisis de sensibilidad (Parte B)</td><td>PDF</td></tr>
-                            <tr><td>4</td><td>Comparación de estrategias y escenarios (Parte C)</td><td>PDF</td></tr>
-                            <tr><td>5</td><td>Modelo implementado (opcional, recomendado)</td><td>Notebook .ipynb (PuLP)</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3>🧾 Rúbrica de evaluación (orientativa)</h3>
-                <div style="margin-top:6px;">
-                    <div class="rubric-bar"><span class="rubric-label">Correctitud del plan y del costo total</span><span class="rubric-track"><span class="rubric-fill" style="width:30%"></span></span><span class="rubric-pct">30%</span></div>
-                    <div class="rubric-bar"><span class="rubric-label">Formulación y comprensión del modelo</span><span class="rubric-track"><span class="rubric-fill" style="width:20%"></span></span><span class="rubric-pct">20%</span></div>
-                    <div class="rubric-bar"><span class="rubric-label">Análisis de sensibilidad (Parte B)</span><span class="rubric-track"><span class="rubric-fill" style="width:20%"></span></span><span class="rubric-pct">20%</span></div>
-                    <div class="rubric-bar"><span class="rubric-label">Estrategias / escenarios (Parte C)</span><span class="rubric-track"><span class="rubric-fill" style="width:15%"></span></span><span class="rubric-pct">15%</span></div>
-                    <div class="rubric-bar"><span class="rubric-label">Claridad del informe y la presentación</span><span class="rubric-track"><span class="rubric-fill" style="width:15%"></span></span><span class="rubric-pct">15%</span></div>
+                <h3>✅ Qué tenés que entregar</h3>
+                <div class="entregable-box">
+                    <p><strong>Un solo entregable:</strong> tu planilla completa en Excel (la descargás con el botón verde), <strong>con tu justificación adentro</strong>.</p>
+                    <p>La justificación es un texto corto donde contás <strong>por qué elegiste lo que elegiste</strong>. Con eso vamos a discutir y comparar las decisiones de cada equipo en clase.</p>
                 </div>
             </div>
         </section>
 
-        <section class="workspace-section" id="datos-entrada">
-        <div class="panel">
-            <h3>🧩 Datos de Entrada</h3>
-            <div class="param-grid">
-                <div class="param-item">
-                    <label>Número de grupo</label>
-                    <input type="text" id="numeroGrupo" placeholder="Ej: 4" oninput="actualizarGrupo(this.value)">
+        <!-- ======================= PLANILLA ======================= -->
+        <section class="workspace-section" id="planilla">
+            <div class="panel">
+                <h3>🧩 Datos del problema</h3>
+                <p class="section-hint">Estos son los datos que ya te damos. Podés dejarlos como están (usá el botón para cargarlos) o cambiarlos si tu docente te propone otra variante. Lo importante lo decidís abajo, en la planilla.</p>
+                <div class="param-grid">
+                    <div class="param-item"><label>Piezas por operario por hora</label><input type="number" id="piezasPorHora" oninput="actualizarParametro('piezasPorHora', this.value)"></div>
+                    <div class="param-item"><label>Horas por turno al mes</label><input type="number" id="horasTurno" oninput="actualizarParametro('horasTurno', this.value)"></div>
+                    <div class="param-item"><label>Máx hs extra / operario · turno</label><input type="number" id="maxHorasExtra" oninput="actualizarParametro('maxHorasExtra', this.value)"></div>
+                    <div class="param-item"><label>Mín. operarios</label><input type="number" id="minOperarios" oninput="actualizarParametro('minOperarios', this.value)"></div>
+                    <div class="param-item"><label>Máx. operarios</label><input type="number" id="maxOperarios" oninput="actualizarParametro('maxOperarios', this.value)"></div>
+                    <div class="param-item"><label>Operarios año anterior</label><input type="number" id="operariosPrev" oninput="actualizarParametro('operariosPrev', this.value)"></div>
+                    <div class="param-item"><label>Inventario inicial</label><input type="number" id="inventarioInicial" oninput="actualizarParametro('inventarioInicial', this.value)"></div>
+                    <div class="param-item"><label>Capacidad máx. de stock</label><input type="number" id="capacidadMax" oninput="actualizarParametro('capacidadMax', this.value)"></div>
+                    <div class="param-item"><label>Costo contratar</label><input type="number" id="costContratar" oninput="actualizarParametro('costContratar', this.value)"></div>
+                    <div class="param-item"><label>Costo desvincular</label><input type="number" id="costDespedir" oninput="actualizarParametro('costDespedir', this.value)"></div>
+                    <div class="param-item"><label>Costo hora normal</label><input type="number" id="costHoraNormal" oninput="actualizarParametro('costHoraNormal', this.value)"></div>
+                    <div class="param-item"><label>Costo hora extra</label><input type="number" id="costHoraExtra" oninput="actualizarParametro('costHoraExtra', this.value)"></div>
+                    <div class="param-item"><label>Costo por unidad producida</label><input type="number" id="costUnidadProd" oninput="actualizarParametro('costUnidadProd', this.value)"></div>
+                    <div class="param-item"><label>Costo por unidad guardada</label><input type="number" id="costUnidadAlmac" oninput="actualizarParametro('costUnidadAlmac', this.value)"></div>
+                    <div class="param-item"><label>Costo por tercerizar</label><input type="number" id="costTercerizado" oninput="actualizarParametro('costTercerizado', this.value)"></div>
                 </div>
-                <div class="param-item">
-                    <label>Piezas por operario por hora</label>
-                    <input type="number" id="piezasPorHora" placeholder="" oninput="actualizarParametro('piezasPorHora', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Horas turno por mes</label>
-                    <input type="number" id="horasTurno" placeholder="" oninput="actualizarParametro('horasTurno', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Máx hs extra/operario</label>
-                    <input type="number" id="maxHorasExtra" placeholder="" oninput="actualizarParametro('maxHorasExtra', this.value)">
-                </div>
-
-                <div class="param-item">
-                    <label>Mín. cantidad operarios</label>
-                    <input type="number" id="minOperarios" placeholder="" oninput="actualizarParametro('minOperarios', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Máx. cantidad operarios</label>
-                    <input type="number" id="maxOperarios" placeholder="" oninput="actualizarParametro('maxOperarios', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Operarios año anterior</label>
-                    <input type="number" id="operariosPrev" placeholder="" oninput="actualizarParametro('operariosPrev', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Inventario inicial</label>
-                    <input type="number" id="inventarioInicial" placeholder="" oninput="actualizarParametro('inventarioInicial', this.value)">
-                </div>
-
-                <div class="param-item">
-                    <label>Capacidad máxima stock</label>
-                    <input type="number" id="capacidadMax" placeholder="" oninput="actualizarParametro('capacidadMax', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Costo contratar</label>
-                    <input type="number" id="costContratar" placeholder="" oninput="actualizarParametro('costContratar', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Costo despedir</label>
-                    <input type="number" id="costDespedir" placeholder="" oninput="actualizarParametro('costDespedir', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Costo hora normal</label>
-                    <input type="number" id="costHoraNormal" placeholder="" oninput="actualizarParametro('costHoraNormal', this.value)">
-                </div>
-
-                <div class="param-item">
-                    <label>Costo hora extra</label>
-                    <input type="number" id="costHoraExtra" placeholder="" oninput="actualizarParametro('costHoraExtra', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Costo por unidad producida</label>
-                    <input type="number" id="costUnidadProd" placeholder="" oninput="actualizarParametro('costUnidadProd', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Costo por unidad almacenada</label>
-                    <input type="number" id="costUnidadAlmac" placeholder="" oninput="actualizarParametro('costUnidadAlmac', this.value)">
-                </div>
-                <div class="param-item">
-                    <label>Costo por tercerizar</label>
-                    <input type="number" id="costTercerizado" placeholder="" oninput="actualizarParametro('costTercerizado', this.value)">
+                <div class="button-group">
+                    <button class="btn-primary" onclick="cargarDatosProblema()">📥 Cargar datos del problema</button>
+                    <button class="btn-secondary" onclick="limpiarPlanilla()">🗑️ Empezar de cero</button>
                 </div>
             </div>
-        </div>
 
-        <div class="table-section">
-            <h2>Planilla Mensual</h2>
-            <p class="section-hint">Completá únicamente las celdas de entrada (demanda, operarios, turnos, horas extra y tercerización). El resto se calcula automáticamente para ayudarte a validar.</p>
-            <div class="table-wrap">
-                <table class="sheet-table">
-                    <thead id="sheetHead"></thead>
-                    <tbody id="sheetBody"></tbody>
-                </table>
+            <div class="table-section">
+                <h2>Tu planilla mensual</h2>
+                <p class="section-hint">Completá solo las filas resaltadas (las que tienen casilleros): <strong>operarios, turnos, horas extra y tercerización</strong> de cada mes. La demanda ya viene cargada. Todo lo demás —producción, stock, contrataciones y costos— <strong>se calcula solo</strong> para que veas al instante si tu plan cierra. Probá, cambiá y mirá qué pasa.</p>
+                <div class="table-wrap">
+                    <table class="sheet-table">
+                        <thead id="sheetHead"></thead>
+                        <tbody id="sheetBody"></tbody>
+                    </table>
+                </div>
+                <div class="button-group">
+                    <button class="btn-excel" onclick="exportarExcel()">📊 Descargar mi Excel (entregable)</button>
+                </div>
             </div>
-            <div class="mobile-editor" id="mobileEditor"></div>
-        </div>
-
-        <div class="button-group">
-            <button class="btn-secondary" onclick="limpiarPlanilla()">🗑️ Limpiar Planilla</button>
-        </div>
         </section>
 
-        <section class="workspace-section" id="analisis">
+        <!-- ======================= EVOLUCIÓN ======================= -->
+        <section class="workspace-section" id="evolucion">
             <div class="sidebar analysis-panels">
                 <div class="panel">
-                    <h3>💰 Desglose de Costos</h3>
-                    <div class="cost-item">
-                        <span class="cost-label">Producción</span>
-                        <span class="cost-value" id="costProduccion">$0</span>
-                    </div>
-                    <div class="cost-bar"><div class="cost-bar-fill" id="barProduccion" style="width: 0%"></div></div>
-
-                    <div class="cost-item">
-                        <span class="cost-label">MOD (Hs. Normales)</span>
-                        <span class="cost-value" id="costMODNormal">$0</span>
-                    </div>
-                    <div class="cost-bar"><div class="cost-bar-fill" id="barMODNormal" style="width: 0%"></div></div>
-
-                    <div class="cost-item">
-                        <span class="cost-label">MOD (Hs. Extra)</span>
-                        <span class="cost-value" id="costMODExtra">$0</span>
-                    </div>
-                    <div class="cost-bar"><div class="cost-bar-fill" id="barMODExtra" style="width: 0%"></div></div>
-
-                    <div class="cost-item">
-                        <span class="cost-label">Tercerización</span>
-                        <span class="cost-value" id="costTercerizado">$0</span>
-                    </div>
-                    <div class="cost-bar"><div class="cost-bar-fill" id="barTercerizado" style="width: 0%"></div></div>
-
-                    <div class="cost-item">
-                        <span class="cost-label">Stock</span>
-                        <span class="cost-value" id="costStock">$0</span>
-                    </div>
-                    <div class="cost-bar"><div class="cost-bar-fill" id="barStock" style="width: 0%"></div></div>
-
-                    <div class="cost-item">
-                        <span class="cost-label">Contratación</span>
-                        <span class="cost-value" id="costContratacion">$0</span>
-                    </div>
-                    <div class="cost-bar"><div class="cost-bar-fill" id="barContratacion" style="width: 0%"></div></div>
-
-                    <div class="cost-item">
-                        <span class="cost-label">Desvinculamiento</span>
-                        <span class="cost-value" id="costDesvinculacion">$0</span>
-                    </div>
-                    <div class="cost-bar"><div class="cost-bar-fill" id="barDesvinculacion" style="width: 0%"></div></div>
-
+                    <h3>💰 En qué se te va la plata</h3>
+                    <div class="cost-item"><span class="cost-label">Producción</span><span class="cost-value" id="costProduccion">$0</span></div>
+                    <div class="cost-bar"><div class="cost-bar-fill" id="barProduccion"></div></div>
+                    <div class="cost-item"><span class="cost-label">Sueldos (hs. normales)</span><span class="cost-value" id="costMODNormal">$0</span></div>
+                    <div class="cost-bar"><div class="cost-bar-fill" id="barMODNormal"></div></div>
+                    <div class="cost-item"><span class="cost-label">Horas extra</span><span class="cost-value" id="costMODExtra">$0</span></div>
+                    <div class="cost-bar"><div class="cost-bar-fill" id="barMODExtra"></div></div>
+                    <div class="cost-item"><span class="cost-label">Tercerización</span><span class="cost-value" id="costTercerizado">$0</span></div>
+                    <div class="cost-bar"><div class="cost-bar-fill" id="barTercerizado"></div></div>
+                    <div class="cost-item"><span class="cost-label">Guardar stock</span><span class="cost-value" id="costStock">$0</span></div>
+                    <div class="cost-bar"><div class="cost-bar-fill" id="barStock"></div></div>
+                    <div class="cost-item"><span class="cost-label">Contrataciones</span><span class="cost-value" id="costContratacion">$0</span></div>
+                    <div class="cost-bar"><div class="cost-bar-fill" id="barContratacion"></div></div>
+                    <div class="cost-item"><span class="cost-label">Desvinculaciones</span><span class="cost-value" id="costDesvinculacion">$0</span></div>
+                    <div class="cost-bar"><div class="cost-bar-fill" id="barDesvinculacion"></div></div>
                     <div style="border-top: 1px solid #27405d; margin-top: 14px; padding-top: 14px;">
                         <div class="cost-item" style="background: linear-gradient(135deg, rgba(45, 212, 191, 0.15), rgba(56, 189, 248, 0.16)); border: 1px solid rgba(56, 189, 248, 0.35);">
-                            <span class="cost-label" style="color: #9ad8ff; font-weight: 800;">COSTO TOTAL ANUAL</span>
+                            <span class="cost-label" style="color: #9ad8ff; font-weight: 800;">COSTO TOTAL DEL AÑO</span>
                             <span class="cost-value" id="costTotalAnual" style="font-size: 0.98rem;">$0</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="panel">
-                    <h3>🚨 Alertas en Vivo</h3>
+                    <h3>🚨 ¿Tu plan cierra?</h3>
                     <ul class="violations-list" id="violationsList">
-                        <li class="ok-item">Sin restricciones violadas.</li>
+                        <li class="ok-item">Cargá tu planilla para ver los avisos acá.</li>
                     </ul>
                 </div>
 
                 <div class="panel">
-                    <h3>ℹ️ Restricciones</h3>
-                    <div class="constraints">
-                        <p><strong>Operarios:</strong> mínimo y máximo definidos en datos</p>
-                        <p><strong>Horas extras:</strong> respetar máximo mensual por operario</p>
-                        <p><strong>Stock:</strong> no superar la capacidad máxima</p>
-                        <p><strong>Objetivo:</strong> minimizar costo total anual</p>
+                    <h3>🧪 Experimentá (sensibilidad)</h3>
+                    <div class="exp-cards" style="grid-template-columns: 1fr;">
+                        <div class="exp-card">
+                            <h4>👷 ¿Gente fija o gente al pico?</h4>
+                            <div class="proba"><strong>Probá:</strong> subí operarios en jun–ago y desvinculá después vs. mantener la dotación pareja todo el año.</div>
+                            <div class="observa">Mirá si te conviene pagar <b>contratar/desvincular</b> o cargar el pico con <b>horas extra</b>.</div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>📦 ¿Producir antes y guardar?</h4>
+                            <div class="proba"><strong>Probá:</strong> producí de más en los meses flojos y guardá stock para el pico.</div>
+                            <div class="observa">Compará el costo de <b>guardar ($7/u)</b> contra el de <b>horas extra o tercerizar</b> en el pico.</div>
+                        </div>
+                        <div class="exp-card">
+                            <h4>🚚 ¿Cuánto tercerizar?</h4>
+                            <div class="proba"><strong>Probá:</strong> cubrí parte de jul–ago comprando afuera en vez de forzar tu fábrica.</div>
+                            <div class="observa">Tercerizar es lo más caro por unidad (<b>$100</b>), pero a veces evita picos de costo. ¿Dónde está el equilibrio?</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        <div class="charts-section">
-            <div class="chart-container">
-                <h3>Demanda vs Producción vs Stock</h3>
-                <div class="chart-wrapper">
-                    <canvas id="chartProduccion"></canvas>
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h3>Cómo evoluciona tu plan (demanda · producción · stock)</h3>
+                    <div class="chart-wrapper"><canvas id="chartProduccion"></canvas></div>
+                </div>
+                <div class="chart-container">
+                    <h3>Operarios y costo, mes a mes</h3>
+                    <div class="chart-wrapper"><canvas id="chartOperarios"></canvas></div>
                 </div>
             </div>
-            <div class="chart-container">
-                <h3>Operarios y Costo Mensual</h3>
-                <div class="chart-wrapper">
-                    <canvas id="chartOperarios"></canvas>
-                </div>
-            </div>
-        </div>
         </section>
+
+        <!-- ======================= JUSTIFICACIÓN ======================= -->
+        <section class="workspace-section" id="justificacion">
+            <div class="panel">
+                <h3>✍️ Justificá tus decisiones</h3>
+                <div class="grupo-input">
+                    <label for="numeroGrupo">Grupo N°</label>
+                    <input type="text" id="numeroGrupo" placeholder="Ej: 4" oninput="actualizarGrupo(this.value)">
+                </div>
+                <p class="justif-intro">Contá en pocas palabras <strong>por qué armaste tu plan así</strong>. No hay respuestas únicas: lo que importa es que tus decisiones tengan sentido y las puedas defender frente a los otros equipos. Te dejamos algunas preguntas para guiarte (no hace falta responder todas):</p>
+                <ul class="justif-questions">
+                    <li>¿Cómo manejaste el pico de julio–agosto? ¿Con gente, horas extra, stock o tercerización?</li>
+                    <li>¿Preferiste una dotación de operarios estable o la fuiste ajustando? ¿Por qué?</li>
+                    <li>¿En qué meses te convino guardar stock y en cuáles no?</li>
+                    <li>¿Cuál fue tu gasto más grande del año? ¿Se podía evitar?</li>
+                    <li>Si tuvieras que recortar un 10% el costo, ¿por dónde empezarías?</li>
+                </ul>
+                <textarea class="justif" id="justificacionTexto" placeholder="Escribí acá la justificación de tu equipo..." oninput="actualizarJustificacion(this.value)"></textarea>
+                <div class="button-group">
+                    <button class="btn-excel" onclick="exportarExcel()">📊 Descargar mi Excel (entregable)</button>
+                </div>
+                <p class="section-hint" style="margin-top:12px; margin-bottom:0;">El Excel incluye tus datos, tu planilla completa con todos los costos y esta justificación, listo para entregar.</p>
+            </div>
+        </section>
+
         </div>
     </div>
 </div>
@@ -1618,112 +507,52 @@
 
     const state = {
         grupo: '',
+        justificacion: '',
         params: {
-            piezasPorHora: '',
-            horasTurno: '',
-            maxHorasExtra: '',
-            minOperarios: '',
-            maxOperarios: '',
-            operariosPrev: '',
-            inventarioInicial: '',
-            capacidadMax: '',
-            costContratar: '',
-            costDespedir: '',
-            costHoraNormal: '',
-            costHoraExtra: '',
-            costUnidadProd: '',
-            costUnidadAlmac: '',
-            costTercerizado: ''
+            piezasPorHora: '', horasTurno: '', maxHorasExtra: '', minOperarios: '', maxOperarios: '',
+            operariosPrev: '', inventarioInicial: '', capacidadMax: '', costContratar: '', costDespedir: '',
+            costHoraNormal: '', costHoraExtra: '', costUnidadProd: '', costUnidadAlmac: '', costTercerizado: ''
         },
         series: {
-            demanda: Array(12).fill(''),
-            operarios: Array(12).fill(''),
-            turnos: Array(12).fill(''),
-            horasExtra: Array(12).fill(''),
-            tercerizacion: Array(12).fill('')
+            demanda: Array(12).fill(''), operarios: Array(12).fill(''), turnos: Array(12).fill(''),
+            horasExtra: Array(12).fill(''), tercerizacion: Array(12).fill('')
         }
     };
 
-    let chartProduccion;
-    let chartOperarios;
+    let chartProduccion, chartOperarios;
 
     const CHART_THEME = {
-        demanda: '#d9480f',
-        produccion: '#14b8a6',
-        stock: '#38bdf8',
-        operarios: '#22d3ee',
-        costo: '#f59e0b',
-        label: '#d5e4f4',
-        grid: 'rgba(148, 163, 184, 0.24)',
-        pointBorder: '#0b1526'
+        demanda: '#d9480f', produccion: '#14b8a6', stock: '#38bdf8', operarios: '#22d3ee',
+        costo: '#f59e0b', label: '#d5e4f4', grid: 'rgba(148, 163, 184, 0.24)', pointBorder: '#0b1526'
     };
 
-    // Datos del optimo local de modelo.xlsx embebidos para no depender del archivo externo.
-    const MODELO_OPTIMO_LOCAL = {
-        grupo: '1',
-        costoTotalEsperado: 42209960,
+    // Solo los DATOS del problema (los que ya se dan). Las decisiones las completa el alumno.
+    const DATOS_PROBLEMA = {
         params: {
-            piezasPorHora: 20,
-            horasTurno: 120,
-            maxHorasExtra: 32,
-            minOperarios: 8,
-            maxOperarios: 18,
-            operariosPrev: 10,
-            inventarioInicial: 8000,
-            capacidadMax: 45000,
-            costContratar: 25000,
-            costDespedir: 50000,
-            costHoraNormal: 100,
-            costHoraExtra: 120,
-            costUnidadProd: 20,
-            costUnidadAlmac: 7,
-            costTercerizado: 100
+            piezasPorHora: 20, horasTurno: 120, maxHorasExtra: 32, minOperarios: 8, maxOperarios: 18,
+            operariosPrev: 10, inventarioInicial: 8000, capacidadMax: 45000, costContratar: 25000,
+            costDespedir: 50000, costHoraNormal: 100, costHoraExtra: 120, costUnidadProd: 20,
+            costUnidadAlmac: 7, costTercerizado: 100
         },
-        series: {
-            demanda: [65000, 68000, 70000, 72000, 90000, 130000, 175000, 178000, 145000, 85000, 77000, 62000],
-            operarios: [12, 14, 14, 18, 18, 18, 18, 18, 18, 18, 18, 18],
-            turnos: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
-            horasExtra: [0, 10, 140, 558, 1152, 1152, 1152, 1152, 1152, 0, 0, 400],
-            tercerizacion: [0, 0, 0, 0, 0, 0, 41120, 68560, 35560, 0, 0, 0]
-        }
+        demanda: [65000, 68000, 70000, 72000, 90000, 130000, 175000, 178000, 145000, 85000, 77000, 62000]
     };
 
-    const COSTO_TOTAL_MODELO_REFERENCIA = MODELO_OPTIMO_LOCAL.costoTotalEsperado;
+    const STORAGE_KEY = 'tp_planificacion_agregada';
 
-    function hasValue(value) {
-        return value !== null && value !== undefined && String(value).trim() !== '';
+    function hasValue(v) { return v !== null && v !== undefined && String(v).trim() !== ''; }
+    function num(v) { const p = parseFloat(String(v).replace(',', '.')); return Number.isFinite(p) ? p : 0; }
+    function formatInt(v) { return Math.round(v || 0).toLocaleString('es-AR'); }
+    function formatMoney(v) { return `$${Math.round(v || 0).toLocaleString('es-AR')}`; }
+    function suma(a) { return a.reduce((x, y) => x + y, 0); }
+
+    function guardarEstado() {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
     }
 
-    function num(value) {
-        const parsed = parseFloat(String(value).replace(',', '.'));
-        return Number.isFinite(parsed) ? parsed : 0;
-    }
-
-    function formatInt(value) {
-        return Math.round(value || 0).toLocaleString('es-AR');
-    }
-
-    function formatMoney(value) {
-        return `$${Math.round(value || 0).toLocaleString('es-AR')}`;
-    }
-
-    function suma(values) {
-        return values.reduce((acc, value) => acc + value, 0);
-    }
-
-    function actualizarGrupo(valor) {
-        state.grupo = valor;
-    }
-
-    function actualizarParametro(clave, valor) {
-        state.params[clave] = valor;
-        recalcularYRenderizar();
-    }
-
-    function actualizarSerie(clave, mes, valor) {
-        state.series[clave][mes] = valor;
-        recalcularYRenderizar();
-    }
+    function actualizarGrupo(v) { state.grupo = v; guardarEstado(); }
+    function actualizarJustificacion(v) { state.justificacion = v; guardarEstado(); }
+    function actualizarParametro(clave, v) { state.params[clave] = v; guardarEstado(); recalcularYRenderizar(); }
+    function actualizarSerie(clave, mes, v) { state.series[clave][mes] = v; guardarEstado(); recalcularYRenderizar(); }
 
     function obtenerParametros() {
         return {
@@ -1747,25 +576,12 @@
 
     function calcularPlanilla() {
         const p = obtenerParametros();
-        const resultado = {
-            contratado: Array(12).fill(0),
-            despedido: Array(12).fill(0),
-            horasNormales: Array(12).fill(0),
-            produccion: Array(12).fill(0),
-            stock: Array(12).fill(0),
-            faltante: Array(12).fill(0),
-            costoProduccion: Array(12).fill(0),
-            costoMODNormal: Array(12).fill(0),
-            costoMODExtra: Array(12).fill(0),
-            costoTercerizado: Array(12).fill(0),
-            costoStock: Array(12).fill(0),
-            costoContratacion: Array(12).fill(0),
-            costoDesvinculacion: Array(12).fill(0),
-            totalMes: Array(12).fill(0),
-            flagsOperarios: Array(12).fill(false),
-            flagsHorasExtra: Array(12).fill(false),
-            flagsStock: Array(12).fill(false),
-            violaciones: []
+        const r = {
+            contratado: [], despedido: [], horasNormales: [], produccion: [], stock: [], faltante: [],
+            costoProduccion: [], costoMODNormal: [], costoMODExtra: [], costoTercerizado: [], costoStock: [],
+            costoContratacion: [], costoDesvinculacion: [], totalMes: [],
+            flagsOperarios: Array(12).fill(false), flagsHorasExtra: Array(12).fill(false), flagsStock: Array(12).fill(false),
+            flagsFaltante: Array(12).fill(false), violaciones: []
         };
 
         for (let i = 0; i < 12; i++) {
@@ -1782,543 +598,363 @@
             const horasNormales = operarios * p.horasTurno * turnos;
             const produccion = p.piezasPorHora * (horasNormales + horasExtra);
 
-            const stockPrevio = i === 0 ? p.inventarioInicial : resultado.stock[i - 1];
+            const stockPrevio = i === 0 ? p.inventarioInicial : r.stock[i - 1];
             const balance = stockPrevio + produccion + tercerizacion - demanda;
             const stock = Math.max(0, balance);
             const faltante = Math.max(0, -balance);
 
-            resultado.contratado[i] = contratado;
-            resultado.despedido[i] = despedido;
-            resultado.horasNormales[i] = horasNormales;
-            resultado.produccion[i] = produccion;
-            resultado.stock[i] = stock;
-            resultado.faltante[i] = faltante;
+            r.contratado[i] = contratado;
+            r.despedido[i] = despedido;
+            r.horasNormales[i] = horasNormales;
+            r.produccion[i] = produccion;
+            r.stock[i] = stock;
+            r.faltante[i] = faltante;
 
-            resultado.costoProduccion[i] = produccion * p.costUnidadProd;
-            resultado.costoMODNormal[i] = horasNormales * p.costHoraNormal;
-            resultado.costoMODExtra[i] = horasExtra * p.costHoraExtra;
-            resultado.costoTercerizado[i] = tercerizacion * p.costTercerizado;
-            resultado.costoStock[i] = stock * p.costUnidadAlmac;
-            resultado.costoContratacion[i] = contratado * p.costContratar;
-            resultado.costoDesvinculacion[i] = despedido * p.costDespedir;
-            resultado.totalMes[i] =
-                resultado.costoProduccion[i] +
-                resultado.costoMODNormal[i] +
-                resultado.costoMODExtra[i] +
-                resultado.costoTercerizado[i] +
-                resultado.costoStock[i] +
-                resultado.costoContratacion[i] +
-                resultado.costoDesvinculacion[i];
+            r.costoProduccion[i] = produccion * p.costUnidadProd;
+            r.costoMODNormal[i] = horasNormales * p.costHoraNormal;
+            r.costoMODExtra[i] = horasExtra * p.costHoraExtra;
+            r.costoTercerizado[i] = tercerizacion * p.costTercerizado;
+            r.costoStock[i] = stock * p.costUnidadAlmac;
+            r.costoContratacion[i] = contratado * p.costContratar;
+            r.costoDesvinculacion[i] = despedido * p.costDespedir;
+            r.totalMes[i] = r.costoProduccion[i] + r.costoMODNormal[i] + r.costoMODExtra[i] + r.costoTercerizado[i] +
+                r.costoStock[i] + r.costoContratacion[i] + r.costoDesvinculacion[i];
 
             if (hasValue(state.series.operarios[i]) && hasValue(state.params.minOperarios) && operarios < p.minOperarios) {
-                resultado.flagsOperarios[i] = true;
-                resultado.violaciones.push(`Mes ${i + 1}: operarios por debajo del mínimo.`);
+                r.flagsOperarios[i] = true;
+                r.violaciones.push(`${MESES[i]}: tenés menos operarios que el mínimo permitido (${formatInt(p.minOperarios)}).`);
             }
             if (hasValue(state.series.operarios[i]) && hasValue(state.params.maxOperarios) && operarios > p.maxOperarios) {
-                resultado.flagsOperarios[i] = true;
-                resultado.violaciones.push(`Mes ${i + 1}: operarios por encima del máximo.`);
+                r.flagsOperarios[i] = true;
+                r.violaciones.push(`${MESES[i]}: te pasaste del máximo de operarios (${formatInt(p.maxOperarios)}).`);
             }
-
-            if (
-                hasValue(state.series.horasExtra[i]) &&
-                hasValue(state.series.operarios[i]) &&
-                hasValue(state.series.turnos[i]) &&
-                hasValue(state.params.maxHorasExtra)
-            ) {
+            if (hasValue(state.series.horasExtra[i]) && hasValue(state.series.operarios[i]) && hasValue(state.series.turnos[i]) && hasValue(state.params.maxHorasExtra)) {
                 const maxPermitido = operarios * p.maxHorasExtra * turnos;
                 if (horasExtra > maxPermitido) {
-                    resultado.flagsHorasExtra[i] = true;
-                    resultado.violaciones.push(`Mes ${i + 1}: horas extra por encima del máximo permitido.`);
+                    r.flagsHorasExtra[i] = true;
+                    r.violaciones.push(`${MESES[i]}: te pasaste del tope de horas extra (máx ${formatInt(maxPermitido)} h).`);
                 }
             }
-
             if (stock > p.capacidadMax) {
-                resultado.flagsStock[i] = true;
-                resultado.violaciones.push(`Mes ${i + 1}: stock supera capacidad máxima.`);
+                r.flagsStock[i] = true;
+                r.violaciones.push(`${MESES[i]}: el stock (${formatInt(stock)}) supera la capacidad del depósito (${formatInt(p.capacidadMax)}).`);
+            }
+            if (faltante > 0 && hasValue(state.series.demanda[i])) {
+                r.flagsFaltante[i] = true;
+                r.violaciones.push(`${MESES[i]}: no llegás a cubrir la demanda, te faltan ${formatInt(faltante)} unidades.`);
             }
         }
-
-        return resultado;
+        return r;
     }
 
     function construirCabeceraPlanilla() {
-        const thead = document.getElementById('sheetHead');
-        thead.innerHTML = `
-            <tr>
-                <th>Concepto</th>
-                <th>Mes ant.</th>
-                ${MESES_CORTOS.map(m => `<th>${m}</th>`).join('')}
-                <th>Ref.</th>
-            </tr>
-        `;
+        document.getElementById('sheetHead').innerHTML = `
+            <tr><th>Concepto</th><th>Mes ant.</th>${MESES_CORTOS.map(m => `<th>${m}</th>`).join('')}</tr>`;
     }
 
-    function valorInput(clave, i) {
-        const valor = state.series[clave][i];
-        return hasValue(valor) ? String(valor) : '';
-    }
+    function valorInput(clave, i) { const v = state.series[clave][i]; return hasValue(v) ? String(v) : ''; }
 
-    function filaEntrada(clave, etiqueta, anterior = '-', referencia = '', flags = Array(12).fill(false)) {
-        let html = `<tr><td class="row-label">${etiqueta}</td><td class="readonly-cell">${anterior}</td>`;
+    function filaEntrada(clave, etiqueta, ayuda, anterior, flags) {
+        flags = flags || Array(12).fill(false);
+        let html = `<tr class="input-row"><td class="row-label">${etiqueta}<small>${ayuda}</small></td><td class="readonly-cell">${anterior || '-'}</td>`;
         for (let i = 0; i < 12; i++) {
-            html += `
-                <td>
-                    <input type="number" value="${valorInput(clave, i)}" oninput="actualizarSerie('${clave}', ${i}, this.value)" class="${flags[i] ? 'error' : ''}">
-                </td>
-            `;
+            html += `<td><input type="number" value="${valorInput(clave, i)}" oninput="actualizarSerie('${clave}', ${i}, this.value)" class="${flags[i] ? 'error' : ''}"></td>`;
         }
-        html += `<td class="readonly-cell">${referencia}</td></tr>`;
-        return html;
+        return html + `</tr>`;
     }
 
-    function filaSalida(etiqueta, valores, anterior = '-', referencia = '', flags = Array(12).fill(false), money = false, total = false) {
-        let html = `<tr class="${total ? 'total-row' : ''}"><td class="row-label">${etiqueta}</td><td class="readonly-cell">${anterior}</td>`;
+    function filaSalida(etiqueta, valores, anterior, flags, money, total) {
+        flags = flags || Array(12).fill(false);
+        let html = `<tr class="${total ? 'total-row' : ''}"><td class="row-label">${etiqueta}</td><td class="readonly-cell">${anterior || '-'}</td>`;
         for (let i = 0; i < 12; i++) {
-            const valor = money ? formatMoney(valores[i]) : formatInt(valores[i]);
-            html += `<td class="cell-value ${flags[i] ? 'cell-error' : ''}">${valor}</td>`;
+            const v = money ? formatMoney(valores[i]) : formatInt(valores[i]);
+            html += `<td class="cell-value ${flags[i] ? 'cell-error' : ''}">${v}</td>`;
         }
-        html += `<td class="readonly-cell">${referencia}</td></tr>`;
-        return html;
+        return html + `</tr>`;
     }
 
-    function renderizarPlanilla(resultado) {
-        const tbody = document.getElementById('sheetBody');
+    function renderizarPlanilla(r) {
         const p = obtenerParametros();
-
-        const prevOperarios = hasValue(state.params.operariosPrev) ? formatInt(p.operariosPrev) : '-';
+        const prevOp = hasValue(state.params.operariosPrev) ? formatInt(p.operariosPrev) : '-';
         const prevStock = hasValue(state.params.inventarioInicial) ? formatInt(p.inventarioInicial) : '-';
-
-        tbody.innerHTML = '';
-        tbody.innerHTML += filaEntrada('demanda', 'DEMANDA', '-', 'Plan de ventas');
-        tbody.innerHTML += filaEntrada('operarios', 'CANTIDAD DE OPERARIOS', prevOperarios, 'Min/Max operarios', resultado.flagsOperarios);
-        tbody.innerHTML += filaSalida('CONTRATADO', resultado.contratado);
-        tbody.innerHTML += filaSalida('DESPEDIDO', resultado.despedido);
-        tbody.innerHTML += filaEntrada('turnos', 'TURNOS DE PRODUCCIÓN', '-', '1 o 2 turnos');
-        tbody.innerHTML += filaSalida('HORAS NORMALES POR MES', resultado.horasNormales);
-        tbody.innerHTML += filaEntrada('horasExtra', 'HORAS EXTRA POR MES', '-', '<= máx permitido', resultado.flagsHorasExtra);
-        tbody.innerHTML += filaSalida('PRODUCCIÓN', resultado.produccion);
-        tbody.innerHTML += filaEntrada('tercerizacion', 'TERCERIZACIÓN', '-', 'Unidades tercerizadas');
-        tbody.innerHTML += filaSalida('STOCK', resultado.stock, prevStock, 'Capacidad máx', resultado.flagsStock);
-        tbody.innerHTML += filaSalida('FALTANTE', resultado.faltante);
-
-        tbody.innerHTML += '<tr class="section-row"><td colspan="15">Costos</td></tr>';
-        tbody.innerHTML += filaSalida('Producción', resultado.costoProduccion, '-', '', Array(12).fill(false), true);
-        tbody.innerHTML += filaSalida('MOD (Hs. Normales)', resultado.costoMODNormal, '-', '', Array(12).fill(false), true);
-        tbody.innerHTML += filaSalida('MOD (Hs. Extra)', resultado.costoMODExtra, '-', '', Array(12).fill(false), true);
-        tbody.innerHTML += filaSalida('Tercerización', resultado.costoTercerizado, '-', '', Array(12).fill(false), true);
-        tbody.innerHTML += filaSalida('Stock', resultado.costoStock, '-', '', Array(12).fill(false), true);
-        tbody.innerHTML += filaSalida('Contratación', resultado.costoContratacion, '-', '', Array(12).fill(false), true);
-        tbody.innerHTML += filaSalida('Desvinculamiento', resultado.costoDesvinculacion, '-', '', Array(12).fill(false), true);
-        tbody.innerHTML += filaSalida('TOTAL', resultado.totalMes, '-', '', Array(12).fill(false), true, true);
+        let h = '';
+        h += filaEntrada('demanda', 'DEMANDA', 'lo que tenés que vender', '-');
+        h += filaEntrada('operarios', 'OPERARIOS', 'tu decisión (8 a 18)', prevOp, r.flagsOperarios);
+        h += filaSalida('Contratados', r.contratado);
+        h += filaSalida('Desvinculados', r.despedido);
+        h += filaEntrada('turnos', 'TURNOS', 'tu decisión (1 o 2)', '-');
+        h += filaSalida('Horas normales', r.horasNormales);
+        h += filaEntrada('horasExtra', 'HORAS EXTRA', 'tu decisión', '-', r.flagsHorasExtra);
+        h += filaSalida('Producción', r.produccion);
+        h += filaEntrada('tercerizacion', 'TERCERIZACIÓN', 'tu decisión (comprar afuera)', '-');
+        h += filaSalida('Stock final', r.stock, prevStock, r.flagsStock);
+        h += filaSalida('Faltante ⚠️', r.faltante, '-', r.flagsFaltante);
+        h += '<tr class="section-row"><td colspan="14">Costos del mes</td></tr>';
+        h += filaSalida('Producción', r.costoProduccion, '-', null, true);
+        h += filaSalida('Sueldos (normales)', r.costoMODNormal, '-', null, true);
+        h += filaSalida('Horas extra', r.costoMODExtra, '-', null, true);
+        h += filaSalida('Tercerización', r.costoTercerizado, '-', null, true);
+        h += filaSalida('Guardar stock', r.costoStock, '-', null, true);
+        h += filaSalida('Contrataciones', r.costoContratacion, '-', null, true);
+        h += filaSalida('Desvinculaciones', r.costoDesvinculacion, '-', null, true);
+        h += filaSalida('TOTAL', r.totalMes, '-', null, true, true);
+        document.getElementById('sheetBody').innerHTML = h;
     }
 
-    function renderizarMobile(resultado) {
-        const contenedor = document.getElementById('mobileEditor');
-        contenedor.innerHTML = '';
-
-        for (let i = 0; i < 12; i++) {
-            const alertas = [];
-            if (resultado.flagsOperarios[i]) alertas.push('Operarios fuera de rango.');
-            if (resultado.flagsHorasExtra[i]) alertas.push('Horas extra excedidas.');
-            if (resultado.flagsStock[i]) alertas.push('Stock supera capacidad.');
-
-            const card = document.createElement('div');
-            card.className = 'mobile-card';
-            card.innerHTML = `
-                <div class="mobile-card-header">
-                    <span class="mobile-month">${MESES[i]}</span>
-                    <span class="mobile-demand">Costo: ${formatMoney(resultado.totalMes[i])}</span>
-                </div>
-
-                <div class="mobile-inputs">
-                    <div class="mobile-field">
-                        <label>Demanda</label>
-                        <input type="number" value="${valorInput('demanda', i)}" oninput="actualizarSerie('demanda', ${i}, this.value)">
-                    </div>
-                    <div class="mobile-field">
-                        <label>Operarios</label>
-                        <input type="number" value="${valorInput('operarios', i)}" oninput="actualizarSerie('operarios', ${i}, this.value)" class="${resultado.flagsOperarios[i] ? 'error' : ''}">
-                    </div>
-                    <div class="mobile-field">
-                        <label>Turnos</label>
-                        <input type="number" value="${valorInput('turnos', i)}" oninput="actualizarSerie('turnos', ${i}, this.value)">
-                    </div>
-                </div>
-
-                <div class="mobile-inputs">
-                    <div class="mobile-field">
-                        <label>Hs extra</label>
-                        <input type="number" value="${valorInput('horasExtra', i)}" oninput="actualizarSerie('horasExtra', ${i}, this.value)" class="${resultado.flagsHorasExtra[i] ? 'error' : ''}">
-                    </div>
-                    <div class="mobile-field">
-                        <label>Tercerización</label>
-                        <input type="number" value="${valorInput('tercerizacion', i)}" oninput="actualizarSerie('tercerizacion', ${i}, this.value)">
-                    </div>
-                    <div class="mobile-field">
-                        <label>Stock final</label>
-                        <input type="text" value="${formatInt(resultado.stock[i])}" disabled>
-                    </div>
-                </div>
-
-                <div class="mobile-metrics">
-                    <div class="mobile-metric">
-                        <span class="mobile-metric-label">Producción</span>
-                        <span class="mobile-metric-value">${formatInt(resultado.produccion[i])}</span>
-                    </div>
-                    <div class="mobile-metric">
-                        <span class="mobile-metric-label">Faltante</span>
-                        <span class="mobile-metric-value">${formatInt(resultado.faltante[i])}</span>
-                    </div>
-                    <div class="mobile-metric">
-                        <span class="mobile-metric-label">Total mes</span>
-                        <span class="mobile-metric-value">${formatMoney(resultado.totalMes[i])}</span>
-                    </div>
-                </div>
-
-                <div class="mobile-alert ${alertas.length ? 'mobile-alert-error' : ''}">
-                    ${alertas.length ? alertas.join(' ') : 'Sin alertas de restricciones.'}
-                </div>
-            `;
-
-            contenedor.appendChild(card);
-        }
-    }
-
-    function actualizarPanelCostos(resultado) {
-        const costos = {
-            produccion: suma(resultado.costoProduccion),
-            modNormal: suma(resultado.costoMODNormal),
-            modExtra: suma(resultado.costoMODExtra),
-            tercerizacion: suma(resultado.costoTercerizado),
-            stock: suma(resultado.costoStock),
-            contratacion: suma(resultado.costoContratacion),
-            desvinculacion: suma(resultado.costoDesvinculacion)
+    function actualizarPanelCostos(r) {
+        const c = {
+            produccion: suma(r.costoProduccion), modNormal: suma(r.costoMODNormal), modExtra: suma(r.costoMODExtra),
+            tercerizacion: suma(r.costoTercerizado), stock: suma(r.costoStock), contratacion: suma(r.costoContratacion),
+            desvinculacion: suma(r.costoDesvinculacion)
         };
-
-        const total =
-            costos.produccion +
-            costos.modNormal +
-            costos.modExtra +
-            costos.tercerizacion +
-            costos.stock +
-            costos.contratacion +
-            costos.desvinculacion;
-
+        const total = c.produccion + c.modNormal + c.modExtra + c.tercerizacion + c.stock + c.contratacion + c.desvinculacion;
         const scale = Math.max(total, 1);
-
-        document.getElementById('costProduccion').textContent = formatMoney(costos.produccion);
-        document.getElementById('costMODNormal').textContent = formatMoney(costos.modNormal);
-        document.getElementById('costMODExtra').textContent = formatMoney(costos.modExtra);
-        document.getElementById('costTercerizado').textContent = formatMoney(costos.tercerizacion);
-        document.getElementById('costStock').textContent = formatMoney(costos.stock);
-        document.getElementById('costContratacion').textContent = formatMoney(costos.contratacion);
-        document.getElementById('costDesvinculacion').textContent = formatMoney(costos.desvinculacion);
-        document.getElementById('costTotalAnual').textContent = formatMoney(total);
-
-        document.getElementById('barProduccion').style.width = `${(costos.produccion / scale) * 100}%`;
-        document.getElementById('barMODNormal').style.width = `${(costos.modNormal / scale) * 100}%`;
-        document.getElementById('barMODExtra').style.width = `${(costos.modExtra / scale) * 100}%`;
-        document.getElementById('barTercerizado').style.width = `${(costos.tercerizacion / scale) * 100}%`;
-        document.getElementById('barStock').style.width = `${(costos.stock / scale) * 100}%`;
-        document.getElementById('barContratacion').style.width = `${(costos.contratacion / scale) * 100}%`;
-        document.getElementById('barDesvinculacion').style.width = `${(costos.desvinculacion / scale) * 100}%`;
+        const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = formatMoney(val); };
+        const bar = (id, val) => { const el = document.getElementById(id); if (el) el.style.width = `${(val / scale) * 100}%`; };
+        set('costProduccion', c.produccion); set('costMODNormal', c.modNormal); set('costMODExtra', c.modExtra);
+        set('costTercerizado', c.tercerizacion); set('costStock', c.stock); set('costContratacion', c.contratacion);
+        set('costDesvinculacion', c.desvinculacion); set('costTotalAnual', total);
+        bar('barProduccion', c.produccion); bar('barMODNormal', c.modNormal); bar('barMODExtra', c.modExtra);
+        bar('barTercerizado', c.tercerizacion); bar('barStock', c.stock); bar('barContratacion', c.contratacion);
+        bar('barDesvinculacion', c.desvinculacion);
     }
 
-    function actualizarPanelAlertas(resultado) {
+    function actualizarPanelAlertas(r) {
         const lista = document.getElementById('violationsList');
         if (!lista) return;
-
-        if (resultado.violaciones.length === 0) {
-            lista.innerHTML = '<li class="ok-item">Sin restricciones violadas.</li>';
-            return;
-        }
-
-        lista.innerHTML = resultado.violaciones
-            .map(violacion => `<li>${violacion}</li>`)
-            .join('');
+        const algoCargado = Object.values(state.series).some(a => a.some(hasValue));
+        if (!algoCargado) { lista.innerHTML = '<li class="ok-item">Cargá tu planilla para ver los avisos acá.</li>'; return; }
+        if (r.violaciones.length === 0) { lista.innerHTML = '<li class="ok-item">✓ ¡Tu plan cierra! No se rompe ninguna regla.</li>'; return; }
+        lista.innerHTML = r.violaciones.map(v => `<li>${v}</li>`).join('');
     }
 
-    function actualizarGraficos(resultado) {
-        const analisisActivo = document.getElementById('analisis')?.classList.contains('active');
-        if (!analisisActivo) return;
-
+    function actualizarGraficos(r) {
+        if (!document.getElementById('evolucion')?.classList.contains('active')) return;
         if (typeof Chart === 'undefined') return;
-
-        const ctxProduccionEl = document.getElementById('chartProduccion');
-        const ctxOperariosEl = document.getElementById('chartOperarios');
-        if (!ctxProduccionEl || !ctxOperariosEl) return;
+        const elP = document.getElementById('chartProduccion');
+        const elO = document.getElementById('chartOperarios');
+        if (!elP || !elO) return;
 
         const demanda = state.series.demanda.map(num);
-        const produccion = resultado.produccion;
-        const stock = resultado.stock;
         const operarios = state.series.operarios.map(num);
-        const costos = resultado.totalMes.map(valor => valor / 1000);
+        const costos = r.totalMes.map(v => v / 1000);
 
-        const ctxProduccion = ctxProduccionEl.getContext('2d');
         if (chartProduccion) chartProduccion.destroy();
-        chartProduccion = new Chart(ctxProduccion, {
+        chartProduccion = new Chart(elP.getContext('2d'), {
             type: 'line',
-            data: {
-                labels: MESES_CORTOS,
-                datasets: [
-                    {
-                        label: 'Demanda',
-                        data: demanda,
-                        borderColor: CHART_THEME.demanda,
-                        backgroundColor: 'rgba(217, 72, 15, 0.12)',
-                        borderWidth: 3,
-                        tension: 0.35,
-                        pointRadius: 4,
-                        pointBackgroundColor: CHART_THEME.demanda,
-                        pointBorderColor: CHART_THEME.pointBorder,
-                        pointBorderWidth: 2
-                    },
-                    {
-                        label: 'Producción',
-                        data: produccion,
-                        borderColor: CHART_THEME.produccion,
-                        backgroundColor: 'rgba(20, 184, 166, 0.13)',
-                        borderWidth: 3,
-                        tension: 0.35,
-                        pointRadius: 4,
-                        pointBackgroundColor: CHART_THEME.produccion,
-                        pointBorderColor: CHART_THEME.pointBorder,
-                        pointBorderWidth: 2
-                    },
-                    {
-                        label: 'Stock',
-                        data: stock,
-                        borderColor: CHART_THEME.stock,
-                        backgroundColor: 'rgba(56, 189, 248, 0.1)',
-                        borderWidth: 2,
-                        tension: 0.35,
-                        pointRadius: 3,
-                        pointBackgroundColor: CHART_THEME.stock,
-                        pointBorderColor: CHART_THEME.pointBorder,
-                        pointBorderWidth: 2,
-                        borderDash: [5, 5]
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } },
-                        position: 'top'
-                    }
-                },
-                scales: {
-                    y: {
-                        ticks: { color: CHART_THEME.label },
-                        grid: { color: CHART_THEME.grid }
-                    },
-                    x: {
-                        ticks: { color: CHART_THEME.label },
-                        grid: { color: CHART_THEME.grid }
-                    }
-                }
-            }
+            data: { labels: MESES_CORTOS, datasets: [
+                { label: 'Demanda', data: demanda, borderColor: CHART_THEME.demanda, backgroundColor: 'rgba(217,72,15,0.12)', borderWidth: 3, tension: 0.35, pointRadius: 4, pointBackgroundColor: CHART_THEME.demanda, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 },
+                { label: 'Producción', data: r.produccion, borderColor: CHART_THEME.produccion, backgroundColor: 'rgba(20,184,166,0.13)', borderWidth: 3, tension: 0.35, pointRadius: 4, pointBackgroundColor: CHART_THEME.produccion, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 },
+                { label: 'Stock', data: r.stock, borderColor: CHART_THEME.stock, backgroundColor: 'rgba(56,189,248,0.1)', borderWidth: 2, tension: 0.35, pointRadius: 3, pointBackgroundColor: CHART_THEME.stock, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2, borderDash: [5, 5] }
+            ]},
+            options: { responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' } },
+                scales: { y: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }, x: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } } } }
         });
 
-        const ctxOperarios = ctxOperariosEl.getContext('2d');
         if (chartOperarios) chartOperarios.destroy();
-        chartOperarios = new Chart(ctxOperarios, {
+        chartOperarios = new Chart(elO.getContext('2d'), {
             type: 'bar',
-            data: {
-                labels: MESES_CORTOS,
-                datasets: [
-                    {
-                        label: 'Operarios',
-                        data: operarios,
-                        borderColor: CHART_THEME.operarios,
-                        backgroundColor: 'rgba(34, 211, 238, 0.42)',
-                        borderWidth: 2,
-                        yAxisID: 'y',
-                        order: 2
-                    },
-                    {
-                        label: 'Costo mensual ($k)',
-                        data: costos,
-                        borderColor: CHART_THEME.costo,
-                        backgroundColor: 'rgba(245, 158, 11, 0.25)',
-                        borderWidth: 2,
-                        type: 'line',
-                        tension: 0.35,
-                        yAxisID: 'y1',
-                        order: 1,
-                        pointRadius: 4,
-                        pointBackgroundColor: CHART_THEME.costo,
-                        pointBorderColor: CHART_THEME.pointBorder,
-                        pointBorderWidth: 2
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } },
-                        position: 'top'
-                    }
-                },
+            data: { labels: MESES_CORTOS, datasets: [
+                { label: 'Operarios', data: operarios, borderColor: CHART_THEME.operarios, backgroundColor: 'rgba(34,211,238,0.42)', borderWidth: 2, yAxisID: 'y', order: 2 },
+                { label: 'Costo mensual ($k)', data: costos, borderColor: CHART_THEME.costo, backgroundColor: 'rgba(245,158,11,0.25)', borderWidth: 2, type: 'line', tension: 0.35, yAxisID: 'y1', order: 1, pointRadius: 4, pointBackgroundColor: CHART_THEME.costo, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 }
+            ]},
+            options: { responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' } },
                 scales: {
-                    y: {
-                        type: 'linear',
-                        position: 'left',
-                        ticks: { color: CHART_THEME.label },
-                        grid: { color: CHART_THEME.grid },
-                        title: { display: true, text: 'Operarios', color: CHART_THEME.label }
-                    },
-                    y1: {
-                        type: 'linear',
-                        position: 'right',
-                        ticks: { color: CHART_THEME.label },
-                        grid: { drawOnChartArea: false },
-                        title: { display: true, text: 'Costo ($k)', color: CHART_THEME.label }
-                    },
-                    x: {
-                        ticks: { color: CHART_THEME.label },
-                        grid: { color: CHART_THEME.grid }
-                    }
-                }
-            }
+                    y: { type: 'linear', position: 'left', ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid }, title: { display: true, text: 'Operarios', color: CHART_THEME.label } },
+                    y1: { type: 'linear', position: 'right', ticks: { color: CHART_THEME.label }, grid: { drawOnChartArea: false }, title: { display: true, text: 'Costo ($k)', color: CHART_THEME.label } },
+                    x: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }
+                } }
         });
     }
 
     function mostrarSeccion(id) {
-        document.querySelectorAll('.workspace-section').forEach(section => {
-            section.classList.toggle('active', section.id === id);
-        });
-
-        document.querySelectorAll('.workspace-sidebar .nav-link').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.section === id);
-        });
-
-        if (id === 'analisis') {
-            requestAnimationFrame(() => {
-                recalcularYRenderizar();
-            });
-        }
+        document.querySelectorAll('.workspace-section').forEach(s => s.classList.toggle('active', s.id === id));
+        document.querySelectorAll('.workspace-sidebar .nav-link').forEach(b => b.classList.toggle('active', b.dataset.section === id));
+        if (id === 'evolucion') requestAnimationFrame(recalcularYRenderizar);
     }
 
-    function actualizarResumen(resultado) {
-        const total = resultado.totalMes.reduce((acc, valor) => acc + valor, 0);
+    function actualizarResumen(r) {
+        const total = suma(r.totalMes);
         const promedio = total / 12;
-        const indicePico = resultado.totalMes.reduce((maxIndex, actual, i, arr) => actual > arr[maxIndex] ? i : maxIndex, 0);
-        const maximo = resultado.totalMes[indicePico];
-
-        const camposCompletados = Object.values(state.params).some(hasValue)
-            || Object.values(state.series).some(arr => arr.some(hasValue));
+        const idxPico = r.totalMes.reduce((mx, v, i, a) => v > a[mx] ? i : mx, 0);
+        const maximo = r.totalMes[idxPico];
+        const cargado = Object.values(state.params).some(hasValue) || Object.values(state.series).some(a => a.some(hasValue));
 
         document.getElementById('totalCostDisplay').textContent = formatMoney(total);
         document.getElementById('avgCostDisplay').textContent = formatMoney(promedio);
-        document.getElementById('peakCostDisplay').textContent = maximo > 0 ? `${MESES_CORTOS[indicePico]} • ${formatMoney(maximo)}` : 'Sin datos';
+        document.getElementById('peakCostDisplay').textContent = maximo > 0 ? `${MESES_CORTOS[idxPico]} • ${formatMoney(maximo)}` : 'Sin datos';
 
         const badge = document.getElementById('validationBadge');
-        if (!camposCompletados) {
-            badge.innerHTML = '<span class="neutral-badge">PLANILLA SIN COMPLETAR</span>';
-        } else if (resultado.violaciones.length > 0) {
-            badge.innerHTML = `<span class="invalid-badge">✗ ${resultado.violaciones.length} RESTRICCIONES</span>`;
-        } else {
-            badge.innerHTML = '<span class="valid-badge">✓ SIN RESTRICCIONES</span>';
-        }
+        if (!cargado) badge.innerHTML = '<span class="neutral-badge">PLANILLA SIN COMPLETAR</span>';
+        else if (r.violaciones.length > 0) badge.innerHTML = `<span class="invalid-badge">✗ ${r.violaciones.length} AVISO(S)</span>`;
+        else badge.innerHTML = '<span class="valid-badge">✓ PLAN VÁLIDO</span>';
     }
 
     function recalcularYRenderizar() {
-        const resultado = calcularPlanilla();
+        const r = calcularPlanilla();
         construirCabeceraPlanilla();
-        renderizarPlanilla(resultado);
-        renderizarMobile(resultado);
-        actualizarResumen(resultado);
-        actualizarPanelCostos(resultado);
-        actualizarPanelAlertas(resultado);
-        actualizarGraficos(resultado);
+        renderizarPlanilla(r);
+        actualizarResumen(r);
+        actualizarPanelCostos(r);
+        actualizarPanelAlertas(r);
+        actualizarGraficos(r);
     }
 
-    function compararCostoConModelo(resultado = calcularPlanilla()) {
-        const total = Math.round(suma(resultado.totalMes));
-        const esperado = COSTO_TOTAL_MODELO_REFERENCIA;
-        const diferencia = total - esperado;
-
-        return {
-            total,
-            esperado,
-            diferencia,
-            coincide: diferencia === 0
-        };
+    function sincronizarInputs() {
+        const g = document.getElementById('numeroGrupo'); if (g) g.value = state.grupo || '';
+        const j = document.getElementById('justificacionTexto'); if (j) j.value = state.justificacion || '';
+        Object.keys(state.params).forEach(k => { const el = document.getElementById(k); if (el) el.value = hasValue(state.params[k]) ? String(state.params[k]) : ''; });
     }
 
-    function cargarModeloOptimo(validarDespues = false) {
-        state.grupo = MODELO_OPTIMO_LOCAL.grupo;
-        const grupoInput = document.getElementById('numeroGrupo');
-        if (grupoInput) grupoInput.value = MODELO_OPTIMO_LOCAL.grupo;
-
-        Object.entries(MODELO_OPTIMO_LOCAL.params).forEach(([clave, valor]) => {
-            state.params[clave] = String(valor);
-            const input = document.getElementById(clave);
-            if (input) input.value = String(valor);
-        });
-
-        Object.entries(MODELO_OPTIMO_LOCAL.series).forEach(([clave, valores]) => {
-            state.series[clave] = valores.map(valor => String(valor));
-        });
-
+    function cargarDatosProblema() {
+        Object.entries(DATOS_PROBLEMA.params).forEach(([k, v]) => { state.params[k] = String(v); });
+        state.series.demanda = DATOS_PROBLEMA.demanda.map(String);
+        sincronizarInputs();
+        guardarEstado();
         recalcularYRenderizar();
-
-        if (validarDespues) {
-            validarCostoContraModelo();
-        }
-    }
-
-    function validarCostoContraModelo() {
-        const comparacion = compararCostoConModelo();
-        console.log('[Verificacion modelo.xlsx]', comparacion);
-
-        if (comparacion.coincide) {
-            alert(`Validacion correcta. Total web: ${formatMoney(comparacion.total)}. Coincide con el costo objetivo del modelo.`);
-        } else {
-            alert(`Aun no coincide. Web: ${formatMoney(comparacion.total)} / Objetivo: ${formatMoney(comparacion.esperado)}.`);
-        }
     }
 
     function limpiarPlanilla() {
-        if (!confirm('¿Limpiar todos los datos cargados en la planilla?')) return;
-
-        state.grupo = '';
-        Object.keys(state.params).forEach(clave => {
-            state.params[clave] = '';
-        });
-
-        Object.keys(state.series).forEach(clave => {
-            state.series[clave] = Array(12).fill('');
-        });
-
-        document.getElementById('numeroGrupo').value = '';
-        document.querySelectorAll('.param-grid input[type="number"]').forEach(input => {
-            input.value = '';
-        });
-
+        if (!confirm('¿Seguro que querés empezar de cero? Se borra todo lo que cargaste (incluida la justificación).')) return;
+        state.grupo = ''; state.justificacion = '';
+        Object.keys(state.params).forEach(k => state.params[k] = '');
+        Object.keys(state.series).forEach(k => state.series[k] = Array(12).fill(''));
+        sincronizarInputs();
+        try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
         recalcularYRenderizar();
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.workspace-sidebar .nav-link').forEach(btn => {
-            btn.addEventListener('click', function() {
-                mostrarSeccion(this.dataset.section);
+    // ---------------- Exportador a Excel (.xlsx) sin librerías ----------------
+    function crc32(bytes) {
+        let table = crc32._t;
+        if (!table) {
+            table = crc32._t = [];
+            for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1); table[n] = c >>> 0; }
+        }
+        let crc = 0xFFFFFFFF;
+        for (let i = 0; i < bytes.length; i++) crc = (crc >>> 8) ^ table[(crc ^ bytes[i]) & 0xFF];
+        return (crc ^ 0xFFFFFFFF) >>> 0;
+    }
+    function strBytes(s) { return new TextEncoder().encode(s); }
+    function buildZip(files) {
+        const chunks = [], central = []; let offset = 0;
+        const u16 = n => [n & 0xFF, (n >>> 8) & 0xFF];
+        const u32 = n => [n & 0xFF, (n >>> 8) & 0xFF, (n >>> 16) & 0xFF, (n >>> 24) & 0xFF];
+        files.forEach(f => {
+            const nameB = strBytes(f.name), data = f.data, crc = crc32(data);
+            const local = new Uint8Array([].concat(u32(0x04034b50), u16(20), u16(0), u16(0), u16(0), u16(0), u32(crc), u32(data.length), u32(data.length), u16(nameB.length), u16(0)));
+            chunks.push(local, nameB, data);
+            const cen = new Uint8Array([].concat(u32(0x02014b50), u16(20), u16(20), u16(0), u16(0), u16(0), u16(0), u32(crc), u32(data.length), u32(data.length), u16(nameB.length), u16(0), u16(0), u16(0), u16(0), u32(0), u32(offset)));
+            central.push(cen, nameB);
+            offset += local.length + nameB.length + data.length;
+        });
+        let centralSize = 0; central.forEach(c => centralSize += c.length);
+        const end = new Uint8Array([].concat(u32(0x06054b50), u16(0), u16(0), u16(files.length), u16(files.length), u32(centralSize), u32(offset), u16(0)));
+        const all = chunks.concat(central, [end]);
+        let total = 0; all.forEach(a => total += a.length);
+        const out = new Uint8Array(total); let p = 0; all.forEach(a => { out.set(a, p); p += a.length; });
+        return out;
+    }
+    function escXml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;'); }
+    function colLetter(n) { let s = ''; n++; while (n > 0) { const m = (n - 1) % 26; s = String.fromCharCode(65 + m) + s; n = Math.floor((n - 1) / 26); } return s; }
+    function sheetFromRows(rows) {
+        let xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>';
+        rows.forEach((row, ri) => {
+            xml += `<row r="${ri + 1}">`;
+            row.forEach((cell, ci) => {
+                if (cell === '' || cell === null || cell === undefined) return;
+                const ref = colLetter(ci) + (ri + 1);
+                if (typeof cell === 'number' && Number.isFinite(cell)) xml += `<c r="${ref}"><v>${cell}</v></c>`;
+                else xml += `<c r="${ref}" t="inlineStr"><is><t xml:space="preserve">${escXml(cell)}</t></is></c>`;
             });
+            xml += `</row>`;
         });
+        return xml + '</sheetData></worksheet>';
+    }
+    function exportarExcel() {
+        const r = calcularPlanilla();
+        const total = suma(r.totalMes);
+        const P = state.params;
+        const val = k => hasValue(P[k]) ? num(P[k]) : '';
+        const S = state.series;
+        const serie = k => S[k].map(v => hasValue(v) ? num(v) : '');
+        const rowM = (label, arr, prev) => [label, (prev === undefined ? '' : prev)].concat(arr);
 
-        document.addEventListener('keydown', function(event) {
-            const key = event.key.toLowerCase();
-            if (event.ctrlKey && event.shiftKey && key === 'm') {
-                event.preventDefault();
-                cargarModeloOptimo(true);
+        const rows = [];
+        rows.push(['TP – Planificación Agregada de la Producción']);
+        rows.push(['Grupo', state.grupo || '(sin número)']);
+        rows.push([]);
+        rows.push(['DATOS DEL PROBLEMA']);
+        rows.push(['Piezas por operario por hora', val('piezasPorHora'), '', 'Costo contratar', val('costContratar')]);
+        rows.push(['Horas por turno al mes', val('horasTurno'), '', 'Costo desvincular', val('costDespedir')]);
+        rows.push(['Máx hs extra / operario·turno', val('maxHorasExtra'), '', 'Costo hora normal', val('costHoraNormal')]);
+        rows.push(['Mín. operarios', val('minOperarios'), '', 'Costo hora extra', val('costHoraExtra')]);
+        rows.push(['Máx. operarios', val('maxOperarios'), '', 'Costo unidad producida', val('costUnidadProd')]);
+        rows.push(['Operarios año anterior', val('operariosPrev'), '', 'Costo unidad guardada', val('costUnidadAlmac')]);
+        rows.push(['Inventario inicial', val('inventarioInicial'), '', 'Costo tercerizar', val('costTercerizado')]);
+        rows.push(['Capacidad máx. de stock', val('capacidadMax')]);
+        rows.push([]);
+        rows.push(['PLANILLA MENSUAL', 'Mes ant.'].concat(MESES));
+        rows.push(rowM('Demanda', serie('demanda'), ''));
+        rows.push(rowM('Operarios', serie('operarios'), val('operariosPrev')));
+        rows.push(rowM('Contratados', r.contratado, ''));
+        rows.push(rowM('Desvinculados', r.despedido, ''));
+        rows.push(rowM('Turnos', serie('turnos'), ''));
+        rows.push(rowM('Horas normales', r.horasNormales, ''));
+        rows.push(rowM('Horas extra', serie('horasExtra'), ''));
+        rows.push(rowM('Producción', r.produccion, ''));
+        rows.push(rowM('Tercerización', serie('tercerizacion'), ''));
+        rows.push(rowM('Stock final', r.stock, val('inventarioInicial')));
+        rows.push(rowM('Faltante', r.faltante, ''));
+        rows.push([]);
+        rows.push(['COSTOS ($)', 'Mes ant.'].concat(MESES));
+        rows.push(rowM('Producción', r.costoProduccion, ''));
+        rows.push(rowM('Sueldos (normales)', r.costoMODNormal, ''));
+        rows.push(rowM('Horas extra', r.costoMODExtra, ''));
+        rows.push(rowM('Tercerización', r.costoTercerizado, ''));
+        rows.push(rowM('Guardar stock', r.costoStock, ''));
+        rows.push(rowM('Contrataciones', r.costoContratacion, ''));
+        rows.push(rowM('Desvinculaciones', r.costoDesvinculacion, ''));
+        rows.push(rowM('TOTAL por mes', r.totalMes, ''));
+        rows.push([]);
+        rows.push(['COSTO TOTAL DEL AÑO', total]);
+        rows.push(['¿Plan válido? (sin avisos)', r.violaciones.length === 0 ? 'SÍ' : 'NO — ' + r.violaciones.length + ' aviso(s)']);
+        rows.push([]);
+        rows.push(['JUSTIFICACIÓN DEL EQUIPO']);
+        (state.justificacion || '(completar en la sección Justificación)').split('\n').forEach(linea => rows.push([linea]));
+
+        const sheet = sheetFromRows(rows);
+        const files = [
+            { name: '[Content_Types].xml', data: strBytes('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>') },
+            { name: '_rels/.rels', data: strBytes('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>') },
+            { name: 'xl/workbook.xml', data: strBytes('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Planilla" sheetId="1" r:id="rId1"/></sheets></workbook>') },
+            { name: 'xl/_rels/workbook.xml.rels', data: strBytes('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>') },
+            { name: 'xl/worksheets/sheet1.xml', data: strBytes(sheet) }
+        ];
+        const zip = buildZip(files);
+        const blob = new Blob([zip], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `TP_planificacion_grupo_${(state.grupo || 'sin_numero').toString().replace(/[^\w-]/g, '_')}.xlsx`;
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        try {
+            const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+            if (saved && saved.params && saved.series) {
+                state.grupo = saved.grupo || '';
+                state.justificacion = saved.justificacion || '';
+                Object.assign(state.params, saved.params);
+                Object.keys(state.series).forEach(k => { if (Array.isArray(saved.series[k])) state.series[k] = saved.series[k]; });
             }
-        });
-
+        } catch (e) {}
+        sincronizarInputs();
+        document.querySelectorAll('.workspace-sidebar .nav-link').forEach(b => b.addEventListener('click', function () { mostrarSeccion(this.dataset.section); }));
         recalcularYRenderizar();
     });
 </script>
