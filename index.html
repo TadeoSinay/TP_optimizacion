@@ -231,6 +231,12 @@
     .chart-tab.active { background: linear-gradient(135deg, #0f766e, #0284c7); border-color: transparent; color: #ffffff; box-shadow: 0 8px 16px rgba(2,132,199,0.3); }
     .chart-big-wrap { position: relative; height: 460px; }
     .chart-caption { margin-top: 12px; color: #93b7d6; font-size: 0.86rem; line-height: 1.5; }
+    #sensControls { margin-bottom: 14px; padding: 12px 14px; border: 1px solid #2f4a68; border-radius: 12px; background: rgba(13, 30, 50, 0.6); }
+    .sens-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .sens-row label { color: #9ec0dd; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+    .sens-row select { background: #0e1b2f; color: #dbe9fb; border: 1px solid #355170; border-radius: 8px; padding: 8px 10px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; cursor: pointer; }
+    .sens-row input[type=range] { flex: 1; min-width: 180px; accent-color: var(--accent-1); cursor: pointer; }
+    .sens-val { font-family: 'JetBrains Mono', monospace; color: var(--accent-1); font-weight: 700; min-width: 78px; text-align: right; font-size: 0.9rem; }
 
     @media (max-width: 1450px) { .sidebar { display: grid; grid-template-columns: repeat(3, minmax(240px, 1fr)); } }
     @media (max-width: 1200px) {
@@ -424,6 +430,20 @@
                     <button type="button" class="chart-tab" data-graf="composicion">🧩 En qué se va la plata</button>
                     <button type="button" class="chart-tab" data-graf="sensibilidad">🧪 Sensibilidad</button>
                 </div>
+                <div id="sensControls" style="display:none;">
+                    <div class="sens-row">
+                        <label for="sensQue">¿Qué querés cambiar?</label>
+                        <select id="sensQue" onchange="onSensQue(this.value)">
+                            <option value="costTercerizado">Costo de tercerizar</option>
+                            <option value="costHoraExtra">Costo de hora extra</option>
+                            <option value="costHoraNormal">Costo de hora normal (sueldos)</option>
+                            <option value="costUnidadProd">Costo de producir</option>
+                            <option value="costUnidadAlmac">Costo de guardar stock</option>
+                        </select>
+                        <input type="range" id="sensValor" min="-50" max="50" step="5" value="0" oninput="onSensVal(this.value)">
+                        <span id="sensValorTxt" class="sens-val">0%</span>
+                    </div>
+                </div>
                 <div class="chart-big-wrap"><canvas id="chartMain"></canvas></div>
                 <p class="chart-caption" id="chartCaption"></p>
             </div>
@@ -519,6 +539,8 @@
         grupo: '',
         justificacion: '',
         grafActual: 'evolucion',
+        sensQue: 'costTercerizado',
+        sensVal: 0,
         params: {
             piezasPorHora: '', horasTurno: '', maxHorasExtra: '', minOperarios: '', maxOperarios: '',
             operariosPrev: '', inventarioInicial: '', capacidadMax: '', costContratar: '', costDespedir: '',
@@ -739,10 +761,11 @@
         lista.innerHTML = r.violaciones.map(v => `<li>${v}</li>`).join('');
     }
 
-    // Costo total del año dado un plan completo (mismo modelo que la planilla).
-    function costoAnual(serie) {
-        const p = obtenerParametros();
-        let total = 0, stockPrev = p.inventarioInicial;
+    // Costo de cada mes dado un plan completo y (opcional) parámetros modificados.
+    function simularMensual(serie, ov) {
+        const p = Object.assign({}, obtenerParametros(), ov || {});
+        const totalMes = [];
+        let stockPrev = p.inventarioInicial;
         for (let i = 0; i < 12; i++) {
             const operarios = serie.operarios[i], turnos = serie.turnos[i];
             const opPrev = i === 0 ? p.operariosPrev : serie.operarios[i - 1];
@@ -751,48 +774,44 @@
             const horasNormales = operarios * p.horasTurno * turnos;
             const produccion = p.piezasPorHora * (horasNormales + serie.horasExtra[i]);
             const stock = Math.max(0, stockPrev + produccion + serie.tercerizacion[i] - serie.demanda[i]);
-            total += produccion * p.costUnidadProd + horasNormales * p.costHoraNormal + serie.horasExtra[i] * p.costHoraExtra
+            totalMes.push(produccion * p.costUnidadProd + horasNormales * p.costHoraNormal + serie.horasExtra[i] * p.costHoraExtra
                 + serie.tercerizacion[i] * p.costTercerizado + stock * p.costUnidadAlmac
-                + contratado * p.costContratar + despedido * p.costDespedir;
+                + contratado * p.costContratar + despedido * p.costDespedir);
             stockPrev = stock;
         }
-        return total;
+        return totalMes;
     }
 
-    // Estrategia "pura": dada la gente/turnos/horas extra, terceriza lo justo para cubrir la demanda.
-    function planCubierto(opArr, turArr, heArr) {
-        const p = obtenerParametros();
-        const demanda = state.series.demanda.map(num);
-        const tercerizacion = [];
-        let stockPrev = p.inventarioInicial;
-        for (let i = 0; i < 12; i++) {
-            const produccion = p.piezasPorHora * (opArr[i] * p.horasTurno * turArr[i] + heArr[i]);
-            const t = Math.max(0, demanda[i] - stockPrev - produccion);
-            tercerizacion.push(t);
-            stockPrev = Math.max(0, stockPrev + produccion + t - demanda[i]);
-        }
-        return { demanda, operarios: opArr, turnos: turArr, horasExtra: heArr, tercerizacion };
-    }
+    const SENS_OPCIONES = {
+        costTercerizado: { label: 'Costo de tercerizar' },
+        costHoraExtra: { label: 'Costo de hora extra' },
+        costHoraNormal: { label: 'Costo de hora normal (sueldos)' },
+        costUnidadProd: { label: 'Costo de producir' },
+        costUnidadAlmac: { label: 'Costo de guardar stock' }
+    };
 
-    // Toma el plan del alumno y completa con tercerización solo lo que le falte para cubrir la demanda.
-    function completarFaltante(serie) {
-        const p = obtenerParametros();
-        const tercerizacion = serie.tercerizacion.slice();
-        let stockPrev = p.inventarioInicial;
-        for (let i = 0; i < 12; i++) {
-            const produccion = p.piezasPorHora * (serie.operarios[i] * p.horasTurno * serie.turnos[i] + serie.horasExtra[i]);
-            const necesita = serie.demanda[i] - stockPrev - produccion - tercerizacion[i];
-            if (necesita > 0) tercerizacion[i] += necesita;
-            stockPrev = Math.max(0, stockPrev + produccion + tercerizacion[i] - serie.demanda[i]);
-        }
-        return Object.assign({}, serie, { tercerizacion });
+    function actualizarSensTxt() {
+        const el = document.getElementById('sensValorTxt');
+        if (!el) return;
+        const v = state.sensVal;
+        el.textContent = `${v > 0 ? '+' : ''}${v}%`;
     }
+    function configurarSlider() {
+        const s = document.getElementById('sensValor');
+        if (!s) return;
+        s.min = -50; s.max = 50; s.step = 5;
+        if (Number(state.sensVal) < -50 || Number(state.sensVal) > 50) state.sensVal = 0;
+        s.value = state.sensVal;
+        actualizarSensTxt();
+    }
+    function onSensQue(v) { state.sensQue = v; state.sensVal = 0; configurarSlider(); renderGraficoActual(); }
+    function onSensVal(v) { state.sensVal = Number(v); actualizarSensTxt(); renderGraficoActual(); }
 
     const GRAF_CAPTIONS = {
         evolucion: 'Mirá si tu producción (verde) le sigue el ritmo a la demanda (naranja). La línea punteada es el stock que arrastrás de un mes al otro.',
         operarios: 'Las barras son la gente que tenés cada mes; la línea es el costo de ese mes. ¿Los meses caros coinciden con más operarios, con horas extra o con tercerización?',
         composicion: 'En qué se te va la plata en todo el año. Lo más grande es donde más conviene buscar ahorros.',
-        sensibilidad: 'Para cubrir la MISMA demanda, ¿cuánto cuesta cada estrategia? Comparamos tu plan contra tres formas "puras" de llegar: apoyarte en más gente + stock, en horas extra, o en tercerizar. La barra más baja es la más barata — mirá qué palanca te conviene y por qué.'
+        sensibilidad: 'Tocá el control de arriba y mirá, mes a mes, cómo tu cambio afecta el costo.'
     };
 
     function actualizarGraficos(r) {
@@ -813,6 +832,8 @@
         if (!el) return;
         r = r || calcularPlanilla();
         const tipo = state.grafActual || 'evolucion';
+        const sc = document.getElementById('sensControls');
+        if (sc) sc.style.display = (tipo === 'sensibilidad') ? 'block' : 'none';
         const cap = document.getElementById('chartCaption');
         if (cap) cap.textContent = GRAF_CAPTIONS[tipo] || '';
 
@@ -860,41 +881,42 @@
                 } }
             });
         } else if (tipo === 'sensibilidad') {
+            const que = state.sensQue, val = state.sensVal, opt = SENS_OPCIONES[que];
             const p = obtenerParametros();
-            const maxOp = p.maxOperarios || 0;
-            const minOp = p.minOperarios || 0;
-            const heCap = maxOp * p.maxHorasExtra * 2;
-            const arr = v => Array(12).fill(v);
-            const serieTu = {
-                demanda: state.series.demanda.map(num),
-                operarios: state.series.operarios.map(num),
-                turnos: state.series.turnos.map(num),
-                horasExtra: state.series.horasExtra.map(num),
+            const serie = {
+                demanda: state.series.demanda.map(num), operarios: state.series.operarios.map(num),
+                turnos: state.series.turnos.map(num), horasExtra: state.series.horasExtra.map(num),
                 tercerizacion: state.series.tercerizacion.map(num)
             };
-            const escenarios = [
-                ['Tu plan', costoAnual(completarFaltante(serieTu)), true],
-                ['Toda la gente + stock', costoAnual(planCubierto(arr(maxOp), arr(2), arr(0))), false],
-                ['Gente + horas extra', costoAnual(planCubierto(arr(maxOp), arr(2), arr(heCap))), false],
-                ['Poca gente, tercerizar', costoAnual(planCubierto(arr(minOp), arr(1), arr(0))), false]
-            ];
+            const ov = {}; ov[que] = p[que] * (1 + val / 100);
+            const cBase = simularMensual(serie, {});
+            const cMod = simularMensual(serie, ov);
+            const totB = suma(cBase), totM = suma(cMod), delta = totM - totB;
+            const cambios = cMod.map((v, i) => ({ m: i, d: v - cBase[i] })).filter(x => Math.abs(x.d) > 0.5).sort((a, b) => Math.abs(b.d) - Math.abs(a.d));
+            const topMeses = cambios.slice(0, 3).map(x => MESES[x.m]);
+
             chartMain = new Chart(el.getContext('2d'), {
                 type: 'bar',
-                data: { labels: escenarios.map(e => e[0]), datasets: [{
-                    label: 'Costo del año para cubrir la demanda',
-                    data: escenarios.map(e => Math.round(e[1])),
-                    backgroundColor: escenarios.map(e => e[2] ? 'rgba(45,212,191,0.8)' : 'rgba(56,189,248,0.42)'),
-                    borderColor: escenarios.map(e => e[2] ? '#2dd4bf' : '#38bdf8'),
-                    borderWidth: 2, borderRadius: 6, maxBarThickness: 90
-                }]},
+                data: { labels: MESES_CORTOS, datasets: [
+                    { label: 'Tu plan', data: cBase.map(v => Math.round(v)), backgroundColor: 'rgba(45,212,191,0.45)', borderColor: '#2dd4bf', borderWidth: 1.5 },
+                    { label: 'Con tu cambio', data: cMod.map(v => Math.round(v)), backgroundColor: 'rgba(245,158,11,0.6)', borderColor: '#f59e0b', borderWidth: 1.5 }
+                ]},
                 options: { responsive: true, maintainAspectRatio: false, plugins: {
-                    legend: { display: false },
-                    tooltip: { callbacks: { label: c => formatMoney(c.parsed.y) } }
+                    legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' },
+                    tooltip: { callbacks: { label: c => `${c.dataset.label}: ${formatMoney(c.parsed.y)}` } }
                 }, scales: {
-                    y: { ticks: { color: CHART_THEME.label, callback: v => '$' + (v / 1e6).toLocaleString('es-AR', { maximumFractionDigits: 1 }) + 'M' }, grid: { color: CHART_THEME.grid }, title: { display: true, text: 'Costo del año', color: CHART_THEME.label } },
+                    y: { ticks: { color: CHART_THEME.label, callback: v => '$' + (v / 1e6).toLocaleString('es-AR', { maximumFractionDigits: 1 }) + 'M' }, grid: { color: CHART_THEME.grid }, title: { display: true, text: 'Costo del mes', color: CHART_THEME.label } },
                     x: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }
                 } }
             });
+
+            if (cap) {
+                const etq = `${val > 0 ? '+' : ''}${val}%`;
+                const dTxt = `${delta >= 0 ? '+' : '−'}${formatMoney(Math.abs(delta))}`;
+                if (val === 0) cap.textContent = `Elegí qué costo cambiar y mové el control: vas a ver, mes a mes, cómo afecta tu plan. (Ahora "${opt.label}" está sin cambios.)`;
+                else if (cambios.length === 0) cap.textContent = `Subiste/bajaste "${opt.label}" (${etq}), pero no cambia ningún mes: ese costo no aparece en tu plan actual.`;
+                else cap.textContent = `"${opt.label}" ${etq}: tu costo del año pasa de ${formatMoney(totB)} a ${formatMoney(totM)} (${dTxt}). Los meses que más cambian: ${topMeses.join(', ')}.`;
+            }
         }
     }
 
@@ -1099,6 +1121,8 @@
         sincronizarInputs();
         document.querySelectorAll('.workspace-sidebar .nav-link').forEach(b => b.addEventListener('click', function () { mostrarSeccion(this.dataset.section); }));
         document.querySelectorAll('#chartTabs .chart-tab').forEach(b => b.addEventListener('click', function () { mostrarGrafico(this.dataset.graf); }));
+        const sq = document.getElementById('sensQue'); if (sq) sq.value = state.sensQue;
+        configurarSlider();
         recalcularYRenderizar();
     });
 </script>
