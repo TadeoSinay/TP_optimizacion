@@ -224,6 +224,14 @@
     .grupo-input label { color: #9ec0dd; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
     .grupo-input input { width: 120px; }
 
+    .chart-panel { padding: 18px; }
+    .chart-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .chart-tab { min-width: unset; padding: 9px 14px; font-size: 0.72rem; text-transform: none; letter-spacing: 0.02em; font-weight: 700; border: 1px solid #2f4a68; background: #102338; color: #cbe2f8; }
+    .chart-tab:hover { transform: translateY(-1px); }
+    .chart-tab.active { background: linear-gradient(135deg, #0f766e, #0284c7); border-color: transparent; color: #ffffff; box-shadow: 0 8px 16px rgba(2,132,199,0.3); }
+    .chart-big-wrap { position: relative; height: 460px; }
+    .chart-caption { margin-top: 12px; color: #93b7d6; font-size: 0.86rem; line-height: 1.5; }
+
     @media (max-width: 1450px) { .sidebar { display: grid; grid-template-columns: repeat(3, minmax(240px, 1fr)); } }
     @media (max-width: 1200px) {
         .workspace-shell { grid-template-columns: 1fr; }
@@ -257,6 +265,8 @@
         .param-grid { grid-template-columns: 1fr; }
         .demanda-grid { grid-template-columns: 1fr 1fr; }
         button { width: 100%; }
+        .chart-tab { width: auto; }
+        .chart-big-wrap { height: 340px; }
     }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); } 70% { box-shadow: 0 0 0 11px rgba(220, 38, 38, 0); } 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); } }
@@ -407,7 +417,25 @@
 
         <!-- ======================= EVOLUCIÓN ======================= -->
         <section class="workspace-section" id="evolucion">
+            <div class="panel chart-panel">
+                <div class="chart-tabs" id="chartTabs">
+                    <button type="button" class="chart-tab active" data-graf="evolucion">📈 Demanda vs Producción</button>
+                    <button type="button" class="chart-tab" data-graf="operarios">👷 Operarios y costo</button>
+                    <button type="button" class="chart-tab" data-graf="composicion">🧩 En qué se va la plata</button>
+                    <button type="button" class="chart-tab" data-graf="sensibilidad">🧪 Sensibilidad</button>
+                </div>
+                <div class="chart-big-wrap"><canvas id="chartMain"></canvas></div>
+                <p class="chart-caption" id="chartCaption"></p>
+            </div>
+
             <div class="sidebar analysis-panels">
+                <div class="panel">
+                    <h3>🚨 ¿Tu plan cierra?</h3>
+                    <ul class="violations-list" id="violationsList">
+                        <li class="ok-item">Cargá tu planilla para ver los avisos acá.</li>
+                    </ul>
+                </div>
+
                 <div class="panel">
                     <h3>💰 En qué se te va la plata</h3>
                     <div class="cost-item"><span class="cost-label">Producción</span><span class="cost-value" id="costProduccion">$0</span></div>
@@ -433,42 +461,24 @@
                 </div>
 
                 <div class="panel">
-                    <h3>🚨 ¿Tu plan cierra?</h3>
-                    <ul class="violations-list" id="violationsList">
-                        <li class="ok-item">Cargá tu planilla para ver los avisos acá.</li>
-                    </ul>
-                </div>
-
-                <div class="panel">
-                    <h3>🧪 Experimentá (sensibilidad)</h3>
+                    <h3>🧪 Experimentá</h3>
                     <div class="exp-cards" style="grid-template-columns: 1fr;">
                         <div class="exp-card">
                             <h4>👷 ¿Gente fija o gente al pico?</h4>
-                            <div class="proba"><strong>Probá:</strong> subí operarios en jun–ago y desvinculá después vs. mantener la dotación pareja todo el año.</div>
-                            <div class="observa">Mirá si te conviene pagar <b>contratar/desvincular</b> o cargar el pico con <b>horas extra</b>.</div>
+                            <div class="proba"><strong>Probá:</strong> subí operarios en jun–ago y desvinculá después vs. mantener la dotación pareja.</div>
+                            <div class="observa">Mirá en <b>Sensibilidad</b> si pesan más los sueldos, las horas extra o las contrataciones.</div>
                         </div>
                         <div class="exp-card">
                             <h4>📦 ¿Producir antes y guardar?</h4>
                             <div class="proba"><strong>Probá:</strong> producí de más en los meses flojos y guardá stock para el pico.</div>
-                            <div class="observa">Compará el costo de <b>guardar ($7/u)</b> contra el de <b>horas extra o tercerizar</b> en el pico.</div>
+                            <div class="observa">Compará el costo de <b>guardar ($7/u)</b> contra <b>horas extra o tercerizar</b>.</div>
                         </div>
                         <div class="exp-card">
                             <h4>🚚 ¿Cuánto tercerizar?</h4>
-                            <div class="proba"><strong>Probá:</strong> cubrí parte de jul–ago comprando afuera en vez de forzar tu fábrica.</div>
-                            <div class="observa">Tercerizar es lo más caro por unidad (<b>$100</b>), pero a veces evita picos de costo. ¿Dónde está el equilibrio?</div>
+                            <div class="proba"><strong>Probá:</strong> cubrí parte de jul–ago comprando afuera.</div>
+                            <div class="observa">Es lo más caro por unidad (<b>$100</b>), pero a veces evita picos. ¿Dónde está el equilibrio?</div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="charts-section">
-                <div class="chart-container">
-                    <h3>Cómo evoluciona tu plan (demanda · producción · stock)</h3>
-                    <div class="chart-wrapper"><canvas id="chartProduccion"></canvas></div>
-                </div>
-                <div class="chart-container">
-                    <h3>Operarios y costo, mes a mes</h3>
-                    <div class="chart-wrapper"><canvas id="chartOperarios"></canvas></div>
                 </div>
             </div>
         </section>
@@ -508,6 +518,7 @@
     const state = {
         grupo: '',
         justificacion: '',
+        grafActual: 'evolucion',
         params: {
             piezasPorHora: '', horasTurno: '', maxHorasExtra: '', minOperarios: '', maxOperarios: '',
             operariosPrev: '', inventarioInicial: '', capacidadMax: '', costContratar: '', costDespedir: '',
@@ -519,7 +530,7 @@
         }
     };
 
-    let chartProduccion, chartOperarios;
+    let chartMain;
 
     const CHART_THEME = {
         demanda: '#d9480f', produccion: '#14b8a6', stock: '#38bdf8', operarios: '#22d3ee',
@@ -728,45 +739,102 @@
         lista.innerHTML = r.violaciones.map(v => `<li>${v}</li>`).join('');
     }
 
+    const GRAF_CAPTIONS = {
+        evolucion: 'Mirá si tu producción (verde) le sigue el ritmo a la demanda (naranja). La línea punteada es el stock que arrastrás de un mes al otro.',
+        operarios: 'Las barras son la gente que tenés cada mes; la línea es el costo de ese mes. ¿Los meses caros coinciden con más operarios, con horas extra o con tercerización?',
+        composicion: 'En qué se te va la plata en todo el año. Lo más grande es donde más conviene buscar ahorros.',
+        sensibilidad: 'Si cada costo unitario cambiara un ±20% (manteniendo tu plan actual), esto es cuánto se movería tu costo total del año. Cuanto más larga la barra, más depende tu resultado de ese costo.'
+    };
+
     function actualizarGraficos(r) {
         if (!document.getElementById('evolucion')?.classList.contains('active')) return;
         if (typeof Chart === 'undefined') return;
-        const elP = document.getElementById('chartProduccion');
-        const elO = document.getElementById('chartOperarios');
-        if (!elP || !elO) return;
+        renderGraficoActual(r);
+    }
 
-        const demanda = state.series.demanda.map(num);
-        const operarios = state.series.operarios.map(num);
-        const costos = r.totalMes.map(v => v / 1000);
+    function mostrarGrafico(tipo) {
+        state.grafActual = tipo;
+        document.querySelectorAll('#chartTabs .chart-tab').forEach(b => b.classList.toggle('active', b.dataset.graf === tipo));
+        renderGraficoActual();
+    }
 
-        if (chartProduccion) chartProduccion.destroy();
-        chartProduccion = new Chart(elP.getContext('2d'), {
-            type: 'line',
-            data: { labels: MESES_CORTOS, datasets: [
-                { label: 'Demanda', data: demanda, borderColor: CHART_THEME.demanda, backgroundColor: 'rgba(217,72,15,0.12)', borderWidth: 3, tension: 0.35, pointRadius: 4, pointBackgroundColor: CHART_THEME.demanda, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 },
-                { label: 'Producción', data: r.produccion, borderColor: CHART_THEME.produccion, backgroundColor: 'rgba(20,184,166,0.13)', borderWidth: 3, tension: 0.35, pointRadius: 4, pointBackgroundColor: CHART_THEME.produccion, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 },
-                { label: 'Stock', data: r.stock, borderColor: CHART_THEME.stock, backgroundColor: 'rgba(56,189,248,0.1)', borderWidth: 2, tension: 0.35, pointRadius: 3, pointBackgroundColor: CHART_THEME.stock, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2, borderDash: [5, 5] }
-            ]},
-            options: { responsive: true, maintainAspectRatio: false,
-                plugins: { legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' } },
-                scales: { y: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }, x: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } } } }
-        });
+    function renderGraficoActual(r) {
+        if (typeof Chart === 'undefined') return;
+        const el = document.getElementById('chartMain');
+        if (!el) return;
+        r = r || calcularPlanilla();
+        const tipo = state.grafActual || 'evolucion';
+        const cap = document.getElementById('chartCaption');
+        if (cap) cap.textContent = GRAF_CAPTIONS[tipo] || '';
 
-        if (chartOperarios) chartOperarios.destroy();
-        chartOperarios = new Chart(elO.getContext('2d'), {
-            type: 'bar',
-            data: { labels: MESES_CORTOS, datasets: [
-                { label: 'Operarios', data: operarios, borderColor: CHART_THEME.operarios, backgroundColor: 'rgba(34,211,238,0.42)', borderWidth: 2, yAxisID: 'y', order: 2 },
-                { label: 'Costo mensual ($k)', data: costos, borderColor: CHART_THEME.costo, backgroundColor: 'rgba(245,158,11,0.25)', borderWidth: 2, type: 'line', tension: 0.35, yAxisID: 'y1', order: 1, pointRadius: 4, pointBackgroundColor: CHART_THEME.costo, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 }
-            ]},
-            options: { responsive: true, maintainAspectRatio: false,
-                plugins: { legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' } },
-                scales: {
+        const baseLegend = { legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' } };
+        const ejeXY = { y: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }, x: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } } };
+
+        if (chartMain) chartMain.destroy();
+
+        if (tipo === 'evolucion') {
+            const demanda = state.series.demanda.map(num);
+            chartMain = new Chart(el.getContext('2d'), {
+                type: 'line',
+                data: { labels: MESES_CORTOS, datasets: [
+                    { label: 'Demanda', data: demanda, borderColor: CHART_THEME.demanda, backgroundColor: 'rgba(217,72,15,0.12)', borderWidth: 3, tension: 0.35, pointRadius: 4, pointBackgroundColor: CHART_THEME.demanda, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 },
+                    { label: 'Producción', data: r.produccion, borderColor: CHART_THEME.produccion, backgroundColor: 'rgba(20,184,166,0.13)', borderWidth: 3, tension: 0.35, pointRadius: 4, pointBackgroundColor: CHART_THEME.produccion, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 },
+                    { label: 'Stock', data: r.stock, borderColor: CHART_THEME.stock, backgroundColor: 'rgba(56,189,248,0.1)', borderWidth: 2, tension: 0.35, pointRadius: 3, pointBackgroundColor: CHART_THEME.stock, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2, borderDash: [5, 5] }
+                ]},
+                options: { responsive: true, maintainAspectRatio: false, plugins: baseLegend, scales: ejeXY }
+            });
+        } else if (tipo === 'operarios') {
+            const operarios = state.series.operarios.map(num);
+            const costos = r.totalMes.map(v => v / 1000);
+            chartMain = new Chart(el.getContext('2d'), {
+                type: 'bar',
+                data: { labels: MESES_CORTOS, datasets: [
+                    { label: 'Operarios', data: operarios, backgroundColor: 'rgba(34,211,238,0.42)', borderColor: CHART_THEME.operarios, borderWidth: 2, yAxisID: 'y', order: 2 },
+                    { label: 'Costo mensual ($k)', data: costos, borderColor: CHART_THEME.costo, backgroundColor: 'rgba(245,158,11,0.25)', type: 'line', tension: 0.35, borderWidth: 2, yAxisID: 'y1', order: 1, pointRadius: 4, pointBackgroundColor: CHART_THEME.costo, pointBorderColor: CHART_THEME.pointBorder, pointBorderWidth: 2 }
+                ]},
+                options: { responsive: true, maintainAspectRatio: false, plugins: baseLegend, scales: {
                     y: { type: 'linear', position: 'left', ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid }, title: { display: true, text: 'Operarios', color: CHART_THEME.label } },
                     y1: { type: 'linear', position: 'right', ticks: { color: CHART_THEME.label }, grid: { drawOnChartArea: false }, title: { display: true, text: 'Costo ($k)', color: CHART_THEME.label } },
                     x: { ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }
                 } }
-        });
+            });
+        } else if (tipo === 'composicion') {
+            const labels = ['Producción', 'Sueldos', 'Horas extra', 'Tercerización', 'Guardar stock', 'Contrataciones', 'Desvinculaciones'];
+            const vals = [suma(r.costoProduccion), suma(r.costoMODNormal), suma(r.costoMODExtra), suma(r.costoTercerizado), suma(r.costoStock), suma(r.costoContratacion), suma(r.costoDesvinculacion)];
+            const colors = ['#0ea5e9', '#2dd4bf', '#f59e0b', '#fb7185', '#38bdf8', '#3b82f6', '#a78bfa'];
+            chartMain = new Chart(el.getContext('2d'), {
+                type: 'doughnut',
+                data: { labels, datasets: [{ data: vals, backgroundColor: colors, borderColor: '#0b1526', borderWidth: 2 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: {
+                    legend: { position: 'right', labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } } },
+                    tooltip: { callbacks: { label: c => `${c.label}: ${formatMoney(c.parsed)}` } }
+                } }
+            });
+        } else if (tipo === 'sensibilidad') {
+            const drivers = [
+                ['Producción', suma(r.costoProduccion)],
+                ['Sueldos', suma(r.costoMODNormal)],
+                ['Horas extra', suma(r.costoMODExtra)],
+                ['Tercerización', suma(r.costoTercerizado)],
+                ['Guardar stock', suma(r.costoStock)],
+                ['Contrataciones', suma(r.costoContratacion)],
+                ['Desvinculaciones', suma(r.costoDesvinculacion)]
+            ].map(d => [d[0], d[1] * 0.2]).sort((a, b) => b[1] - a[1]);
+            chartMain = new Chart(el.getContext('2d'), {
+                type: 'bar',
+                data: { labels: drivers.map(d => d[0]), datasets: [
+                    { label: 'Si baja 20%', data: drivers.map(d => -d[1]), backgroundColor: 'rgba(34,197,94,0.55)', borderColor: '#22c55e', borderWidth: 1, stack: 's' },
+                    { label: 'Si sube 20%', data: drivers.map(d => d[1]), backgroundColor: 'rgba(239,68,68,0.55)', borderColor: '#ef4444', borderWidth: 1, stack: 's' }
+                ]},
+                options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: {
+                    legend: { labels: { color: CHART_THEME.label, font: { size: 12, family: 'Outfit' } }, position: 'top' },
+                    tooltip: { callbacks: { label: c => `${c.dataset.label}: ${formatMoney(Math.abs(c.parsed.x))}` } }
+                }, scales: {
+                    x: { stacked: true, ticks: { color: CHART_THEME.label, callback: v => '$' + Math.abs(v).toLocaleString('es-AR') }, grid: { color: CHART_THEME.grid } },
+                    y: { stacked: true, ticks: { color: CHART_THEME.label }, grid: { color: CHART_THEME.grid } }
+                } }
+            });
+        }
     }
 
     function mostrarSeccion(id) {
@@ -955,6 +1023,7 @@
         } catch (e) {}
         sincronizarInputs();
         document.querySelectorAll('.workspace-sidebar .nav-link').forEach(b => b.addEventListener('click', function () { mostrarSeccion(this.dataset.section); }));
+        document.querySelectorAll('#chartTabs .chart-tab').forEach(b => b.addEventListener('click', function () { mostrarGrafico(this.dataset.graf); }));
         recalcularYRenderizar();
     });
 </script>
