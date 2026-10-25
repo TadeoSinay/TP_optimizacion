@@ -1,6 +1,6 @@
 Puesto,Huella de lo que va adentro (m²)
 MANUALES,
-4. Corte de disco y embutido (cúpula y fondo) · 1 máq. · 2 turnos,10.93
+4. Corte de disco y embutido (cúpula y fondo) · 1 máq. · 2 turnos,12.02
 5. Preparación de cuello · 2 máq. · 2 turnos,0
 7. Soldadura del cuello a la cúpula · 1 máq. · 2 turnos,4.03
 8. Cilindrado · 1 máq. · 1 turno,3.25
@@ -20,7 +20,7 @@ MANUALES,
 24. Control de calidad — Ensayo de pérdidas · 1 máq. · 1 turno,3.43
 25. Etiquetado · 1 máq. · 1 turno,3.36
 26. Embalaje y paletizado · 2 máq. · 2 turnos,8.81
-Total Manuales,113.62
+Total Manuales,114.71
 ,
 CARROS,
 3. Cilindrado · 1 máq. · 1 turno,9.26
@@ -65,11 +65,11 @@ PULMONES DE ENTRADA Y SALIDA DE RECARGAS,24
 Total Recargas,61.66
 ,
 COMPARTIDOS,
-CORTE — guillotina 1 (franjas) · Manuales 2 y Carros 2,6.28
-CORTE — guillotina 2 (piezas) · Manuales 3 y Carros 2,10.44
+CORTE — guillotina 1 (franjas) · Manuales 2 y Carros 2,6.38
+CORTE — guillotina 2 (piezas) · Manuales 3 y Carros 2,9.18
 MARCADO DEL CUERPO · Manuales 6 y Carros 2.1,4.04
 PRUEBA HIDRÁULICA · Manuales 15 y Carros 9,3.87
 SECADO · Manuales 16 y Carros 10,5.04
-Total Compartidos,29.66
+Total Compartidos,28.51
 ,
-TOTAL SIN ALMACENES,246.68
+TOTAL SIN ALMACENES,246.62
