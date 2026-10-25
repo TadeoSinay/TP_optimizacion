@@ -1,69 +1,4 @@
 Puesto,Huella de lo que va adentro (m²)
-MANUALES,
-4. Corte de disco y embutido (cúpula y fondo) · 1 máq. · 2 turnos,12.02
-5. Preparación de cuello · 2 máq. · 2 turnos,0
-7. Soldadura del cuello a la cúpula · 1 máq. · 2 turnos,4.03
-8. Cilindrado · 1 máq. · 1 turno,3.25
-"9. Soldadura longitudinal — 2,5 a 10 kg · 1 máq. · 2 turnos",7.27
-10. Soldadura longitudinal TIG — 1 kg · 1 máq. · 2 turnos,1.32
-11. Encastre de fondo · 1 máq. · 2 turnos,6.29
-12. Bordoneado · 1 máq. · 2 turnos,1.75
-13. Soldadura circunferencial de cúpula y fondo · 2 máq. · 2 turnos,10.31
-14. Control de calidad — Espesor · 1 máq. · 1 turno,0
-17. Granallado · 1 máq. · 2 turnos,6.76
-18. Detección de defectos · 1 máq. · 2 turnos,0
-19. Corrección de defectos · 1 máq. · 1 turno,0
-20. Pintura en polvo + horno · 1 máq. · 2 turnos,35.54
-21. Carga de polvo · 1 máq. · 1 turno,4.11
-22. Ensamblaje · 1 máq. · 2 turnos,3.4
-23. Presurización · 1 máq. · 1 turno,3.07
-24. Control de calidad — Ensayo de pérdidas · 1 máq. · 1 turno,3.43
-25. Etiquetado · 1 máq. · 1 turno,3.36
-26. Embalaje y paletizado · 2 máq. · 2 turnos,8.81
-Total Manuales,114.71
-,
-CARROS,
-3. Cilindrado · 1 máq. · 1 turno,9.26
-4. Punteo del cuerpo · 1 máq. · 1 turno,0.58
-5. Soldadura longitudinal · 1 máq. · 1 turno,3
-6. Soldadura de cupla en la cúpula · 1 máq. · 1 turno,0.47
-7. Armado y soldadura circunferencial · 1 máq. · 1 turno,2.42
-8. Soldadura de accesorios · 1 máq. · 1 turno,0.4
-8.1. Fabricación de accesorios · 1 máq. · 1 turno,0
-11. Pulmón de despacho y carga a pintura · 1 máq. · 1 turno,12.65
-12. Recepción de pintados y cambio de juego · 1 máq. · 1 turno,12.65
-13 B. Carga de polvo y presurización · 1 máq. · 1 turno,0.32
-"13 A-C / 15. Montaje, manga, precinto y etiquetado · 1 máq. · 1 turno",0
-"14-17. Calidad: pérdidas, inspección final, liberación y ensayos de lote · 1 máq. · 1 turno",0
-Total Carros,41.74
-,
-RECARGAS,
-R1. Recepción y registro · 2 máq. · 1 turno,2.4
-R2. Inspección visual · 2 máq. · 2 turnos,1.2
-R3. Descarga ABC — ruta recuperable · 1 máq. · 2 turnos,1.52
-"R4. Descarga a descarte (ABC, BC y Clase D) · 1 máq. · 1 turno",1.2
-R5. Descarga y carga de agua / AFFF / sales K · 1 máq. · 1 turno,1.55
-R6. Recuperación y carga de CO₂ · 1 máq. · 1 turno,1.56
-R7. Recuperación y carga de halogenado · 1 máq. · 1 turno,1.2
-R8. Desarme y limpieza — recinto · 2 máq. · 2 turnos,1.2
-R9. Desarme e inspección interior — zona general · 1 máq. · 1 turno,1.2
-R10. Laboratorio — Puffer y mufla · 1 máq. · 1 turno,1.2
-R11. Prueba hidráulica · 1 máq. · 2 turnos,2.31
-R12. Secado · 1 máq. · 2 turnos,1.66
-R13. Inspección interior con videoscopio · 1 máq. · 1 turno,1.2
-R14. Pintura · 2 máq. · 2 turnos,1.2
-"R15. Carga de polvo ABC, BC y Clase D · 2 máq. · 2 turnos",1.83
-R16. Ensamblaje y marbete — recinto · 2 máq. · 2 turnos,1.73
-R17. Presurización — recinto · 1 máq. · 2 turnos,1.49
-R18. Ensamblaje y presurización — zona general · 1 máq. · 1 turno,1.2
-R19. Control de peso (CO₂ y halogenados sin recarga) · 1 máq. · 1 turno,1.2
-R20. Ensayo de pérdidas · 2 máq. · 1 turno,6
-"R21. Precinto, etiqueta y despacho · 2 máq. · 2 turnos",1.2
-R22. Inutilización y disposición final · 1 máq. · 1 turno,1.2
-R23. PH de mangueras (CO₂ y rodantes) · 1 máq. · 1 turno,1.2
-PULMONES DE ENTRADA Y SALIDA DE RECARGAS,24
-Total Recargas,61.66
-,
 COMPARTIDOS,
 CORTE — guillotina 1 (franjas) · Manuales 2 y Carros 2,6.38
 CORTE — guillotina 2 (piezas) · Manuales 3 y Carros 2,9.18
@@ -72,4 +7,69 @@ PRUEBA HIDRÁULICA · Manuales 15 y Carros 9,3.87
 SECADO · Manuales 16 y Carros 10,5.04
 Total Compartidos,28.51
 ,
-TOTAL SIN ALMACENES,246.62
+MANUALES,
+4. Corte de disco y embutido (cúpula y fondo),12.02
+5. Preparación de cuello,0
+7. Soldadura del cuello a la cúpula,4.03
+8. Cilindrado,3.25
+"9. Soldadura longitudinal — 2,5 a 10 kg",7.27
+10. Soldadura longitudinal TIG — 1 kg,0
+11. Encastre de fondo,5.23
+12. Bordoneado,1.75
+13. Soldadura circunferencial de cúpula y fondo,10.31
+14. Control de calidad — Espesor,0
+17. Granallado,6.76
+18. Detección de defectos,0
+19. Corrección de defectos,0
+20. Pintura en polvo + horno,35.54
+21. Carga de polvo,4.11
+22. Ensamblaje,3.4
+23. Presurización,3.07
+24. Control de calidad — Ensayo de pérdidas,3.43
+25. Etiquetado,3.07
+26. Embalaje y paletizado,5.94
+Total Manuales,109.17
+,
+CARROS,
+3. Cilindrado,9.26
+4. Punteo del cuerpo,0.58
+5. Soldadura longitudinal,3
+6. Soldadura de cupla en la cúpula,0.47
+7. Armado y soldadura circunferencial,2.42
+8. Soldadura de accesorios,0.4
+8.1. Fabricación de accesorios,0
+11. Pulmón de despacho y carga a pintura,12.65
+12. Recepción de pintados y cambio de juego,12.65
+13 B. Carga de polvo y presurización,0.32
+"13 A-C / 15. Montaje, manga, precinto y etiquetado",0
+"14-17. Calidad: pérdidas, inspección final, liberación y ensayos de lote",0
+Total Carros,41.74
+,
+RECARGAS,
+R1. Recepción y registro,2.4
+R2. Inspección visual,1.2
+R3. Descarga ABC — ruta recuperable,1.52
+"R4. Descarga a descarte (ABC, BC y Clase D)",1.2
+R5. Descarga y carga de agua / AFFF / sales K,1.55
+R6. Recuperación y carga de CO₂,1.56
+R7. Recuperación y carga de halogenado,1.2
+R8. Desarme y limpieza — recinto,1.2
+R9. Desarme e inspección interior — zona general,1.2
+R10. Laboratorio — Puffer y mufla,1.2
+R11. Prueba hidráulica,2.31
+R12. Secado,1.66
+R13. Inspección interior con videoscopio,1.2
+R14. Pintura,1.2
+"R15. Carga de polvo ABC, BC y Clase D",1.83
+R16. Ensamblaje y marbete — recinto,1.73
+R17. Presurización — recinto,1.49
+R18. Ensamblaje y presurización — zona general,1.2
+R19. Control de peso (CO₂ y halogenados sin recarga),1.2
+R20. Ensayo de pérdidas,6
+"R21. Precinto, etiqueta y despacho",1.2
+R22. Inutilización y disposición final,1.2
+R23. PH de mangueras (CO₂ y rodantes),1.2
+PULMONES DE ENTRADA Y SALIDA DE RECARGAS,24
+Total Recargas,61.66
+,
+TOTAL SIN ALMACENES,241.08

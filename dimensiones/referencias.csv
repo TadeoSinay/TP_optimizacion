@@ -1,0 +1,315 @@
+ID,Dato,Valor,Unidad,Documento,Dónde,Texto en la fuente,Link
+R001,Estante: frente del módulo,1200,mm,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda B7",Frente del módulo → 1200.0,abrir
+R002,Estante: fondo del módulo,600,mm,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda B8",Fondo del módulo → 600.0,abrir
+R003,Estante: alto del bastidor,2000,mm,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda B9",Alto del bastidor → 2000.0,abrir
+R004,Carro porta-bandejas: largo,1300,mm,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda D42","m² del lugar del carro en el origen → Carro de 1,3 × 0,7 m con lugar para maniobrar",abrir
+R005,Carro porta-bandejas: ancho,700,mm,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda D42","m² del lugar del carro en el origen → Carro de 1,3 × 0,7 m con lugar para maniobrar",abrir
+R006,Carro de 12 cajones: medida,1,—,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda D38","Carro de 12 cajones: 4 niveles de 3 cajones de 600 × 400 … si no, se pide igual al porta-bandejas con 4 niveles.",abrir
+R007,Rack: frente del vano,2.7,m,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda B56",Frente del vano → 2.7,abrir
+R008,Rack: fondo,1.2,m,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda B57",Fondo del rack → 1.2,abrir
+R009,Rack: vanos,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Equipos, celda B12","Rack de pallets: vanos de 2,7 m × 3 niveles → 2",abrir
+R010,Factor de circulación de lo que espera en el piso,1.4,×,PULMONES-FLAMA2035.xlsx (Fran),"hoja Parametros, celda B46",Factor de circulación para lo que espera en el piso → 1.4,abrir
+R011,Jaula de recargas: largo,1200,mm,Balanceo-FLAMA2035.xlsx (Fran),"hoja Parametros, celda A52","Matafuegos por jaula paletizable (1,2 × 1,0 m) → 28",abrir
+R012,Jaula de recargas: ancho,1000,mm,Balanceo-FLAMA2035.xlsx (Fran),"hoja Parametros, celda A52","Matafuegos por jaula paletizable (1,2 × 1,0 m) → 28",abrir
+R013,Carros por tramo con tandas (propuesta),1,u,Pedido del grupo en la revisión del Excel,pedido en el chat de revisión,«no tiene sentido tener dos carretillas cuando se procesan por tandas»,
+R014,Guillotina 1: largo,3395,mm,Internet · aviso ERMAK HGS 2600 X 6 (Exapro),datos técnicos del aviso,"3395 × 1880 × 1550 mm, 5.000 kg. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R015,Guillotina 1: ancho,1880,mm,Internet · aviso ERMAK HGS 2600 X 6 (Exapro),datos técnicos del aviso,"3395 × 1880 × 1550 mm, 5.000 kg. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R016,Guillotina 1: alto,1550,mm,Internet · aviso ERMAK HGS 2600 X 6 (Exapro),datos técnicos del aviso,"3395 × 1880 × 1550 mm, 5.000 kg. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R017,Guillotina 2: largo,3100,mm,Internet · ficha QC12Y-6X2500 (goldsupplier),tabla de especificaciones,Dimension(L*W*H) 3100x1620x1600mm,abrir
+R018,Guillotina 2: ancho,1620,mm,Internet · ficha QC12Y-6X2500 (goldsupplier),tabla de especificaciones,Dimension(L*W*H) 3100x1620x1600mm,abrir
+R019,Guillotina 2: alto,1600,mm,Internet · ficha QC12Y-6X2500 (goldsupplier),tabla de especificaciones,Dimension(L*W*H) 3100x1620x1600mm,abrir
+R020,Prensa Sangiacomo: largo,1600,mm,Internet · aviso Sangiacomo T130 R CE (Exapro),datos técnicos del aviso,Length x width x height 1600.0 × 1300.0 × 3320.0. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link,abrir
+R021,Prensa Sangiacomo: ancho,1300,mm,Internet · aviso Sangiacomo T130 R CE (Exapro),datos técnicos del aviso,Length x width x height 1600.0 × 1300.0 × 3320.0. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link,abrir
+R022,Prensa Sangiacomo: alto,3320,mm,Internet · aviso Sangiacomo T130 R CE (Exapro),datos técnicos del aviso,Length x width x height 1600.0 × 1300.0 × 3320.0. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link,abrir
+R023,Mesa elevadora: largo,2500,mm,Internet · mesas de tijera de 3.000 kg (Workplace Products),tabla de mesas de 3.000 kg,"2500 × 1300 mm, 350 mm cerrada, 1930 mm de elevación. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R024,Mesa elevadora: ancho,1300,mm,Internet · mesas de tijera de 3.000 kg (Workplace Products),tabla de mesas de 3.000 kg,"2500 × 1300 mm, 350 mm cerrada, 1930 mm de elevación. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R025,Mesa elevadora: alto,350,mm,Internet · mesas de tijera de 3.000 kg (Workplace Products),tabla de mesas de 3.000 kg,"2500 × 1300 mm, 350 mm cerrada, 1930 mm de elevación. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R026,Desbobinador TC-400: largo,1200,mm,Cotización CENA · Devobinador CENA SRL 2026.pdf,"pág. 1, tabla del desbobinador, fila Dimensiones",TC-200 / TC-300 / TC-400 … 1000×800×1100 / 1100×1000×1300 / 1200×1000×1300,abrir
+R027,Desbobinador TC-400: ancho,1000,mm,Cotización CENA · Devobinador CENA SRL 2026.pdf,"pág. 1, tabla del desbobinador, fila Dimensiones",TC-200 / TC-300 / TC-400 … 1000×800×1100 / 1100×1000×1300 / 1200×1000×1300,abrir
+R028,Desbobinador TC-400: alto,1300,mm,Cotización CENA · Devobinador CENA SRL 2026.pdf,"pág. 1, tabla del desbobinador, fila Dimensiones",TC-200 / TC-300 / TC-400 … 1000×800×1100 / 1100×1000×1300 / 1200×1000×1300,abrir
+R029,Enderezadora SC-300: largo,800,mm,Cotización CENA · Devobinador CENA SRL 2026.pdf,"pág. 2, tabla SC, fila Dimensiones",SC-300 … 800×550×1300,abrir
+R030,Enderezadora SC-300: ancho,550,mm,Cotización CENA · Devobinador CENA SRL 2026.pdf,"pág. 2, tabla SC, fila Dimensiones",SC-300 … 800×550×1300,abrir
+R031,Enderezadora SC-300: alto,1300,mm,Cotización CENA · Devobinador CENA SRL 2026.pdf,"pág. 2, tabla SC, fila Dimensiones",SC-300 … 800×550×1300,abrir
+R032,Soldadora FS-HPM: largo,1400,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-HPM, Dimensions",1200mm×1400mmX1580mm (L×W×H),abrir
+R033,Soldadora FS-HPM: ancho,1200,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-HPM, Dimensions",1200mm×1400mmX1580mm (L×W×H),abrir
+R034,Soldadora FS-HPM: alto,1580,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-HPM, Dimensions",1200mm×1400mmX1580mm (L×W×H),abrir
+R035,Roladora FS-PM01: largo,1800,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-PM01, Dimensions",机械尺寸/Dimensions 1800 1300 1250,abrir
+R036,Roladora FS-PM01: ancho,1300,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-PM01, Dimensions",机械尺寸/Dimensions 1800 1300 1250,abrir
+R037,Roladora FS-PM01: alto,1250,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-PM01, Dimensions",机械尺寸/Dimensions 1800 1300 1250,abrir
+R038,Soldadora ZF-500: largo,1320,mm,Internet · ficha Z F 500 (china.org.ru),tabla de la ficha,"Z F 500 … 1320, 1000, 1800, 390 (columnas sin rótulo)",abrir
+R039,Soldadora ZF-500: ancho,1000,mm,Internet · ficha Z F 500 (china.org.ru),tabla de la ficha,"Z F 500 … 1320, 1000, 1800, 390 (columnas sin rótulo)",abrir
+R040,Soldadora ZF-500: alto,1800,mm,Internet · ficha Z F 500 (china.org.ru),tabla de la ficha,"Z F 500 … 1320, 1000, 1800, 390 (columnas sin rótulo)",abrir
+R041,Bordoneadora AKM 250: largo,1200,mm,Internet · aviso AK-BEND AKM 250 motor (resale.info),datos del aviso,"L-W-H 1,2 x 0,7 x 1,2, 295 kg. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R042,Bordoneadora AKM 250: ancho,700,mm,Internet · aviso AK-BEND AKM 250 motor (resale.info),datos del aviso,"L-W-H 1,2 x 0,7 x 1,2, 295 kg. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R043,Bordoneadora AKM 250: alto,1200,mm,Internet · aviso AK-BEND AKM 250 motor (resale.info),datos del aviso,"L-W-H 1,2 x 0,7 x 1,2, 295 kg. Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link",abrir
+R044,Granalladora G-100: largo,4500,mm,Cotización AirBlast · Memoria Descriptiva Shoteadora G-100,Características técnicas,medidas en planta: 4500 x 1300 x 2200 mm. (long. x ancho x altura),abrir
+R045,Granalladora G-100: ancho,1300,mm,Cotización AirBlast · Memoria Descriptiva Shoteadora G-100,Características técnicas,medidas en planta: 4500 x 1300 x 2200 mm. (long. x ancho x altura),abrir
+R046,Granalladora G-100: alto,2200,mm,Cotización AirBlast · Memoria Descriptiva Shoteadora G-100,Características técnicas,medidas en planta: 4500 x 1300 x 2200 mm. (long. x ancho x altura),abrir
+R047,Horno: largo,6,m,Cotización de pintura (proforma 0001-001556),renglón 4,"2 Estructura de horno 6x2,44x2,44m",abrir
+R048,Horno: ancho,2.44,m,Cotización de pintura (proforma 0001-001556),renglón 4,"2 Estructura de horno 6x2,44x2,44m",abrir
+R049,Horno: alto,2.44,m,Cotización de pintura (proforma 0001-001556),renglón 4,"2 Estructura de horno 6x2,44x2,44m",abrir
+R050,Hornos cotizados,2,u,Cotización de pintura (proforma 0001-001556),renglón 4,"2 Estructura de horno 6x2,44x2,44m",abrir
+R051,Cabina de pintura: largo,2,m,Cotización de pintura (proforma 0001-001556),renglón 7,"1 Cabina de pintura 2x1,5x2,44m",abrir
+R052,Cabina de pintura: ancho,1.5,m,Cotización de pintura (proforma 0001-001556),renglón 7,"1 Cabina de pintura 2x1,5x2,44m",abrir
+R053,Cabina de pintura: alto,2.44,m,Cotización de pintura (proforma 0001-001556),renglón 7,"1 Cabina de pintura 2x1,5x2,44m",abrir
+R054,Cabinas cotizadas,1,u,Cotización de pintura (proforma 0001-001556),renglón 7,"1 Cabina de pintura 2x1,5x2,44m",abrir
+R055,Cargadora M-000121: largo,620,mm,Cotización Yukon · Ficha Maq. carga M-000121,Características técnicas,Altura 1200 mm · Profundidad 620 mm · Ancho 510 mm,abrir
+R056,Cargadora M-000121: ancho,510,mm,Cotización Yukon · Ficha Maq. carga M-000121,Características técnicas,Altura 1200 mm · Profundidad 620 mm · Ancho 510 mm,abrir
+R057,Cargadora M-000121: alto,1200,mm,Cotización Yukon · Ficha Maq. carga M-000121,Características técnicas,Altura 1200 mm · Profundidad 620 mm · Ancho 510 mm,abrir
+R058,Roscadora FS-NGNP: largo,650,mm,Catálogo Firesafer · Filling Line Series 2026.pdf,ficha FS-NGNP,Machine Dimension 650*500*1450mm,abrir
+R059,Roscadora FS-NGNP: ancho,500,mm,Catálogo Firesafer · Filling Line Series 2026.pdf,ficha FS-NGNP,Machine Dimension 650*500*1450mm,abrir
+R060,Roscadora FS-NGNP: alto,1450,mm,Catálogo Firesafer · Filling Line Series 2026.pdf,ficha FS-NGNP,Machine Dimension 650*500*1450mm,abrir
+R061,Tanque FS-SS100: largo,1800,mm,Catálogo Firesafer · Filling Line Series 2026.pdf,ficha FS-SS100,Dimension 1000 * 1800 * 900mm,abrir
+R062,Tanque FS-SS100: ancho,1000,mm,Catálogo Firesafer · Filling Line Series 2026.pdf,ficha FS-SS100,Dimension 1000 * 1800 * 900mm,abrir
+R063,Tanque FS-SS100: alto,900,mm,Catálogo Firesafer · Filling Line Series 2026.pdf,ficha FS-SS100,Dimension 1000 * 1800 * 900mm,abrir
+R064,Envolvedora PS 5: largo,3000,mm,Cotización EDOS · Folleto Recubridor PS5 V21,Características Técnicas,Área de instalación apróximada 1500 x 3000 x 2500 (h),abrir
+R065,Envolvedora PS 5: ancho,1500,mm,Cotización EDOS · Folleto Recubridor PS5 V21,Características Técnicas,Área de instalación apróximada 1500 x 3000 x 2500 (h),abrir
+R066,Envolvedora PS 5: alto,2500,mm,Cotización EDOS · Folleto Recubridor PS5 V21,Características Técnicas,Área de instalación apróximada 1500 x 3000 x 2500 (h),abrir
+R067,Envolvedoras,1,u,Cotización EDOS · Folleto Recubridor PS5 V21,pág. 1,Equipo: PS 5,abrir
+R068,Marcadora FS-0001: largo,1250,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-0001, Dimensions",1250X750X1200 (LXWXH),abrir
+R069,Marcadora FS-0001: ancho,750,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-0001, Dimensions",1250X750X1200 (LXWXH),abrir
+R070,Marcadora FS-0001: alto,1200,mm,Catálogo Firesafer · FS Cylinder Production.pdf,"ficha FS-0001, Dimensions",1250X750X1200 (LXWXH),abrir
+R071,PH M-000200: largo,950,mm,Cotización Yukon · Ficha Maq. P.H. M-000200,Características técnicas sin mesa,Altura 1050 mm · Profundidad 400 mm · Ancho 950 mm,abrir
+R072,PH M-000200: ancho,400,mm,Cotización Yukon · Ficha Maq. P.H. M-000200,Características técnicas sin mesa,Altura 1050 mm · Profundidad 400 mm · Ancho 950 mm,abrir
+R073,PH M-000200: alto,1050,mm,Cotización Yukon · Ficha Maq. P.H. M-000200,Características técnicas sin mesa,Altura 1050 mm · Profundidad 400 mm · Ancho 950 mm,abrir
+R074,Secadora FS-D4: largo,100,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-D4,Overall Size 100 cm * 46.2 cm * 110 cm,abrir
+R075,Secadora FS-D4: ancho,46.2,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-D4,Overall Size 100 cm * 46.2 cm * 110 cm,abrir
+R076,Secadora FS-D4: alto,110,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-D4,Overall Size 100 cm * 46.2 cm * 110 cm,abrir
+R077,Roladora W11-6×1500: largo,331,cm,Internet · ficha W11-10X2000 / serie W11 (goldsupplier),"tabla de la serie W11, fila 6×1500",W11-6×1500 … 331*121*133 (sin unidad; se lee en cm). Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link,abrir
+R078,Roladora W11-6×1500: ancho,121,cm,Internet · ficha W11-10X2000 / serie W11 (goldsupplier),"tabla de la serie W11, fila 6×1500",W11-6×1500 … 331*121*133 (sin unidad; se lee en cm). Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link,abrir
+R079,Roladora W11-6×1500: alto,133,cm,Internet · ficha W11-10X2000 / serie W11 (goldsupplier),"tabla de la serie W11, fila 6×1500",W11-6×1500 … 331*121*133 (sin unidad; se lee en cm). Valor que muestra el buscador para esa página (desde acá no se puede abrir): verificarlo en el link,abrir
+R080,Virador motriz: largo,470,mm,Internet · ProArc TR-0100 (Westermans),Dimensions,L470/450mm W320/160mm H334/334mm (drive/idler),abrir
+R081,Virador motriz: ancho,320,mm,Internet · ProArc TR-0100 (Westermans),Dimensions,L470/450mm W320/160mm H334/334mm (drive/idler),abrir
+R082,Virador motriz: alto,334,mm,Internet · ProArc TR-0100 (Westermans),Dimensions,L470/450mm W320/160mm H334/334mm (drive/idler),abrir
+R083,Virador loco: largo,450,mm,Internet · ProArc TR-0100 (Westermans),Dimensions,L470/450mm W320/160mm H334/334mm (drive/idler),abrir
+R084,Virador loco: ancho,160,mm,Internet · ProArc TR-0100 (Westermans),Dimensions,L470/450mm W320/160mm H334/334mm (drive/idler),abrir
+R085,Virador loco: alto,334,mm,Internet · ProArc TR-0100 (Westermans),Dimensions,L470/450mm W320/160mm H334/334mm (drive/idler),abrir
+R086,Soldadora ZH-1300: largo,230,cm,Cotización Dragon Welding · PROFORMA INVOICE 26091611.pdf,ítem 01,Size: 230x114x180cm,abrir
+R087,Soldadora ZH-1300: ancho,114,cm,Cotización Dragon Welding · PROFORMA INVOICE 26091611.pdf,ítem 01,Size: 230x114x180cm,abrir
+R088,Soldadora ZH-1300: alto,180,cm,Cotización Dragon Welding · PROFORMA INVOICE 26091611.pdf,ítem 01,Size: 230x114x180cm,abrir
+R089,Chiller SDL-1000 (embalaje): largo,72,cm,Cotización Dragon Welding · PROFORMA INVOICE 26091611.pdf,ítem 03,Packing size: 72x53x87cm,abrir
+R090,Chiller SDL-1000 (embalaje): ancho,53,cm,Cotización Dragon Welding · PROFORMA INVOICE 26091611.pdf,ítem 03,Packing size: 72x53x87cm,abrir
+R091,Chiller SDL-1000 (embalaje): alto,87,cm,Cotización Dragon Welding · PROFORMA INVOICE 26091611.pdf,ítem 03,Packing size: 72x53x87cm,abrir
+R092,FS-ZR01: largo,80,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-ZR01,Machine Size 80 cm * 40 cm * 135 cm,abrir
+R093,FS-ZR01: ancho,40,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-ZR01,Machine Size 80 cm * 40 cm * 135 cm,abrir
+R094,FS-ZR01: alto,135,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-ZR01,Machine Size 80 cm * 40 cm * 135 cm,abrir
+R095,FS-SJML01: largo,60,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-SJML01,Machine Size 60 cm * 58 cm * 95 cm,abrir
+R096,FS-SJML01: ancho,58,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-SJML01,Machine Size 60 cm * 58 cm * 95 cm,abrir
+R097,FS-SJML01: alto,95,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-SJML01,Machine Size 60 cm * 58 cm * 95 cm,abrir
+R098,FS-CO2E: largo,65,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-CO2E,Machine Size 65 cm * 55 cm * 105 cm,abrir
+R099,FS-CO2E: ancho,55,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-CO2E,Machine Size 65 cm * 55 cm * 105 cm,abrir
+R100,FS-CO2E: alto,105,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-CO2E,Machine Size 65 cm * 55 cm * 105 cm,abrir
+R101,Bomba FS-HPT1: largo,93,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-HPT1,Pressure Test Pump Size 93 cm * 59 cm * 98 cm,abrir
+R102,Bomba FS-HPT1: ancho,59,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-HPT1,Pressure Test Pump Size 93 cm * 59 cm * 98 cm,abrir
+R103,Bomba FS-HPT1: alto,98,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-HPT1,Pressure Test Pump Size 93 cm * 59 cm * 98 cm,abrir
+R104,Banco FS-HPT1: largo,101,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-HPT1,Station Size 101 cm * 56 cm * 120 cm,abrir
+R105,Banco FS-HPT1: ancho,56,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-HPT1,Station Size 101 cm * 56 cm * 120 cm,abrir
+R106,Banco FS-HPT1: alto,120,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-HPT1,Station Size 101 cm * 56 cm * 120 cm,abrir
+R107,Morsa FS-MC: largo,76,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-MC,Overall Size 76 cm * 35 cm * 32 cm,abrir
+R108,Morsa FS-MC: ancho,35,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-MC,Overall Size 76 cm * 35 cm * 32 cm,abrir
+R109,Morsa FS-MC: alto,32,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-MC,Overall Size 76 cm * 35 cm * 32 cm,abrir
+R110,FS-N2: largo,58.5,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-N2,Overall Size 58.5 cm * 50 cm * 100 cm,abrir
+R111,FS-N2: ancho,50,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-N2,Overall Size 58.5 cm * 50 cm * 100 cm,abrir
+R112,FS-N2: alto,100,cm,Catálogo Firesafer · FS 2026 SERVICE LISTS 05.pdf,ficha FS-N2,Overall Size 58.5 cm * 50 cm * 100 cm,abrir
+R113,Máquinas del puesto 4 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R37",Puesto 4: Corte de disco y embutido (cúpula y fondo) · Máq. → 1,abrir
+R114,Rollo más pesado (cúpula 5 kg),Rollo de 1.181 kg · Ø 1.094,texto,MP-FLAMA2035.xlsx (Fran),"hoja Resumen, celda B31","MP-07 · Fleje LAF 1,6 × 204,2 mm (cúpula 5 kg) → Rollo de 1.181 kg · Ø 1.094",abrir
+R115,Fleje más ancho (cúpula 10 kg),"MP-09 · Fleje LAF 2,0 × 238,7 mm (cúpula 10 kg)",texto,MP-FLAMA2035.xlsx (Fran),"hoja Resumen, celda A33","MP-09 · Fleje LAF 2,0 × 238,7 mm (cúpula 10 kg) → MP-09 · Fleje LAF 2,0 × 238,7 mm (cúpula 10 kg)",abrir
+R116,Carros del tramo: fondos,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S10",Fondos · Carros de tránsito → 1,abrir
+R117,Carros del tramo: cúpulas,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S11",Cúpulas · Carros de tránsito → 1,abrir
+R118,Máquinas del puesto 5 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R38",Puesto 5: Preparación de cuello · Máq. → 2,abrir
+R119,Máquinas del puesto 7 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R40",Puesto 7: Soldadura del cuello a la cúpula · Máq. → 1,abrir
+R120,Módulos de estante: cúpulas,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O11",Cúpulas · Módulos de estante → 2,abrir
+R121,Carros del tramo: cúpulas con cuello,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S13",Cúpulas con cuello · Carros de tránsito → 1,abrir
+R122,Máquinas del puesto 8 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R41",Puesto 8: Cilindrado · Máq. → 1,abrir
+R123,Carros del tramo: virolas,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S8",Virolas · Carros de tránsito → 1,abrir
+R124,Máquinas del puesto 9 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R42","Puesto 9: Soldadura longitudinal — 2,5 a 10 kg · Máq. → 1",abrir
+R125,Módulos de estante: virolas,7,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O8",Virolas · Módulos de estante → 7,abrir
+R126,Carros del tramo: cuerpos soldados,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S9",Cuerpos soldados · Carros de tránsito → 2,abrir
+R127,Máquinas del puesto 10 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R43",Puesto 10: Soldadura longitudinal TIG — 1 kg · Máq. → 1,abrir
+R128,Máquinas del puesto 11 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R44",Puesto 11: Encastre de fondo · Máq. → 1,abrir
+R129,Módulos de estante: cuerpos soldados,4,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O9",Cuerpos soldados · Módulos de estante → 4,abrir
+R130,Módulos de estante: fondos,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O10",Fondos · Módulos de estante → 2,abrir
+R131,Carros del tramo: cuerpos con fondo,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S14",Cuerpos con fondo · Carros de tránsito → 2,abrir
+R132,Máquinas del puesto 12 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R45",Puesto 12: Bordoneado · Máq. → 1,abrir
+R133,Carros del tramo: cuerpos bordoneados,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S15",Cuerpos bordoneados · Carros de tránsito → 1,abrir
+R134,Máquinas del puesto 13 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R46",Puesto 13: Soldadura circunferencial de cúpula y fondo · Máq. → 2,abrir
+R135,Módulos de estante: cúpulas con cuello,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O13",Cúpulas con cuello · Módulos de estante → 1,abrir
+R136,Módulos de estante: cuerpos bordoneados,7,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O15",Cuerpos bordoneados · Módulos de estante → 7,abrir
+R137,Carros del tramo: cilindros soldados,5,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S16",Cilindros soldados · Carros de tránsito → 5,abrir
+R138,Máquinas del puesto 14 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R47",Puesto 14: Control de calidad — Espesor · Máq. → 1,abrir
+R139,Máquinas del puesto 17 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R50",Puesto 17: Granallado · Máq. → 1,abrir
+R140,Carros del tramo: cilindros granallados,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S19",Cilindros granallados · Carros de tránsito → 1,abrir
+R141,Máquinas del puesto 18 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R51",Puesto 18: Detección de defectos · Máq. → 1,abrir
+R142,Máquinas del puesto 19 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R52",Puesto 19: Corrección de defectos · Máq. → 1,abrir
+R143,Módulos de estante: cilindros granallados,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O19",Cilindros granallados · Módulos de estante → 2,abrir
+R144,Carros del tramo: cilindros vacíos pintados,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S20",Cilindros vacíos pintados · Carros de tránsito → 2,abrir
+R145,Carros del tramo: cilindros pintados para cargar,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S21",Cilindros pintados para cargar · Carros de tránsito → 2,abrir
+R146,Máquinas del puesto 21 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R54",Puesto 21: Carga de polvo · Máq. → 1,abrir
+R147,Módulos de estante: cilindros pintados para cargar,4,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O21",Cilindros pintados para cargar · Módulos de estante → 4,abrir
+R148,Carros del tramo: cilindros cargados de polvo,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S22",Cilindros cargados de polvo · Carros de tránsito → 1,abrir
+R149,Máquinas del puesto 22 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R55",Puesto 22: Ensamblaje · Máq. → 1,abrir
+R150,Módulos de estante: cilindros cargados de polvo,3,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O22",Cilindros cargados de polvo · Módulos de estante → 3,abrir
+R151,Carros del tramo: matafuegos armados,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S23",Matafuegos armados · Carros de tránsito → 1,abrir
+R152,Máquinas del puesto 23 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R56",Puesto 23: Presurización · Máq. → 1,abrir
+R153,Módulos de estante: matafuegos armados,3,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O23",Matafuegos armados · Módulos de estante → 3,abrir
+R154,Carros del tramo: matafuegos presurizados,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S24",Matafuegos presurizados · Carros de tránsito → 1,abrir
+R155,Máquinas del puesto 24 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R57",Puesto 24: Control de calidad — Ensayo de pérdidas · Máq. → 1,abrir
+R156,Módulos de estante: matafuegos presurizados,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O24",Matafuegos presurizados · Módulos de estante → 1,abrir
+R157,Carros del tramo: matafuegos ensayados,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S25",Matafuegos ensayados · Carros de tránsito → 1,abrir
+R158,Máquinas del puesto 25 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R58",Puesto 25: Etiquetado · Máq. → 1,abrir
+R159,Módulos de estante: matafuegos ensayados,3,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O25",Matafuegos ensayados · Módulos de estante → 3,abrir
+R160,Carros del tramo: matafuegos etiquetados,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S26",Matafuegos etiquetados · Carros de tránsito → 2,abrir
+R161,Máquinas del puesto 26 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R59",Puesto 26: Embalaje y paletizado · Máq. → 2,abrir
+R162,Módulos de estante: cilindros vacíos pintados,2,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O20",Cilindros vacíos pintados · Módulos de estante → 2,abrir
+R163,Máquinas del puesto 2 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R35","Puesto 2: Corte de chapa — 1.er corte en franjas (guillotina 1, manuales + carros) · Máq. → 1",abrir
+R164,Modelo de la guillotina 1,Guillotina 1 — franjas (Ermaksan HGS 2600-6),texto,Balanceo-FLAMA2035.xlsx (Fran),"hoja Lotes, celda A22",Guillotina 1 — franjas (Ermaksan HGS 2600-6) → Guillotina 1 — franjas (Ermaksan HGS 2600-6),abrir
+R165,Máquinas del puesto 3 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R36","Puesto 3: Corte de chapa — 2.º corte en piezas (guillotina 2, manuales + carros) · Máq. → 1",abrir
+R166,Modelo de la guillotina 2,Guillotina 2 — piezas (QC12Y 6 × 2500),texto,Balanceo-FLAMA2035.xlsx (Fran),"hoja Lotes, celda A23",Guillotina 2 — piezas (QC12Y 6 × 2500) → Guillotina 2 — piezas (QC12Y 6 × 2500),abrir
+R167,Mesas elevadoras 2,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda I6","Sobre la mesa elevadora 2 (fija), en la guillotina 2",abrir
+R168,Hoja más grande,"MP-04 · Hoja LAF 2,0 × 1500 × 3000 mm",texto,MP-FLAMA2035.xlsx (Fran),"hoja Resumen, celda A24","MP-04 · Hoja LAF 2,0 × 1500 × 3000 mm → MP-04 · Hoja LAF 2,0 × 1500 × 3000 mm",abrir
+R169,Carros del tramo: desarrollos,1,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S7",Desarrollos · Carros de tránsito → 1,abrir
+R170,Máquinas del puesto 6 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R39",Puesto 6: Marcado del cuerpo (manuales + carros) · Máq. → 2,abrir
+R171,Módulos de estante: desarrollos,3,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda O7",Desarrollos · Módulos de estante → 3,abrir
+R172,Máquinas del puesto 15 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R48",Puesto 15: Prueba hidráulica · Máq. → 2,abrir
+R173,Máquinas del puesto 9 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M84",Puesto 9: Prueba hidráulica · Máq. → 1,abrir
+R174,Carros del tramo: cilindros mojados,3,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S17",Cilindros mojados · Carros de tránsito → 3,abrir
+R175,Máquinas del puesto 16 de manuales,4,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R49",Puesto 16: Secado · Máq. → 4,abrir
+R176,Máquinas del puesto 10 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M85",Puesto 10: Secado · Máq. → 1,abrir
+R177,Carros del tramo: cilindros secos,3,u,PULMONES-FLAMA2035.xlsx (Fran),"hoja Pulmones, celda S18",Cilindros secos · Carros de tránsito → 3,abrir
+R178,Máquinas del puesto 3 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M77",Puesto 3: Cilindrado · Máq. → 1,abrir
+R179,Chapa de carros más gruesa,"MP-12 · Hoja LAC 4,75 × 1500 × 3000 mm",texto,MP-FLAMA2035.xlsx (Fran),"hoja Resumen, celda A26","MP-12 · Hoja LAC 4,75 × 1500 × 3000 mm → MP-12 · Hoja LAC 4,75 × 1500 × 3000 mm",abrir
+R180,m² en el piso: cuerpos planos grabados,7.36,m²,PULMONES-FLAMA2035.xlsx (Fran),"hoja Carros, celda J6",Cuerpos planos grabados · m² → 7.36,abrir
+R181,Máquinas del puesto 4 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M78",Puesto 4: Punteo del cuerpo · Máq. → 1,abrir
+R182,m² en el piso: virolas,0.49,m²,PULMONES-FLAMA2035.xlsx (Fran),"hoja Carros, celda J7",Virolas · m² → 0.49,abrir
+R183,Máquinas del puesto 5 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M79",Puesto 5: Soldadura longitudinal · Máq. → 1,abrir
+R184,Máquinas del puesto 6 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M80",Puesto 6: Soldadura de cupla en la cúpula · Máq. → 1,abrir
+R185,m² en el piso: cúpulas con cupla,0.66,m²,PULMONES-FLAMA2035.xlsx (Fran),"hoja Carros, celda J9",Cúpulas con cupla · m² → 0.66,abrir
+R186,Máquinas del puesto 7 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M81",Puesto 7: Armado y soldadura circunferencial · Máq. → 1,abrir
+R187,m² en el piso: cuerpos soldados,3.07,m²,PULMONES-FLAMA2035.xlsx (Fran),"hoja Carros, celda J8",Cuerpos soldados · m² → 3.07,abrir
+R188,Máquinas del puesto 8 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M82",Puesto 8: Soldadura de accesorios · Máq. → 1,abrir
+R189,m² en el piso: cilindros cerrados,0.25,m²,PULMONES-FLAMA2035.xlsx (Fran),"hoja Carros, celda J10",Cilindros cerrados · m² → 0.25,abrir
+R190,Máquinas del puesto 8.1 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M83",Puesto 8.1: Fabricación de accesorios · Máq. → 1,abrir
+R191,m² en el piso: recipientes esperando la pintura,17.71,m²,PULMONES-FLAMA2035.xlsx (Fran),"hoja Carros, celda J11",Recipientes esperando la pintura · m² → 17.71,abrir
+R192,m² en el piso: carros pintados,17.71,m²,PULMONES-FLAMA2035.xlsx (Fran),"hoja Carros, celda J13",Carros pintados · m² → 17.71,abrir
+R193,Máquinas del puesto 13 B de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M88",Puesto 13 B: Carga de polvo y presurización · Máq. → 1,abrir
+R194,Máquinas del puesto 13 A-C / 15 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M89","Puesto 13 A-C / 15: Montaje, manga, precinto y etiquetado · Máq. → 1",abrir
+R195,Máquinas del puesto 14-17 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M90","Puesto 14-17: Calidad: pérdidas, inspección final, liberación y ensayos de lote · Máq. → 1",abrir
+R196,Turnos del puesto 4 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S37",Puesto 4: Corte de disco y embutido (cúpula y fondo) · Turnos → 2,abrir
+R197,Turnos del puesto 5 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S38",Puesto 5: Preparación de cuello · Turnos → 2,abrir
+R198,Turnos del puesto 7 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S40",Puesto 7: Soldadura del cuello a la cúpula · Turnos → 2,abrir
+R199,Turnos del puesto 8 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S41",Puesto 8: Cilindrado · Turnos → 1,abrir
+R200,Turnos del puesto 9 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S42","Puesto 9: Soldadura longitudinal — 2,5 a 10 kg · Turnos → 2",abrir
+R201,Turnos del puesto 10 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S43",Puesto 10: Soldadura longitudinal TIG — 1 kg · Turnos → 2,abrir
+R202,Turnos del puesto 11 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S44",Puesto 11: Encastre de fondo · Turnos → 2,abrir
+R203,Turnos del puesto 12 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S45",Puesto 12: Bordoneado · Turnos → 2,abrir
+R204,Turnos del puesto 13 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S46",Puesto 13: Soldadura circunferencial de cúpula y fondo · Turnos → 2,abrir
+R205,Turnos del puesto 14 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S47",Puesto 14: Control de calidad — Espesor · Turnos → 1,abrir
+R206,Turnos del puesto 17 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S50",Puesto 17: Granallado · Turnos → 2,abrir
+R207,Turnos del puesto 18 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S51",Puesto 18: Detección de defectos · Turnos → 2,abrir
+R208,Turnos del puesto 19 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S52",Puesto 19: Corrección de defectos · Turnos → 1,abrir
+R209,Máquinas del puesto 20 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda R53",Puesto 20: Pintura en polvo + horno · Máq. → 1,abrir
+R210,Turnos del puesto 20 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S53",Puesto 20: Pintura en polvo + horno · Turnos → 2,abrir
+R211,Turnos del puesto 21 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S54",Puesto 21: Carga de polvo · Turnos → 1,abrir
+R212,Turnos del puesto 22 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S55",Puesto 22: Ensamblaje · Turnos → 2,abrir
+R213,Turnos del puesto 23 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S56",Puesto 23: Presurización · Turnos → 1,abrir
+R214,Turnos del puesto 24 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S57",Puesto 24: Control de calidad — Ensayo de pérdidas · Turnos → 1,abrir
+R215,Turnos del puesto 25 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S58",Puesto 25: Etiquetado · Turnos → 1,abrir
+R216,Turnos del puesto 26 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S59",Puesto 26: Embalaje y paletizado · Turnos → 2,abrir
+R217,Turnos del puesto 3 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N77",Puesto 3: Cilindrado · Turnos → 1,abrir
+R218,Turnos del puesto 4 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N78",Puesto 4: Punteo del cuerpo · Turnos → 1,abrir
+R219,Turnos del puesto 5 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N79",Puesto 5: Soldadura longitudinal · Turnos → 1,abrir
+R220,Turnos del puesto 6 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N80",Puesto 6: Soldadura de cupla en la cúpula · Turnos → 1,abrir
+R221,Turnos del puesto 7 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N81",Puesto 7: Armado y soldadura circunferencial · Turnos → 1,abrir
+R222,Turnos del puesto 8 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N82",Puesto 8: Soldadura de accesorios · Turnos → 1,abrir
+R223,Turnos del puesto 8.1 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N83",Puesto 8.1: Fabricación de accesorios · Turnos → 1,abrir
+R224,Máquinas del puesto 11 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M86",Puesto 11: Pulmón de despacho y carga a pintura · Máq. → 1,abrir
+R225,Turnos del puesto 11 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N86",Puesto 11: Pulmón de despacho y carga a pintura · Turnos → 1,abrir
+R226,Máquinas del puesto 12 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M87",Puesto 12: Recepción de pintados y cambio de juego · Máq. → 1,abrir
+R227,Turnos del puesto 12 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N87",Puesto 12: Recepción de pintados y cambio de juego · Turnos → 1,abrir
+R228,Turnos del puesto 13 B de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N88",Puesto 13 B: Carga de polvo y presurización · Turnos → 1,abrir
+R229,Turnos del puesto 13 A-C / 15 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N89","Puesto 13 A-C / 15: Montaje, manga, precinto y etiquetado · Turnos → 1",abrir
+R230,Turnos del puesto 14-17 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N90","Puesto 14-17: Calidad: pérdidas, inspección final, liberación y ensayos de lote · Turnos → 1",abrir
+R231,Turnos del puesto 2 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S35","Puesto 2: Corte de chapa — 1.er corte en franjas (guillotina 1, manuales + carros) · Turnos → 1",abrir
+R232,Máquinas del puesto 2 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M75",Puesto 2: Corte de chapa (guillotina) · Máq. → 1,abrir
+R233,Turnos del puesto 2 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N75",Puesto 2: Corte de chapa (guillotina) · Turnos → 1,abrir
+R234,Turnos del puesto 3 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S36","Puesto 3: Corte de chapa — 2.º corte en piezas (guillotina 2, manuales + carros) · Turnos → 1",abrir
+R235,Turnos del puesto 6 de manuales,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S39",Puesto 6: Marcado del cuerpo (manuales + carros) · Turnos → 1,abrir
+R236,Máquinas del puesto 2.1 de carros,0,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M76",Puesto 2.1: Marcado del cuerpo · Máq. → 0,abrir
+R237,Turnos del puesto 2.1 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N76",Puesto 2.1: Marcado del cuerpo · Turnos → 1,abrir
+R238,Turnos del puesto 15 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S48",Puesto 15: Prueba hidráulica · Turnos → 2,abrir
+R239,Turnos del puesto 9 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N84",Puesto 9: Prueba hidráulica · Turnos → 1,abrir
+R240,Turnos del puesto 16 de manuales,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda S49",Puesto 16: Secado · Turnos → 2,abrir
+R241,Turnos del puesto 10 de carros,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda N85",Puesto 10: Secado · Turnos → 1,abrir
+R242,Máquinas del puesto R1,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F104",R1: Recepción y registro · Máq. → 2,abrir
+R243,Turnos del puesto R1,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G104",R1: Recepción y registro · Turnos → 1,abrir
+R244,Jaulas en el puesto R1,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M104",R1: Recepción y registro · Jaulas → 2,abrir
+R245,Máquinas del puesto R2,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F105",R2: Inspección visual · Máq. → 2,abrir
+R246,Turnos del puesto R2,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G105",R2: Inspección visual · Turnos → 2,abrir
+R247,Jaulas en el puesto R2,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M105",R2: Inspección visual · Jaulas → 1,abrir
+R248,Máquinas del puesto R3,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F106",R3: Descarga ABC — ruta recuperable · Máq. → 1,abrir
+R249,Turnos del puesto R3,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G106",R3: Descarga ABC — ruta recuperable · Turnos → 2,abrir
+R250,Jaulas en el puesto R3,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M106",R3: Descarga ABC — ruta recuperable · Jaulas → 1,abrir
+R251,Máquinas del puesto R4,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F107","R4: Descarga a descarte (ABC, BC y Clase D) · Máq. → 1",abrir
+R252,Turnos del puesto R4,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G107","R4: Descarga a descarte (ABC, BC y Clase D) · Turnos → 1",abrir
+R253,Jaulas en el puesto R4,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M107","R4: Descarga a descarte (ABC, BC y Clase D) · Jaulas → 1",abrir
+R254,Máquinas del puesto R5,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F108",R5: Descarga y carga de agua / AFFF / sales K · Máq. → 1,abrir
+R255,Turnos del puesto R5,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G108",R5: Descarga y carga de agua / AFFF / sales K · Turnos → 1,abrir
+R256,Jaulas en el puesto R5,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M108",R5: Descarga y carga de agua / AFFF / sales K · Jaulas → 1,abrir
+R257,Máquinas del puesto R6,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F109",R6: Recuperación y carga de CO₂ · Máq. → 1,abrir
+R258,Turnos del puesto R6,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G109",R6: Recuperación y carga de CO₂ · Turnos → 1,abrir
+R259,Jaulas en el puesto R6,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M109",R6: Recuperación y carga de CO₂ · Jaulas → 1,abrir
+R260,Máquinas del puesto R7,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F110",R7: Recuperación y carga de halogenado · Máq. → 1,abrir
+R261,Turnos del puesto R7,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G110",R7: Recuperación y carga de halogenado · Turnos → 1,abrir
+R262,Jaulas en el puesto R7,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M110",R7: Recuperación y carga de halogenado · Jaulas → 1,abrir
+R263,Máquinas del puesto R8,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F111",R8: Desarme y limpieza — recinto · Máq. → 2,abrir
+R264,Turnos del puesto R8,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G111",R8: Desarme y limpieza — recinto · Turnos → 2,abrir
+R265,Jaulas en el puesto R8,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M111",R8: Desarme y limpieza — recinto · Jaulas → 1,abrir
+R266,Máquinas del puesto R9,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F112",R9: Desarme e inspección interior — zona general · Máq. → 1,abrir
+R267,Turnos del puesto R9,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G112",R9: Desarme e inspección interior — zona general · Turnos → 1,abrir
+R268,Jaulas en el puesto R9,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M112",R9: Desarme e inspección interior — zona general · Jaulas → 1,abrir
+R269,Máquinas del puesto R10,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F113",R10: Laboratorio — Puffer y mufla · Máq. → 1,abrir
+R270,Turnos del puesto R10,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G113",R10: Laboratorio — Puffer y mufla · Turnos → 1,abrir
+R271,Jaulas en el puesto R10,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M113",R10: Laboratorio — Puffer y mufla · Jaulas → 1,abrir
+R272,Máquinas del puesto R11,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F114",R11: Prueba hidráulica · Máq. → 1,abrir
+R273,Turnos del puesto R11,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G114",R11: Prueba hidráulica · Turnos → 2,abrir
+R274,Jaulas en el puesto R11,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M114",R11: Prueba hidráulica · Jaulas → 1,abrir
+R275,Máquinas del puesto R12,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F115",R12: Secado · Máq. → 1,abrir
+R276,Turnos del puesto R12,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G115",R12: Secado · Turnos → 2,abrir
+R277,Jaulas en el puesto R12,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M115",R12: Secado · Jaulas → 1,abrir
+R278,Máquinas del puesto R13,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F116",R13: Inspección interior con videoscopio · Máq. → 1,abrir
+R279,Turnos del puesto R13,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G116",R13: Inspección interior con videoscopio · Turnos → 1,abrir
+R280,Jaulas en el puesto R13,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M116",R13: Inspección interior con videoscopio · Jaulas → 1,abrir
+R281,Máquinas del puesto R14,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F117",R14: Pintura · Máq. → 2,abrir
+R282,Turnos del puesto R14,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G117",R14: Pintura · Turnos → 2,abrir
+R283,Jaulas en el puesto R14,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M117",R14: Pintura · Jaulas → 1,abrir
+R284,Máquinas del puesto R15,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F118","R15: Carga de polvo ABC, BC y Clase D · Máq. → 2",abrir
+R285,Turnos del puesto R15,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G118","R15: Carga de polvo ABC, BC y Clase D · Turnos → 2",abrir
+R286,Jaulas en el puesto R15,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M118","R15: Carga de polvo ABC, BC y Clase D · Jaulas → 1",abrir
+R287,Máquinas del puesto R16,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F119",R16: Ensamblaje y marbete — recinto · Máq. → 2,abrir
+R288,Turnos del puesto R16,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G119",R16: Ensamblaje y marbete — recinto · Turnos → 2,abrir
+R289,Jaulas en el puesto R16,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M119",R16: Ensamblaje y marbete — recinto · Jaulas → 1,abrir
+R290,Máquinas del puesto R17,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F120",R17: Presurización — recinto · Máq. → 1,abrir
+R291,Turnos del puesto R17,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G120",R17: Presurización — recinto · Turnos → 2,abrir
+R292,Jaulas en el puesto R17,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M120",R17: Presurización — recinto · Jaulas → 1,abrir
+R293,Máquinas del puesto R18,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F121",R18: Ensamblaje y presurización — zona general · Máq. → 1,abrir
+R294,Turnos del puesto R18,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G121",R18: Ensamblaje y presurización — zona general · Turnos → 1,abrir
+R295,Jaulas en el puesto R18,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M121",R18: Ensamblaje y presurización — zona general · Jaulas → 1,abrir
+R296,Máquinas del puesto R19,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F122",R19: Control de peso (CO₂ y halogenados sin recarga) · Máq. → 1,abrir
+R297,Turnos del puesto R19,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G122",R19: Control de peso (CO₂ y halogenados sin recarga) · Turnos → 1,abrir
+R298,Jaulas en el puesto R19,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M122",R19: Control de peso (CO₂ y halogenados sin recarga) · Jaulas → 1,abrir
+R299,Máquinas del puesto R20,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F123",R20: Ensayo de pérdidas · Máq. → 2,abrir
+R300,Turnos del puesto R20,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G123",R20: Ensayo de pérdidas · Turnos → 1,abrir
+R301,Jaulas en el puesto R20,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M123",R20: Ensayo de pérdidas · Jaulas → 2,abrir
+R302,Máquinas del puesto R21,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F124","R21: Precinto, etiqueta y despacho · Máq. → 2",abrir
+R303,Turnos del puesto R21,2,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G124","R21: Precinto, etiqueta y despacho · Turnos → 2",abrir
+R304,Jaulas en el puesto R21,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M124","R21: Precinto, etiqueta y despacho · Jaulas → 1",abrir
+R305,Máquinas del puesto R22,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F125",R22: Inutilización y disposición final · Máq. → 1,abrir
+R306,Turnos del puesto R22,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G125",R22: Inutilización y disposición final · Turnos → 1,abrir
+R307,Jaulas en el puesto R22,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M125",R22: Inutilización y disposición final · Jaulas → 1,abrir
+R308,Máquinas del puesto R23,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda F126",R23: PH de mangueras (CO₂ y rodantes) · Máq. → 1,abrir
+R309,Turnos del puesto R23,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda G126",R23: PH de mangueras (CO₂ y rodantes) · Turnos → 1,abrir
+R310,Jaulas en el puesto R23,1,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M126",R23: PH de mangueras (CO₂ y rodantes) · Jaulas → 1,abrir
+R311,Jaulas del pulmón de recepción,10,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M128",Pulmón de recepción · Jaulas → 10,abrir
+R312,Equipos del pulmón de recepción,270.55,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda L128",Pulmón de recepción · Equipos → 270.55,abrir
+R313,Jaulas del pulmón de despacho,10,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda M129",Pulmón de despacho · Jaulas → 10,abrir
+R314,Equipos del pulmón de despacho,270.55,u,Balanceo-FLAMA2035.xlsx (Fran),"hoja Carga, celda L129",Pulmón de despacho · Equipos → 270.55,abrir

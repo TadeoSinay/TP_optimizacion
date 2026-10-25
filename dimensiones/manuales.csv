@@ -1,94 +1,94 @@
-Puesto / ítem,Cant.,Ancho (m),Largo (m),Alto (m),Huella (m²),Medidas internas / uso,Fuente,A confirmar
-4. Corte de disco y embutido (cúpula y fondo) · 1 máq. · 2 turnos,,,,,12.02,,Balanceo-FLAMA2035 › Carga R37 (máq.) y S37 (turnos),
-   Prensa Sangiacomo,1,1.3,1.6,3.32,2.08,"Sangiacomo T130 R CE: 130 t, mesa 1.200 × 700 mm, 10.000 kg",Máquina: Balanceo-FLAMA2035 › Lotes A42 · medidas: exapro.com/sp/sangiacomo-t130rce-19888 (1.600 × 1.300 × 3.320 mm),Fran no dice el modelo ni el tonelaje: se toma la T130 R. Confirmar modelo
-   Desbobinador CENA TC-400,1,1,1.2,1.3,1.2,"fleje hasta 400 mm, rollo hasta Ø 1.200 y 1.500 kg",Cotización CENA (desbobinador): 1.200 × 1.000 × 1.300 mm,"Elegido por el fleje más ancho (238,7 mm, MP-FLAMA2035 › Resumen A33) y el rollo más pesado (1.181 kg, Resumen B31): el TC-300 llega a 1.000 kg"
-   Enderezadora CENA SC-300,1,0.55,0.8,1.3,0.44,fleje hasta 300 mm y 3 mm,Cotización CENA (enderezadora): 800 × 550 × 1.300 mm,"Elegida por el fleje más ancho (238,7 mm) y el más grueso (2,0 mm), MP-FLAMA2035 › Resumen A33. El alimentador servo no trae medidas"
-"   Rack de fondos y cúpulas (supermercado, pulmón)",2,1.2,2.7,a confirmar,6.48,"vano de 2,7 m × 3 niveles, 3 pallets 1.200 × 800 por nivel; 17 pallets de 12 cajones","PULMONES-FLAMA2035 › Parametros B56 (vano 2,7 m), B57 (fondo 1,2 m), B54 (3 niveles), B55 (3 pallets por nivel) · vanos: Equipos B12 · pallets: Equipos B13","Alto del rack (primer nivel a 400 mm, pallet de 1.045 mm de alto)"
-   Carro de 12 cajones: fondos,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"PULMONES-FLAMA2035 › Parametros B38 (12 cajones en 4 niveles); medidas = carro de A42 (1,3 × 0,7 m) · cantidad: Pulmones S10","Fran pide confirmar que el carro tenga 4 niveles de 3 cajones; si no, se pide igual al porta-bandejas (1,3 × 0,7 m) con 4 niveles. Alto del carro"
-   Carro de 12 cajones: cúpulas,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"PULMONES-FLAMA2035 › Parametros B38 (12 cajones en 4 niveles); medidas = carro de A42 (1,3 × 0,7 m) · cantidad: Pulmones S11","Fran pide confirmar que el carro tenga 4 niveles de 3 cajones; si no, se pide igual al porta-bandejas (1,3 × 0,7 m) con 4 niveles. Alto del carro"
-,,,,,,,,
-5. Preparación de cuello · 2 máq. · 2 turnos,,,,,0,,Balanceo-FLAMA2035 › Carga R38 (máq.) y S38 (turnos),
-   Prensa de muesca del cuello,2,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-,,,,,,,,
-7. Soldadura del cuello a la cúpula · 1 máq. · 2 turnos,,,,,4.03,,Balanceo-FLAMA2035 › Carga R40 (máq.) y S40 (turnos),
-   Soldadora de cuello,1,1.4,1.2,1.58,1.68,"Firesafer FS-HPM: plato divisor, 12 pzas/min",Catálogo Firesafer (FS Cylinder Production),Está en el catálogo pero no en la cotización Firesafer. Confirmar el modelo
-   Estante: cúpulas (pulmón),2,0.6,1.2,2,1.44,Rack de pallets al lado de la prensa (la tanda) + estante en el puesto con la ola de mañana; máx. 6765 u en 80 bandejas o cajones,"PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O11 · máximo: H11 · bandejas: N11",
-   Carro de 12 cajones: cúpulas con cuello,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"PULMONES-FLAMA2035 › Parametros B38 (12 cajones en 4 niveles); medidas = carro de A42 (1,3 × 0,7 m) · cantidad: Pulmones S13","Fran pide confirmar que el carro tenga 4 niveles de 3 cajones; si no, se pide igual al porta-bandejas (1,3 × 0,7 m) con 4 niveles. Alto del carro"
-,,,,,,,,
-8. Cilindrado · 1 máq. · 1 turno,,,,,3.25,,Balanceo-FLAMA2035 › Carga R41 (máq.) y S41 (turnos),
-   Roladora (cilindradora de manuales),1,1.3,1.8,1.25,2.34,"Firesafer FS-PM01: Ø 50–163 mm, 10 pzas/min",Catálogo Firesafer (FS Cylinder Production); la cotización Firesafer cotiza 2 roladoras,"Hay 4 opciones: Firesafer FS-PM01 1,80 × 1,30 × 1,25 · Bästlein AK-BEND AS 70-10 1,70 × 0,70 × 1,10 · WMT OSTAS SM 700 × 76 1,30 × 0,80 × 1,30 · Getweld 2 rodillos (sin medidas). Se pone la más grande. Balanceo: 1 máquina; en Rueda se toman 2 (roladora propia del 1 kg)"
-   Carro porta-bandejas: virolas → soldadura longitudinal,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S8 (¿puede parar el que entrega?: Z8)",Alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-"9. Soldadura longitudinal — 2,5 a 10 kg · 1 máq. · 2 turnos",,,,,7.27,,Balanceo-FLAMA2035 › Carga R42 (máq.) y S42 (turnos),
-"   Soldadora longitudinal 2,5 a 10 kg",1,1,1.32,1.8,1.32,"MIG, largo de soldadura hasta 500 mm (Getweld ZF-500)","Cotización Getweld ZF-500; medidas: china.org.ru/product/1607235162 (ZF-500: 1.320, 1.000, 1.800 mm)",La cotización no da medidas. La ficha de internet no rotula las columnas: confirmar largo × ancho × alto con Getweld
-   Estante: virolas (pulmón),7,0.6,1.2,2,5.04,"Estante: parados en bandejas, un modelo por bandeja; máx. 607 u en 20 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O8 · máximo: H8 · bandejas: N8",
-   Carro porta-bandejas: cuerpos soldados → encastre de fondo,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S9 (¿puede parar el que entrega?: Z9)",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-10. Soldadura longitudinal TIG — 1 kg · 1 máq. · 2 turnos,,,,,1.32,,Balanceo-FLAMA2035 › Carga R43 (máq.) y S43 (turnos),
-   Soldadora longitudinal TIG 1 kg,1,1,1.32,1.8,1.32,equivalente: soldadora longitudinal ZF-500,Cotización Firesafer (TIG); medidas: china.org.ru/product/1607235162,Firesafer no da medidas; se toma la misma longitudinal ZF-500. Confirmar
-,,,,,,,,
-11. Encastre de fondo · 1 máq. · 2 turnos,,,,,6.29,,Balanceo-FLAMA2035 › Carga R44 (máq.) y S44 (turnos),
-   Prensa de encastre de fondo 30 t,1,1.31,0.81,2.12,1.06,equivalente: prensa de taller motorizada 30 t Promac 30-TON-MH2,Internet: ficha Promac 30-TON-MH2 (2.120 × 1.315 × 805 mm),"La cotización (Del Fabro 30 t) es solo un link que no carga. La ficha no dice qué medida es cada eje: se toma el alto 2,12 m"
-   Estante: cuerpos soldados (pulmón),4,0.6,1.2,2,2.88,"Estante: parados en bandejas, un modelo por bandeja; máx. 405 u en 10 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O9 · máximo: H9 · bandejas: N9",
-   Estante: fondos (pulmón),2,0.6,1.2,2,1.44,Rack de pallets al lado de la prensa (la tanda) + estante en el puesto con la ola de mañana; máx. 6609 u en 65 bandejas o cajones,"PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O10 · máximo: H10 · bandejas: N10",
-   Carro porta-bandejas: cuerpos con fondo → bordoneado,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S14 (¿puede parar el que entrega?: Z14)",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-12. Bordoneado · 1 máq. · 2 turnos,,,,,1.75,,Balanceo-FLAMA2035 › Carga R45 (máq.) y S45 (turnos),
-   Bordoneadora,1,0.7,1.2,1.2,0.84,"equivalente: bordoneadora motorizada AK-BEND AKM 250 (2,5 mm)","Internet: resale.info n.º 165720938 (AKM 250: 1,2 × 0,7 × 1,2 m)",Las cotizaciones Prinzing SME 80/3P y Pilman SWM-400 no dan medidas y no se encontraron en internet
-   Carro porta-bandejas: cuerpos bordoneados → soldadura circunferencial de cúpula y fondo,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S15 (¿puede parar el que entrega?: Z15)",Alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-13. Soldadura circunferencial de cúpula y fondo · 2 máq. · 2 turnos,,,,,10.31,,Balanceo-FLAMA2035 › Carga R46 (máq.) y S46 (turnos),
-   Soldadora circunferencial,2,a confirmar,a confirmar,a confirmar,,"Getweld ZNC250X2: Ø < 250 mm, 340 pzas/8 h","Cotizaciones Getweld ZNC250X2, SC Welding PRO-WP150 y Firesafer",Ninguna cotización de la carpeta da medidas y no se encontraron en internet. PRO-WP150: plato Ø 450 mm
-   Estante: cúpulas con cuello (pulmón),1,0.6,1.2,2,0.72,Estante de cajones al pie de la soldadura circunferencial; máx. 407 u en 9 bandejas o cajones,"PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O13 · máximo: H13 · bandejas: N13",
-   Estante: cuerpos bordoneados (pulmón),7,0.6,1.2,2,5.04,"Estante: parados en bandejas, un modelo por bandeja; máx. 691 u en 21 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O15 · máximo: H15 · bandejas: N15",
-   Carro porta-bandejas: cilindros soldados → prueba hidráulica,5,0.7,1.3,a confirmar,4.55,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S16 (¿puede parar el que entrega?: Z16)",Alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-14. Control de calidad — Espesor · 1 máq. · 1 turno,,,,,0,,Balanceo-FLAMA2035 › Carga R47 (máq.) y S47 (turnos),
-   Medidor de espesores,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-,,,,,,,,
-17. Granallado · 1 máq. · 2 turnos,,,,,6.76,,Balanceo-FLAMA2035 › Carga R50 (máq.) y S50 (turnos),
-   Granalladora AirBlast G-100,1,1.3,4.5,2.2,5.85,,Cotización AirBlast (memoria descriptiva),Alternativa CyM ECO 100 sin medidas
-   Carro porta-bandejas: cilindros granallados → pintura en polvo + horno,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S19 (¿puede parar el que entrega?: Z19)",Alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-18. Detección de defectos · 1 máq. · 2 turnos,,,,,0,,Balanceo-FLAMA2035 › Carga R51 (máq.) y S51 (turnos),
-   Puesto de detección de defectos,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-,,,,,,,,
-19. Corrección de defectos · 1 máq. · 1 turno,,,,,0,,Balanceo-FLAMA2035 › Carga R52 (máq.) y S52 (turnos),
-   Puesto de corrección de defectos,1,a confirmar,a confirmar,a confirmar,,,Cotización Firesafer (sanding machine),Ninguna cotización de la carpeta da medidas
-,,,,,,,,
-20. Pintura en polvo + horno · 1 máq. · 2 turnos,,,,,35.54,,Balanceo-FLAMA2035 › Carga R53 (máq.) y S53 (turnos),
-   Horno (precalentamiento y curado),2,2.44,6,2.44,29.28,"panelizado con lana de roca 50 mm, a gas",Cotización de pintura (Electricolor),Alternativas: línea Firesafer (sin medidas) o Prymax tercerizado
-   Cabina de pintura,1,1.5,2,2.44,3,con 2 reciprocadores de 1.300 mm y 2 ciclones,Cotización de pintura (Electricolor),Reciprocadores y ciclones sin medidas
-   Estante: cilindros granallados (pulmón),2,0.6,1.2,2,1.44,"Estante: parados en bandejas, un modelo por bandeja; máx. 488 u en 7 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O19 · máximo: H19 · bandejas: N19",
-   Carro porta-bandejas: cilindros vacíos pintados → embalaje y paletizado,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S20 (¿puede parar el que entrega?: Z20)",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
-   Carro porta-bandejas: cilindros pintados para cargar → carga de polvo,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S21 (¿puede parar el que entrega?: Z21)",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-21. Carga de polvo · 1 máq. · 1 turno,,,,,4.11,,Balanceo-FLAMA2035 › Carga R54 (máq.) y S54 (turnos),
-   Cargadora de polvo Yukon M-000121,1,0.51,0.62,1.2,0.32,,Cotización Yukon (Máquina de llenado),Alternativa Firesafer FS-A10 sin medidas
-   Estante: cilindros pintados para cargar (pulmón),4,0.6,1.2,2,2.88,"Estante: parados en bandejas, un modelo por bandeja; máx. 330 u en 11 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O21 · máximo: H21 · bandejas: N21",
-   Carro porta-bandejas: cilindros cargados de polvo → ensamblaje,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S22 (¿puede parar el que entrega?: Z22)",Alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-22. Ensamblaje · 1 máq. · 2 turnos,,,,,3.4,,Balanceo-FLAMA2035 › Carga R55 (máq.) y S55 (turnos),
-   Roscadora de manómetro y tubo Firesafer FS-NGNP,1,0.5,0.65,1.45,0.33,,Cotización Firesafer (ítem 34); medidas del catálogo Filling Line,
-   Estante: cilindros cargados de polvo (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 183 u en 9 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O22 · máximo: H22 · bandejas: N22",
-   Carro porta-bandejas: matafuegos armados → presurización,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S23 (¿puede parar el que entrega?: Z23)",Alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-23. Presurización · 1 máq. · 1 turno,,,,,3.07,,Balanceo-FLAMA2035 › Carga R56 (máq.) y S56 (turnos),
-   Pinza de presurización Yukon M-000150,1,a confirmar,a confirmar,a confirmar,,"neumática, 2 kg",Cotización Yukon (Presurización),Va sobre un soporte: medidas del soporte
-   Estante: matafuegos armados (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 168 u en 7 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O23 · máximo: H23 · bandejas: N23",
-   Carro porta-bandejas: matafuegos presurizados → control de calidad,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S24 (¿puede parar el que entrega?: Z24)",Alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-24. Control de calidad — Ensayo de pérdidas · 1 máq. · 1 turno,,,,,3.43,,Balanceo-FLAMA2035 › Carga R57 (máq.) y S57 (turnos),
-   Tanque de ensayo de pérdidas Firesafer FS-SS100,1,1.8,1,0.9,1.8,30–40 piezas por tanda,Catálogo Firesafer (Filling Line),La cotización Firesafer dice que el tanque no está incluido
-   Estante: matafuegos presurizados (pulmón),1,0.6,1.2,2,0.72,"Estante: parados en bandejas, un modelo por bandeja; máx. 161 u en 3 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O24 · máximo: H24 · bandejas: N24",
-   Carro porta-bandejas: matafuegos ensayados → etiquetado,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S25 (¿puede parar el que entrega?: Z25)",Alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-25. Etiquetado · 1 máq. · 1 turno,,,,,3.36,,Balanceo-FLAMA2035 › Carga R58 (máq.) y S58 (turnos),
-   Etiquetadora semiautomática,1,0.45,0.65,0.45,0.29,equivalente: etiquetadora semiautomática para envases redondos,"Internet: etiquetadora semiautomática Sammi (650 × 450 × 450 mm, 35 kg)",SISA y Firesafer no dan medidas. Es de mesa: falta la mesa
-   Estante: matafuegos ensayados (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 241 u en 8 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O25 · máximo: H25 · bandejas: N25",
-   Carro porta-bandejas: matafuegos etiquetados → embalaje y paletizado,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","PULMONES-FLAMA2035 › Parametros A42:B42 (lugar de 1 m² del carro de 1,3 × 0,7 m) y B37 (3 bandejas) · cantidad: Pulmones S26 (¿puede parar el que entrega?: Z26)",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
-,,,,,,,,
-26. Embalaje y paletizado · 2 máq. · 2 turnos,,,,,8.81,,Balanceo-FLAMA2035 › Carga R59 (máq.) y S59 (turnos),
-   Envolvedora EDOS PS 5,1,3,1.5,2.5,4.5,"área de instalación; pallet máx. 1,25 × 1,25 × 2,00 m",Folleto EDOS (Embaladora de pallet),
-   Cerradora de cajas Firesafer FS-DDP50,1,1.42,2.02,1.55,2.87,,Catálogo Firesafer (Filling Line),No está en la cotización Firesafer
-   Estante: cilindros vacíos pintados (pulmón),2,0.6,1.2,2,1.44,"Estante: parados en bandejas, un modelo por bandeja; máx. 421 u en 5 bandejas o cajones","PULMONES-FLAMA2035 › Parametros B7 (frente 1.200), B8 (fondo 600) y B9 (alto 2.000) · módulos: Pulmones O20 · máximo: H20 · bandejas: N20",
+Puesto / ítem,Cant.,Ancho (m),Largo (m),Alto (m),Huella (m²),Uso,Referencias,Documento y lugar de las medidas,Link medidas,Documento y lugar de la cantidad,Link cantidad,A confirmar
+4. Corte de disco y embutido (cúpula y fondo),1,,,,12.02,máquinas · turnos: 2,"R113, R196",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R37",abrir,
+   Prensa Sangiacomo (T130 R),1,1.3,1.6,3.32,2.08,"130 t, mesa 1.200 × 700 mm","R113, R021, R020, R022",Internet · aviso Sangiacomo T130 R CE (Exapro) · datos técnicos del aviso,abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R37",abrir,Fran nombra «Prensa Sangiacomo» (Balanceo › Lotes A42) sin modelo: se toma la T130 R
+   Desbobinador CENA TC-400,1,1,1.2,1.3,1.2,"fleje hasta 400 mm, rollo hasta 1.500 kg","R113, R027, R026, R028","Cotización CENA · Devobinador CENA SRL 2026.pdf · pág. 1, tabla del desbobinador, fila Dimensiones",abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R37",abrir,Se elige por el rollo más pesado: R114 (la TC-300 llega a 1.000 kg)
+   Enderezadora CENA SC-300,1,0.55,0.8,1.3,0.44,fleje hasta 300 mm,"R113, R030, R029, R031","Cotización CENA · Devobinador CENA SRL 2026.pdf · pág. 2, tabla SC, fila Dimensiones",abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R37",abrir,Se elige por el fleje más ancho: R115
+"   Rack de fondos y cúpulas (supermercado, pulmón)",2,1.2,2.7,a confirmar,6.48,"vano de 2,7 m × 3 niveles, pallets 1.200 × 800","R009, R008, R007","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B56",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Equipos, celda B12",abrir,Alto del rack
+   Carro de 12 cajones: fondos,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"R116, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S10",abrir,Fran no da su medida: pide igual al porta-bandejas si no sirve el que hay (R006). Alto del carro
+   Carro de 12 cajones: cúpulas,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"R117, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S11",abrir,Fran no da su medida: pide igual al porta-bandejas si no sirve el que hay (R006). Alto del carro
+,,,,,,,,,,,,
+5. Preparación de cuello,2,,,,0,máquinas · turnos: 2,"R118, R197",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R38",abrir,
+   Prensa de muesca del cuello,2,a confirmar,a confirmar,a confirmar,,,R118,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R38",abrir,No hay cotización ni dato de Fran para este equipo
+,,,,,,,,,,,,
+7. Soldadura del cuello a la cúpula,1,,,,4.03,máquinas · turnos: 2,"R119, R198",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R40",abrir,
+   Soldadora de cuello Firesafer FS-HPM,1,1.2,1.4,1.58,1.68,"plato divisor, 12 pzas/min","R119, R033, R032, R034","Catálogo Firesafer · FS Cylinder Production.pdf · ficha FS-HPM, Dimensions",abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R40",abrir,"Elegida por función (suelda el asiento de válvula en la cúpula); está en el catálogo, no en la cotización"
+   Estante: cúpulas (pulmón),2,0.6,1.2,2,1.44,Rack de pallets al lado de la prensa (la tanda) + estante en el puesto con la ola de mañana; máx. 6765 u,"R120, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O11",abrir,
+   Carro de 12 cajones: cúpulas con cuello,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"R121, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S13",abrir,Fran no da su medida: pide igual al porta-bandejas si no sirve el que hay (R006). Alto del carro
+,,,,,,,,,,,,
+8. Cilindrado,1,,,,3.25,máquinas · turnos: 1,"R122, R199",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R41",abrir,
+   Roladora Firesafer FS-PM01,1,1.3,1.8,1.25,2.34,"Ø 50–163 mm, 10 pzas/min","R122, R036, R035, R037","Catálogo Firesafer · FS Cylinder Production.pdf · ficha FS-PM01, Dimensions",abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R41",abrir,"Otras cotizaciones de roladora: Bästlein AK-BEND AS 70-10 «dimensions of the machine ca. 1700x700x1100 mm» · WMT OSTAS SM 700 × 76 «ca. 1,3 x 0,8 x 1,3» · Getweld 2 rodillos (sin medidas). Se pone la Firesafer, la más grande"
+   Carro porta-bandejas: virolas → soldadura longitudinal,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R123, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S8",abrir,Alto del carro
+,,,,,,,,,,,,
+"9. Soldadura longitudinal — 2,5 a 10 kg",1,,,,7.27,máquinas · turnos: 2,"R124, R200",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R42",abrir,
+   Soldadora longitudinal Getweld ZF-500,1,1,1.32,1.8,1.32,"MIG, hasta 500 mm","R124, R039, R038, R040",Internet · ficha Z F 500 (china.org.ru) · tabla de la ficha,abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R42",abrir,La cotización Getweld no da medidas; la ficha de internet no rotula las columnas
+   Estante: virolas (pulmón),7,0.6,1.2,2,5.04,"Estante: parados en bandejas, un modelo por bandeja; máx. 607 u","R125, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O8",abrir,
+   Carro porta-bandejas: cuerpos soldados → encastre de fondo,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R013, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,Pedido del grupo en la revisión del Excel · pedido en el chat de revisión,,Pulmones da 2 (R126); se pone 1 + soporte fijo (R013). Alto del carro
+,,,,,,,,,,,,
+10. Soldadura longitudinal TIG — 1 kg,1,,,,0,máquinas · turnos: 2,"R127, R201",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R43",abrir,
+   Soldadora longitudinal TIG 1 kg,1,a confirmar,a confirmar,a confirmar,,,R127,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R43",abrir,Sin medidas en las cotizaciones de la carpeta
+,,,,,,,,,,,,
+11. Encastre de fondo,1,,,,5.23,máquinas · turnos: 2,"R128, R202",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R44",abrir,
+   Prensa de encastre de fondo 30 t,1,a confirmar,a confirmar,a confirmar,,Del Fabro 30 t motorizada,R128,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R44",abrir,La cotización es solo un link a Del Fabro que no carga; no se encontró la ficha
+   Estante: cuerpos soldados (pulmón),4,0.6,1.2,2,2.88,"Estante: parados en bandejas, un modelo por bandeja; máx. 405 u","R129, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O9",abrir,
+   Estante: fondos (pulmón),2,0.6,1.2,2,1.44,Rack de pallets al lado de la prensa (la tanda) + estante en el puesto con la ola de mañana; máx. 6609 u,"R130, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O10",abrir,
+   Carro porta-bandejas: cuerpos con fondo → bordoneado,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R013, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,Pedido del grupo en la revisión del Excel · pedido en el chat de revisión,,Pulmones da 2 (R131); se pone 1 + soporte fijo (R013). Alto del carro
+,,,,,,,,,,,,
+12. Bordoneado,1,,,,1.75,máquinas · turnos: 2,"R132, R203",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R45",abrir,
+   Bordoneadora (equivalente AK-BEND AKM 250),1,0.7,1.2,1.2,0.84,"motorizada, 2,5 mm","R132, R042, R041, R043",Internet · aviso AK-BEND AKM 250 motor (resale.info) · datos del aviso,abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R45",abrir,Las cotizaciones Prinzing SME 80/3P y Pilman SWM-400 no dan medidas: se toma un equivalente
+   Carro porta-bandejas: cuerpos bordoneados → soldadura circunferencial de cúpula y fondo,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R133, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S15",abrir,Alto del carro
+,,,,,,,,,,,,
+13. Soldadura circunferencial de cúpula y fondo,2,,,,10.31,máquinas · turnos: 2,"R134, R204",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R46",abrir,
+   Soldadora circunferencial,2,a confirmar,a confirmar,a confirmar,,Getweld ZNC250X2: Ø < 250 mm,R134,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R46",abrir,"Sin medidas en las cotizaciones de la carpeta (Getweld ZNC250X2, SC Welding PRO-WP150, Firesafer) y no se encontró en internet"
+   Estante: cúpulas con cuello (pulmón),1,0.6,1.2,2,0.72,Estante de cajones al pie de la soldadura circunferencial; máx. 407 u,"R135, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O13",abrir,
+   Estante: cuerpos bordoneados (pulmón),7,0.6,1.2,2,5.04,"Estante: parados en bandejas, un modelo por bandeja; máx. 691 u","R136, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O15",abrir,
+   Carro porta-bandejas: cilindros soldados → prueba hidráulica,5,0.7,1.3,a confirmar,4.55,3 bandejas 1.200 × 600; espera en el origen,"R137, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S16",abrir,Alto del carro
+,,,,,,,,,,,,
+14. Control de calidad — Espesor,1,,,,0,máquinas · turnos: 1,"R138, R205",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R47",abrir,
+   Control de espesor,1,a confirmar,a confirmar,a confirmar,,,R138,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R47",abrir,No hay cotización ni dato de Fran para este equipo
+,,,,,,,,,,,,
+17. Granallado,1,,,,6.76,máquinas · turnos: 2,"R139, R206",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R50",abrir,
+   Granalladora AirBlast G-100,1,1.3,4.5,2.2,5.85,cabina 2.000 × 700 × 700 mm,"R139, R045, R044, R046",Cotización AirBlast · Memoria Descriptiva Shoteadora G-100 · Características técnicas,abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R50",abrir,
+   Carro porta-bandejas: cilindros granallados → pintura en polvo + horno,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R140, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S19",abrir,Alto del carro
+,,,,,,,,,,,,
+18. Detección de defectos,1,,,,0,máquinas · turnos: 2,"R141, R207",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R51",abrir,
+   Detección de defectos,1,a confirmar,a confirmar,a confirmar,,,R141,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R51",abrir,No hay cotización ni dato de Fran para este equipo
+,,,,,,,,,,,,
+19. Corrección de defectos,1,,,,0,máquinas · turnos: 1,"R142, R208",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R52",abrir,
+   Corrección de defectos,1,a confirmar,a confirmar,a confirmar,,,R142,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R52",abrir,Sin medidas en las cotizaciones de la carpeta
+,,,,,,,,,,,,
+20. Pintura en polvo + horno,1,,,,35.54,máquinas · turnos: 2,"R209, R210",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R53",abrir,
+   Horno (precalentamiento y curado),2,2.44,6,2.44,29.28,panelizado con lana de roca 50 mm,"R050, R048, R047, R049",Cotización de pintura (proforma 0001-001556) · renglón 4,abrir,Cotización de pintura (proforma 0001-001556) · renglón 4,abrir,
+   Cabina de pintura,1,1.5,2,2.44,3,2 reciprocadores de 1.300 mm y 2 ciclones sin medidas,"R054, R052, R051, R053",Cotización de pintura (proforma 0001-001556) · renglón 7,abrir,Cotización de pintura (proforma 0001-001556) · renglón 7,abrir,
+   Estante: cilindros granallados (pulmón),2,0.6,1.2,2,1.44,"Estante: parados en bandejas, un modelo por bandeja; máx. 488 u","R143, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O19",abrir,
+   Carro porta-bandejas: cilindros vacíos pintados → embalaje y paletizado,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R013, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,Pedido del grupo en la revisión del Excel · pedido en el chat de revisión,,Pulmones da 2 (R144); se pone 1 + soporte fijo (R013). Alto del carro
+   Carro porta-bandejas: cilindros pintados para cargar → carga de polvo,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R013, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,Pedido del grupo en la revisión del Excel · pedido en el chat de revisión,,Pulmones da 2 (R145); se pone 1 + soporte fijo (R013). Alto del carro
+,,,,,,,,,,,,
+21. Carga de polvo,1,,,,4.11,máquinas · turnos: 1,"R146, R211",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R54",abrir,
+   Cargadora de polvo Yukon M-000121,1,0.51,0.62,1.2,0.32,,"R146, R056, R055, R057",Cotización Yukon · Ficha Maq. carga M-000121 · Características técnicas,abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R54",abrir,
+   Estante: cilindros pintados para cargar (pulmón),4,0.6,1.2,2,2.88,"Estante: parados en bandejas, un modelo por bandeja; máx. 330 u","R147, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O21",abrir,
+   Carro porta-bandejas: cilindros cargados de polvo → ensamblaje,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R148, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S22",abrir,Alto del carro
+,,,,,,,,,,,,
+22. Ensamblaje,1,,,,3.4,máquinas · turnos: 2,"R149, R212",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R55",abrir,
+   Roscadora de manómetro y tubo Firesafer FS-NGNP,1,0.5,0.65,1.45,0.33,cotizada (ítem 34),"R149, R059, R058, R060",Catálogo Firesafer · Filling Line Series 2026.pdf · ficha FS-NGNP,abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R55",abrir,
+   Estante: cilindros cargados de polvo (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 183 u","R150, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O22",abrir,
+   Carro porta-bandejas: matafuegos armados → presurización,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R151, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S23",abrir,Alto del carro
+,,,,,,,,,,,,
+23. Presurización,1,,,,3.07,máquinas · turnos: 1,"R152, R213",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R56",abrir,
+   Pinza de presurización Yukon M-000150,1,a confirmar,a confirmar,a confirmar,,"neumática, 2 kg",R152,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R56",abrir,La ficha no da medidas; va sobre un soporte
+   Estante: matafuegos armados (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 168 u","R153, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O23",abrir,
+   Carro porta-bandejas: matafuegos presurizados → control de calidad,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R154, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S24",abrir,Alto del carro
+,,,,,,,,,,,,
+24. Control de calidad — Ensayo de pérdidas,1,,,,3.43,máquinas · turnos: 1,"R155, R214",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R57",abrir,
+   Tanque de ensayo de pérdidas Firesafer FS-SS100,1,1,1.8,0.9,1.8,30–40 piezas por tanda,"R155, R062, R061, R063",Catálogo Firesafer · Filling Line Series 2026.pdf · ficha FS-SS100,abrir,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R57",abrir,Elegido por función; la cotización Firesafer dice que el tanque no está incluido
+   Estante: matafuegos presurizados (pulmón),1,0.6,1.2,2,0.72,"Estante: parados en bandejas, un modelo por bandeja; máx. 161 u","R156, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O24",abrir,
+   Carro porta-bandejas: matafuegos ensayados → etiquetado,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R157, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda S25",abrir,Alto del carro
+,,,,,,,,,,,,
+25. Etiquetado,1,,,,3.07,máquinas · turnos: 1,"R158, R215",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R58",abrir,
+   Etiquetadora,1,a confirmar,a confirmar,a confirmar,,,R158,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R58",abrir,"Sin medidas en las cotizaciones de la carpeta (SISA, Firesafer)"
+   Estante: matafuegos ensayados (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 241 u","R159, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O25",abrir,
+   Carro porta-bandejas: matafuegos etiquetados → embalaje y paletizado,1,0.7,1.3,a confirmar,0.91,3 bandejas 1.200 × 600; espera en el origen,"R013, R005, R004","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda D42",abrir,Pedido del grupo en la revisión del Excel · pedido en el chat de revisión,,Pulmones da 2 (R160); se pone 1 + soporte fijo (R013). Alto del carro
+,,,,,,,,,,,,
+26. Embalaje y paletizado,2,,,,5.94,máquinas · turnos: 2,"R161, R216",,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R59",abrir,
+   Envolvedora EDOS PS 5,1,1.5,3,2.5,4.5,área de instalación,"R067, R065, R064, R066",Cotización EDOS · Folleto Recubridor PS5 V21 · Características Técnicas,abrir,Cotización EDOS · Folleto Recubridor PS5 V21 · pág. 1,abrir,
+   Puesto de encajonado,2,a confirmar,a confirmar,a confirmar,,,R161,,,"Balanceo-FLAMA2035.xlsx (Fran) · hoja Carga, celda R59",abrir,No hay cotización ni dato de Fran para este equipo
+   Estante: cilindros vacíos pintados (pulmón),2,0.6,1.2,2,1.44,"Estante: parados en bandejas, un modelo por bandeja; máx. 421 u","R162, R002, R001, R003","PULMONES-FLAMA2035.xlsx (Fran) · hoja Parametros, celda B7",abrir,"PULMONES-FLAMA2035.xlsx (Fran) · hoja Pulmones, celda O20",abrir,

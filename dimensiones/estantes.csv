@@ -1,44 +1,44 @@
-1) MUEBLES Y UNIDADES DE CARGA,,,,,,,,,
-Elemento,Frente (mm),Fondo (mm),Alto (mm),Niveles,Carga máx.,Cómo es por dentro,Fuente,,
-Estante de carga media (1 módulo),1200,600,2000,según la pieza (abajo),300 kg por nivel,Primer nivel a 100 mm del piso; el último no pasa de 1.600 mm (se carga sin escalera). Entre niveles: alto de la pieza + 100 mm para meter la mano + 40 mm de la bandeja. 1 bandeja o 3 cajones por nivel.,PULMONES-FLAMA2035 › Parametros B7:B13,,
-Bandeja metálica,1200,600,40,—,150 kg,Chapa plegada de 2 mm con borde de 30 mm. Rueda del carro al estante sobre carriles de rodillos. Un solo modelo por bandeja.,PULMONES-FLAMA2035 › Parametros B19:B22,,
-Cajón plástico,600,400,300,—,20 kg con el cajón,Interior 560 × 360 × 280 mm (pared y fondo de 20 mm). Fondos y cúpulas en columnas anidadas con 5 mm de luz.,PULMONES-FLAMA2035 › Parametros B23:B30,,
-Carro porta-bandejas (tránsito),1300,700,a confirmar,3,450 kg (3 × 150),3 niveles a la misma altura que los 3 primeros del estante: la bandeja pasa deslizando del carro al estante.,"PULMONES-FLAMA2035 › Parametros B37, B42",,
-Carro de 12 cajones (tránsito),1300,700,a confirmar,4,12 cajones,"4 niveles de 3 cajones de 600 × 400, a la altura de los niveles del estante de cajones (100 / 500 / 900 / 1.300 mm).",PULMONES-FLAMA2035 › Parametros B38,,
-Soporte fijo junto al puesto que entrega,1200,600,a confirmar,1,1 bandeja,Donde queda la bandeja que se está llenando mientras el carro viaja.,PULMONES-FLAMA2035 › Parametros B39,,
-Rack selectivo (supermercado de fondos y cúpulas),2700,1200,a confirmar,3,3 pallets por nivel,"Vano de 2,7 m, 3 pallets de 800 de frente por nivel. Primer nivel a 400 mm (picking a mano entre 0,55 y 1,45 m); arriba, reserva.",PULMONES-FLAMA2035 › Parametros B53:B58,,
-Pallet de cajones (fondos o cúpulas),1200,800,1045,3 capas,12 cajones,4 cajones por capa (2 × 2) y 3 capas. Un solo modelo por pallet.,PULMONES-FLAMA2035 › Parametros B53,,
-Jaula de recargas,1200,1000,a confirmar,apilada a 2,28 equipos,Paletizable.,Balanceo-FLAMA2035 › Parametros (U_JAULA) y Carga A131,,
-,,,,,,,,,
-2) CÓMO SE CARGA CADA PIEZA (por modelo),,,,,,,,,
-Pieza y unidad de carga,Modelo,Cómo va,Piezas por bandeja / cajón,Peso (kg),Alto que ocupa (mm),Altura de cada nivel del estante (mm),Por módulo de estante,Por carro,A confirmar
-Desarrollo — pila sobre bandeja,1 kg,"1 pila de 254 desarrollos (chapa de 0,9 mm)",254,149.9,229,5 niveles: 100 / 469 / 838 / 1207 / 1576,1270,762,
-,"2,5 kg","1 pila de 147 desarrollos (chapa de 1,25 mm)",147,149.9,184,5 niveles: 100 / 424 / 748 / 1072 / 1396,735,441,
-,5 kg,"1 pila de 76 desarrollos (chapa de 1,6 mm)",76,149.7,122,6 niveles: 100 / 362 / 624 / 886 / 1148 / 1410,456,228,
-,10 kg,"1 pila de 34 desarrollos (chapa de 2,0 mm)",34,148.9,68,8 niveles: 100 / 308 / 516 / 724 / 932 / 1140 / 1348 / 1556,272,102,
-Virola o cuerpo — parado sobre bandeja,1 kg,"parados en 15 filas × 7 = 105 (Ø 76,2 mm)",105,62,297.5,4 niveles: 100 / 538 / 976 / 1414,420,315,
-,"2,5 kg","parados en 9 filas × 4 = 36 (Ø 124,0 mm)",36,36.7,333,4 niveles: 100 / 573 / 1046 / 1519,144,108,
-,5 kg,"parados en 7 filas × 3 = 21 (Ø 153,0 mm)",21,41.4,414,3 niveles: 100 / 654 / 1208,63,63,
-,10 kg,"parados en 6 filas × 3 = 18 (Ø 181,5 mm)",18,78.8,582,3 niveles: 100 / 822 / 1544,54,54,
-Cilindro — parado sobre bandeja,1 kg,"parados en 15 filas × 7 = 105 (Ø 76,2 mm)",105,74.5,297.5,4 niveles: 100 / 538 / 976 / 1414,420,315,
-,"2,5 kg","parados en 9 filas × 4 = 36 (Ø 124,0 mm)",36,48.6,333,4 niveles: 100 / 573 / 1046 / 1519,144,108,
-,5 kg,"parados en 7 filas × 3 = 21 (Ø 153,0 mm)",21,54.6,414,3 niveles: 100 / 654 / 1208,63,63,
-,10 kg,"parados en 6 filas × 3 = 18 (Ø 181,5 mm)",18,98.6,582,3 niveles: 100 / 822 / 1544,54,54,
-Matafuego — parado sobre bandeja,1 kg,"parados, 72 (por peso: entran 15 × 7 = 105)",72,149.8,390,3 niveles: 100 / 630 / 1160,216,216,
-,"2,5 kg","parados, 34 (por peso: entran 9 × 4 = 36)",34,146.2,415,3 niveles: 100 / 655 / 1210,102,102,
-,5 kg,"parados, 18 (por peso: entran 7 × 3 = 21)",18,145.8,495,3 niveles: 100 / 735 / 1370,54,54,
-,10 kg,"parados, 9 (por peso: entran 6 × 3 = 18)",9,143.5,665,2 niveles: 100 / 905,18,27,"En el carro entran 3 bandejas, pero en el estante solo 2 niveles quedan bajo 1,6 m"
-Fondo — en cajón,1 kg,6 × 4 columnas de 12 piezas anidadas,288,17.4,300,4 niveles: 100 / 500 / 900 / 1300,3456,3456,
-,"2,5 kg",4 × 2 columnas de 11 piezas anidadas,88,19.7,300,4 niveles: 100 / 500 / 900 / 1300,1056,1056,
-,5 kg,3 × 2 columnas de 8 piezas anidadas,48,19.3,300,4 niveles: 100 / 500 / 900 / 1300,576,576,
-,10 kg,3 × 1 columnas de 9 piezas anidadas,27,18.4,300,4 niveles: 100 / 500 / 900 / 1300,324,324,
-Cúpula — en cajón,1 kg,6 × 4 columnas de 12 piezas anidadas,288,14.5,300,4 niveles: 100 / 500 / 900 / 1300,3456,3456,
-,"2,5 kg",4 × 2 columnas de 10 piezas anidadas,80,19.8,300,4 niveles: 100 / 500 / 900 / 1300,960,960,
-,5 kg,3 × 2 columnas de 6 piezas anidadas,36,18.1,300,4 niveles: 100 / 500 / 900 / 1300,432,432,
-,10 kg,3 × 1 columnas de 7 piezas anidadas,21,17.9,300,4 niveles: 100 / 500 / 900 / 1300,252,252,
-Cúpula con cuello — en cajón,1 kg,"sueltas en el cajón (Pulmones, Unidades fila 48; límite 20 kg)",100,8,300,4 niveles: 100 / 500 / 900 / 1300,1200,1200,
-,"2,5 kg","sueltas en el cajón (Pulmones, Unidades fila 48; límite 20 kg)",40,13.5,300,4 niveles: 100 / 500 / 900 / 1300,480,480,
-,5 kg,"sueltas en el cajón (Pulmones, Unidades fila 48; límite 20 kg)",30,18.8,300,4 niveles: 100 / 500 / 900 / 1300,360,360,
-,10 kg,"sueltas en el cajón (Pulmones, Unidades fila 48; límite 20 kg)",19,19.9,300,4 niveles: 100 / 500 / 900 / 1300,228,228,
-,,,,,,,,,
-"Fuente: PULMONES-FLAMA2035, hojas Unidades y Datos (pesos, Ø y altos de cada modelo). Altura de los niveles = 100 mm + n × (alto de la pieza + 100 mm + 40 mm de bandeja).",,,,,,,,,
+1) MUEBLES Y UNIDADES DE CARGA,,,,,,,,,,
+Elemento,Frente (mm),Fondo (mm),Alto (mm),Niveles,Carga máx.,Cómo es por dentro,Fuente,,,
+Estante de carga media (1 módulo),1200,600,2000,según la pieza (abajo),300 kg por nivel,Primer nivel a 100 mm del piso; el último no pasa de 1.600 mm (se carga sin escalera). Entre niveles: alto de la pieza + 100 mm para meter la mano + 40 mm de la bandeja. 1 bandeja o 3 cajones por nivel.,PULMONES-FLAMA2035 › Parametros B7:B13,,,
+Bandeja metálica,1200,600,40,—,150 kg,Chapa plegada de 2 mm con borde de 30 mm. Rueda del carro al estante sobre carriles de rodillos. Un solo modelo por bandeja.,PULMONES-FLAMA2035 › Parametros B19:B22,,,
+Cajón plástico,600,400,300,—,20 kg con el cajón,Interior 560 × 360 × 280 mm (pared y fondo de 20 mm). Fondos y cúpulas en columnas anidadas con 5 mm de luz.,PULMONES-FLAMA2035 › Parametros B23:B30,,,
+Carro porta-bandejas (tránsito),1300,700,a confirmar,3,450 kg (3 × 150),3 niveles a la misma altura que los 3 primeros del estante: la bandeja pasa deslizando del carro al estante.,"PULMONES-FLAMA2035 › Parametros B37, B42",,,
+Carro de 12 cajones (tránsito),1300,700,a confirmar,4,12 cajones,"4 niveles de 3 cajones de 600 × 400, a la altura de los niveles del estante de cajones (100 / 500 / 900 / 1.300 mm).",PULMONES-FLAMA2035 › Parametros B38,,,
+Soporte fijo junto al puesto que entrega,1200,600,a confirmar,1,1 bandeja,Donde queda la bandeja que se está llenando mientras el carro viaja.,PULMONES-FLAMA2035 › Parametros B39,,,
+Rack selectivo (supermercado de fondos y cúpulas),2700,1200,a confirmar,3,3 pallets por nivel,"Vano de 2,7 m, 3 pallets de 800 de frente por nivel. Primer nivel a 400 mm (picking a mano entre 0,55 y 1,45 m); arriba, reserva.",PULMONES-FLAMA2035 › Parametros B53:B58,,,
+Pallet de cajones (fondos o cúpulas),1200,800,1045,3 capas,12 cajones,4 cajones por capa (2 × 2) y 3 capas. Un solo modelo por pallet.,PULMONES-FLAMA2035 › Parametros B53,,,
+Jaula de recargas,1200,1000,a confirmar,apilada a 2,28 equipos,Paletizable.,Balanceo-FLAMA2035 › Parametros (U_JAULA) y Carga A131,,,
+,,,,,,,,,,
+2) CÓMO SE CARGA CADA PIEZA (por modelo),,,,,,,,,,
+Pieza y unidad de carga,Modelo,Cómo va,Piezas por bandeja / cajón,Peso (kg),Alto que ocupa (mm),Altura de cada nivel del estante (mm),Por módulo de estante,Por carro,A confirmar,Fila en la fuente
+Desarrollo — pila sobre bandeja,1 kg,"1 pila de 254 desarrollos (chapa de 0,9 mm)",254,149.9,229,5 niveles: 100 / 469 / 838 / 1207 / 1576,1270,762,,"PULMONES-FLAMA2035 › hoja Unidades, columna C, filas 6 a 11"
+,"2,5 kg","1 pila de 147 desarrollos (chapa de 1,25 mm)",147,149.9,184,5 niveles: 100 / 424 / 748 / 1072 / 1396,735,441,,"PULMONES-FLAMA2035 › hoja Unidades, columna D, filas 6 a 11"
+,5 kg,"1 pila de 76 desarrollos (chapa de 1,6 mm)",76,149.7,122,6 niveles: 100 / 362 / 624 / 886 / 1148 / 1410,456,228,,"PULMONES-FLAMA2035 › hoja Unidades, columna E, filas 6 a 11"
+,10 kg,"1 pila de 34 desarrollos (chapa de 2,0 mm)",34,148.9,68,8 niveles: 100 / 308 / 516 / 724 / 932 / 1140 / 1348 / 1556,272,102,,"PULMONES-FLAMA2035 › hoja Unidades, columna F, filas 6 a 11"
+Virola o cuerpo — parado sobre bandeja,1 kg,"parados en 15 filas × 7 = 105 (Ø 76,2 mm)",105,62,297.5,4 niveles: 100 / 538 / 976 / 1414,420,315,,"PULMONES-FLAMA2035 › hoja Unidades, columna C, filas 13 a 18"
+,"2,5 kg","parados en 9 filas × 4 = 36 (Ø 124,0 mm)",36,36.7,333,4 niveles: 100 / 573 / 1046 / 1519,144,108,,"PULMONES-FLAMA2035 › hoja Unidades, columna D, filas 13 a 18"
+,5 kg,"parados en 7 filas × 3 = 21 (Ø 153,0 mm)",21,41.4,414,3 niveles: 100 / 654 / 1208,63,63,,"PULMONES-FLAMA2035 › hoja Unidades, columna E, filas 13 a 18"
+,10 kg,"parados en 6 filas × 3 = 18 (Ø 181,5 mm)",18,78.8,582,3 niveles: 100 / 822 / 1544,54,54,,"PULMONES-FLAMA2035 › hoja Unidades, columna F, filas 13 a 18"
+Cilindro — parado sobre bandeja,1 kg,"parados en 15 filas × 7 = 105 (Ø 76,2 mm)",105,74.5,297.5,4 niveles: 100 / 538 / 976 / 1414,420,315,,"PULMONES-FLAMA2035 › hoja Unidades, columna C, filas 20 a 25"
+,"2,5 kg","parados en 9 filas × 4 = 36 (Ø 124,0 mm)",36,48.6,333,4 niveles: 100 / 573 / 1046 / 1519,144,108,,"PULMONES-FLAMA2035 › hoja Unidades, columna D, filas 20 a 25"
+,5 kg,"parados en 7 filas × 3 = 21 (Ø 153,0 mm)",21,54.6,414,3 niveles: 100 / 654 / 1208,63,63,,"PULMONES-FLAMA2035 › hoja Unidades, columna E, filas 20 a 25"
+,10 kg,"parados en 6 filas × 3 = 18 (Ø 181,5 mm)",18,98.6,582,3 niveles: 100 / 822 / 1544,54,54,,"PULMONES-FLAMA2035 › hoja Unidades, columna F, filas 20 a 25"
+Matafuego — parado sobre bandeja,1 kg,"parados, 72 (por peso: entran 15 × 7 = 105)",72,149.8,390,3 niveles: 100 / 630 / 1160,216,216,,"PULMONES-FLAMA2035 › hoja Unidades, columna C, filas 27 a 32"
+,"2,5 kg","parados, 34 (por peso: entran 9 × 4 = 36)",34,146.2,415,3 niveles: 100 / 655 / 1210,102,102,,"PULMONES-FLAMA2035 › hoja Unidades, columna D, filas 27 a 32"
+,5 kg,"parados, 18 (por peso: entran 7 × 3 = 21)",18,145.8,495,3 niveles: 100 / 735 / 1370,54,54,,"PULMONES-FLAMA2035 › hoja Unidades, columna E, filas 27 a 32"
+,10 kg,"parados, 9 (por peso: entran 6 × 3 = 18)",9,143.5,665,2 niveles: 100 / 905,18,27,"En el carro entran 3 bandejas, pero en el estante solo 2 niveles quedan bajo 1,6 m","PULMONES-FLAMA2035 › hoja Unidades, columna F, filas 27 a 32"
+Fondo — en cajón,1 kg,6 × 4 columnas de 12 piezas anidadas,288,17.4,300,4 niveles: 100 / 500 / 900 / 1300,3456,3456,,"PULMONES-FLAMA2035 › hoja Unidades, columna C, filas 34 a 39"
+,"2,5 kg",4 × 2 columnas de 11 piezas anidadas,88,19.7,300,4 niveles: 100 / 500 / 900 / 1300,1056,1056,,"PULMONES-FLAMA2035 › hoja Unidades, columna D, filas 34 a 39"
+,5 kg,3 × 2 columnas de 8 piezas anidadas,48,19.3,300,4 niveles: 100 / 500 / 900 / 1300,576,576,,"PULMONES-FLAMA2035 › hoja Unidades, columna E, filas 34 a 39"
+,10 kg,3 × 1 columnas de 9 piezas anidadas,27,18.4,300,4 niveles: 100 / 500 / 900 / 1300,324,324,,"PULMONES-FLAMA2035 › hoja Unidades, columna F, filas 34 a 39"
+Cúpula — en cajón,1 kg,6 × 4 columnas de 12 piezas anidadas,288,14.5,300,4 niveles: 100 / 500 / 900 / 1300,3456,3456,,"PULMONES-FLAMA2035 › hoja Unidades, columna C, filas 41 a 46"
+,"2,5 kg",4 × 2 columnas de 10 piezas anidadas,80,19.8,300,4 niveles: 100 / 500 / 900 / 1300,960,960,,"PULMONES-FLAMA2035 › hoja Unidades, columna D, filas 41 a 46"
+,5 kg,3 × 2 columnas de 6 piezas anidadas,36,18.1,300,4 niveles: 100 / 500 / 900 / 1300,432,432,,"PULMONES-FLAMA2035 › hoja Unidades, columna E, filas 41 a 46"
+,10 kg,3 × 1 columnas de 7 piezas anidadas,21,17.9,300,4 niveles: 100 / 500 / 900 / 1300,252,252,,"PULMONES-FLAMA2035 › hoja Unidades, columna F, filas 41 a 46"
+Cúpula con cuello — en cajón,1 kg,"sueltas en el cajón (Pulmones, Unidades fila 48; límite 20 kg)",100,8,300,4 niveles: 100 / 500 / 900 / 1300,1200,1200,,"PULMONES-FLAMA2035 › hoja Unidades, columna C, filas 48 a 53"
+,"2,5 kg","sueltas en el cajón (Pulmones, Unidades fila 48; límite 20 kg)",40,13.5,300,4 niveles: 100 / 500 / 900 / 1300,480,480,,"PULMONES-FLAMA2035 › hoja Unidades, columna D, filas 48 a 53"
+,5 kg,"sueltas en el cajón (Pulmones, Unidades fila 48; límite 20 kg)",30,18.8,300,4 niveles: 100 / 500 / 900 / 1300,360,360,,"PULMONES-FLAMA2035 › hoja Unidades, columna E, filas 48 a 53"
+,10 kg,"sueltas en el cajón (Pulmones, Unidades fila 48; límite 20 kg)",19,19.9,300,4 niveles: 100 / 500 / 900 / 1300,228,228,,"PULMONES-FLAMA2035 › hoja Unidades, columna F, filas 48 a 53"
+,,,,,,,,,,
+"Fuente: PULMONES-FLAMA2035, hojas Unidades y Datos (pesos, Ø y altos de cada modelo). Altura de los niveles = 100 mm + n × (alto de la pieza + 100 mm + 40 mm de bandeja).",,,,,,,,,,
