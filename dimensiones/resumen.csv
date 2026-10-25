@@ -1,85 +1,75 @@
 Puesto,Huella de lo que va adentro (m²)
 MANUALES,
-4. CORTE DE DISCO Y EMBUTIDO + supermercado de fondos y cúpulas · 1 máq. · 2 turnos,23.88
-5. PREPARACIÓN DE CUELLO (muesca ×2) · 2 máq. · 2 turnos,3.25
-7. SOLDADURA DEL CUELLO A LA CÚPULA · 1 máq. · 2 turnos,4.2
-8. CILINDRADO 1 – 10 kg (única roladora) · 1 máq. · 1 turno,5.42
-"9. SOLDADURA LONGITUDINAL 2,5–10 kg — cuello de botella · 1 máq. · 2 turnos",9.17
-10. SOLDADURA LONGITUDINAL TIG 1 kg · 1 máq. · 2 turnos,5.57
-11. ENCASTRE DE FONDO · 1 máq. · 2 turnos,6.91
-12. BORDONEADO · 1 máq. · 2 turnos,4.71
-13. SOLDADURA CIRCUNFERENCIAL ×2 — marcapasos · 2 máq. · 2 turnos,12.67
-14. CONTROL DE ESPESOR · 1 máq. · 1 turno,2.08
-17 + 18 + 19. GRANALLADO + DETECCIÓN + CORRECCIÓN,21.2
-20. PINTURA EN POLVO + HORNO · 1 máq. · 2 turnos,66.97
-21. CARGA DE POLVO · 1 máq. · 1 turno,7.52
-22. ENSAMBLAJE · 1 máq. · 2 turnos,5.81
-23. PRESURIZACIÓN · 1 máq. · 1 turno,3.99
-24. ENSAYO DE PÉRDIDAS · 1 máq. · 1 turno,3.58
-25. ETIQUETADO · 1 máq. · 1 turno,4.72
-26. EMBALAJE — 17a armado de cajas · 2 máq. · 2 turnos,3.82
-26. EMBALAJE Y PALETIZADO · 2 máq. · 2 turnos,11.1
-26. EMBALAJE — 17b insumos de embalaje e identificación (al pie del puesto) · 2 máq. · 2 turnos,8.78
-Total Manuales,215.33
+4. Corte de disco y embutido (cúpula y fondo) · 1 máq. · 2 turnos,8.3
+5. Preparación de cuello · 2 máq. · 2 turnos,0
+7. Soldadura del cuello a la cúpula · 1 máq. · 2 turnos,4.03
+8. Cilindrado · 1 máq. · 1 turno,3.25
+"9. Soldadura longitudinal — 2,5 a 10 kg · 1 máq. · 2 turnos",5.95
+10. Soldadura longitudinal TIG — 1 kg · 1 máq. · 2 turnos,0
+11. Encastre de fondo · 1 máq. · 2 turnos,5.23
+12. Bordoneado · 1 máq. · 2 turnos,0.91
+13. Soldadura circunferencial de cúpula y fondo · 2 máq. · 2 turnos,10.31
+14. Control de calidad — Espesor · 1 máq. · 1 turno,0
+17. Granallado · 1 máq. · 2 turnos,6.76
+18. Detección de defectos · 1 máq. · 2 turnos,0
+19. Corrección de defectos · 1 máq. · 1 turno,0
+20. Pintura en polvo + horno · 1 máq. · 2 turnos,35.54
+21. Carga de polvo · 1 máq. · 1 turno,4.11
+22. Ensamblaje · 1 máq. · 2 turnos,3.4
+23. Presurización · 1 máq. · 1 turno,3.07
+24. Control de calidad — Ensayo de pérdidas · 1 máq. · 1 turno,3.43
+25. Etiquetado · 1 máq. · 1 turno,3.07
+26. Embalaje y paletizado · 2 máq. · 2 turnos,8.81
+Total Manuales,106.16
 ,
 CARROS,
-2.2 PULMÓN de cuerpos planos grabados · 0 máq. · 1 turno,5.27
-3. CILINDRADO · 1 máq. · 1 turno,9.12
-4. PUNTEO DEL CUERPO · 1 máq. · 1 turno,6.84
-5. SOLDADURA LONGITUDINAL · 1 máq. · 1 turno,6.68
-6. SOLDADURA DE CUPLA EN LA CÚPULA · 1 máq. · 1 turno,3.47
-7. ARMADO + SOLDADURA CIRCUNFERENCIAL · 1 máq. · 1 turno,8.43
-8. SOLDADURA DE ACCESORIOS · 1 máq. · 1 turno,7.47
-8.1 FABRICACIÓN DE ACCESORIOS · 1 máq. · 1 turno,13.08
-8.1 BUFFER DE SEMIELABORADOS (al pie de 8.1) · 1 máq. · 1 turno,2.38
-11. ESPERA DEL PINTOR + CARROS DE MANIPULACIÓN · 1 máq. · 1 turno,17.52
-12. RECEPCIÓN DE PINTADOS + CAMBIO DE JUEGO (ruedas) · 1 máq. · 1 turno,26.86
-"13. CARGA, MONTAJE Y PRESURIZACIÓN (estaciones A, B y C)",21.48
-13b. N₂ (al pie de 13) · 1 máq. · 1 turno,6.27
-15. ETIQUETADO + NO CONFORME,5.38
-14-17. ENSAYOS DE LOTE (adentro) + muestra · 1 máq. · 1 turno,11.54
-14-17. LIBERACIÓN / TRAZABILIDAD (abierto al 17 y a la expedición) · 1 máq. · 1 turno,4.12
-Total Carros,155.89
+3. Cilindrado · 1 máq. · 1 turno,5.25
+4. Punteo del cuerpo · 1 máq. · 1 turno,0.35
+5. Soldadura longitudinal · 1 máq. · 1 turno,3
+6. Soldadura de cupla en la cúpula · 1 máq. · 1 turno,0.47
+7. Armado y soldadura circunferencial · 1 máq. · 1 turno,2.2
+8. Soldadura de accesorios · 1 máq. · 1 turno,0.18
+8.1. Fabricación de accesorios · 1 máq. · 1 turno,0
+11. Pulmón de despacho y carga a pintura · 1 máq. · 1 turno,12.65
+12. Recepción de pintados y cambio de juego · 1 máq. · 1 turno,12.65
+13 B. Carga de polvo y presurización · 1 máq. · 1 turno,0.32
+"13 A-C / 15. Montaje, manga, precinto y etiquetado · 1 máq. · 1 turno",0
+"14-17. Calidad: pérdidas, inspección final, liberación y ensayos de lote · 1 máq. · 1 turno",0
+Total Carros,37.07
 ,
 RECARGAS,
-R1 ×2. RECEPCIÓN Y REGISTRO · 2 máq. · 1 turno,1.49
-R2 ×2. INSPECCIÓN VISUAL · 2 máq. · 2 turnos,1.34
-R3. DESCARGA ABC (recinto de polvo) · 1 máq. · 2 turnos,1.21
-R4. DESCARTE ABC · BC (recinto de polvo) · 1 máq. · 1 turno,0.72
-R4. BIG BAG (recinto de polvo) · 1 máq. · 1 turno,1.54
-R5. LÍQUIDOS: AGUA · AFFF · CLASE K · 1 máq. · 1 turno,4.26
-R6. CO₂: RECUPERACIÓN Y CARGA · 1 máq. · 1 turno,1.65
-R7. HALOGENADOS · 1 máq. · 1 turno,1.22
-R8 ×2. DESARME Y LIMPIEZA (recinto de polvo) · 2 máq. · 2 turnos,1.74
-R9. DESARME E INSPECCIÓN GENERAL · 1 máq. · 1 turno,1.61
-R10. LABORATORIO · 1 máq. · 1 turno,5.7
-R11 + R23. PRUEBA HIDRÁULICA + PH DE MANGUERAS,2.01
-R12 + R13. SECADO + VIDEOSCOPIO,1.71
-R14 ×2. PINTURA (recinto) · 2 máq. · 2 turnos,0.58
-R15 ×2. CARGA DE POLVO ABC · BC (recinto) · 2 máq. · 2 turnos,2.04
-SECTOR CLASE D (recinto; parte del 15 y del 4),1.64
-R16 ×2. ENSAMBLAJE Y MARBETE (recinto) · 2 máq. · 2 turnos,1.45
-R17. PRESURIZACIÓN (recinto) · 1 máq. · 2 turnos,0.8
-R18 + R19. ENSAMBLAJE GENERAL + CONTROL DE PESO,1.22
-R20 ×2. ENSAYO DE PÉRDIDAS · 2 máq. · 1 turno,3
-"R21 ×2. PRECINTO, ETIQUETA Y DESPACHO · 2 máq. · 2 turnos",1.85
-R22. INUTILIZACIÓN · 1 máq. · 1 turno,1.42
-PL. PULMÓN A RECINTO (espera de jaulas),1.5
-CLIMA DEL RECINTO DE POLVO,0.91
-POLVO NUEVO (al pie de R15) · 2 máq. · 2 turnos,1.68
-REPUESTOS (al pie de R16 y R17) · 2 máq. · 2 turnos,1.09
-PULMÓN DE ENTRADA (E) — jaulas de clientes,20.04
-PULMÓN DE SALIDA (D) — jaulas listas por cliente y ruta,20.04
-JAULAS VACÍAS,2.4
-CARGA DE BATERÍAS + TRAZABILIDAD,2.77
-Total Recargas,90.62
+R1. Recepción y registro · 2 máq. · 1 turno,2.4
+R2. Inspección visual · 2 máq. · 2 turnos,1.2
+R3. Descarga ABC — ruta recuperable · 1 máq. · 2 turnos,1.52
+"R4. Descarga a descarte (ABC, BC y Clase D) · 1 máq. · 1 turno",1.2
+R5. Descarga y carga de agua / AFFF / sales K · 1 máq. · 1 turno,1.55
+R6. Recuperación y carga de CO₂ · 1 máq. · 1 turno,1.56
+R7. Recuperación y carga de halogenado · 1 máq. · 1 turno,1.2
+R8. Desarme y limpieza — recinto · 2 máq. · 2 turnos,1.2
+R9. Desarme e inspección interior — zona general · 1 máq. · 1 turno,1.2
+R10. Laboratorio — Puffer y mufla · 1 máq. · 1 turno,1.2
+R11. Prueba hidráulica · 1 máq. · 2 turnos,2.31
+R12. Secado · 1 máq. · 2 turnos,1.66
+R13. Inspección interior con videoscopio · 1 máq. · 1 turno,1.2
+R14. Pintura · 2 máq. · 2 turnos,1.2
+"R15. Carga de polvo ABC, BC y Clase D · 2 máq. · 2 turnos",1.83
+R16. Ensamblaje y marbete — recinto · 2 máq. · 2 turnos,1.73
+R17. Presurización — recinto · 1 máq. · 2 turnos,1.49
+R18. Ensamblaje y presurización — zona general · 1 máq. · 1 turno,1.2
+R19. Control de peso (CO₂ y halogenados sin recarga) · 1 máq. · 1 turno,1.2
+R20. Ensayo de pérdidas · 2 máq. · 1 turno,6
+"R21. Precinto, etiqueta y despacho · 2 máq. · 2 turnos",1.2
+R22. Inutilización y disposición final · 1 máq. · 1 turno,1.2
+R23. PH de mangueras (CO₂ y rodantes) · 1 máq. · 1 turno,1.2
+PULMONES DE ENTRADA Y SALIDA DE RECARGAS,24
+Total Recargas,61.66
 ,
 COMPARTIDOS,
-CORTE — 2 guillotinas en L · Manuales 2 + 3 y Carros 2,30.64
-MARCADO DEL CUERPO — marcadora 1 · Manuales 6 (puesto único de 2 máq. con Carros 2.1),5.3
-MARCADO DEL CUERPO — marcadora 2 · Carros 2.1 (mismo puesto 6 del Balanceo),2.35
-PRUEBA HIDRÁULICA + SECADO — un bloque · Manuales 15 + 16 y Carros 9 + 10,28.18
-INSUMOS DE MONTAJE — al lado del 13 de Carros; la estantería A va al ensamblaje de Manuales,8.2
-Total Compartidos,74.65
+CORTE — guillotina 1 (franjas) · Manuales 2 y Carros 2,0
+CORTE — guillotina 2 (piezas) · Manuales 3 y Carros 2,0.91
+MARCADO DEL CUERPO · Manuales 6 y Carros 2.1,4.04
+PRUEBA HIDRÁULICA · Manuales 15 y Carros 9,3.87
+SECADO · Manuales 16 y Carros 10,2.73
+Total Compartidos,11.54
 ,
-TOTAL SIN ALMACENES,536.5
+TOTAL SIN ALMACENES,216.43

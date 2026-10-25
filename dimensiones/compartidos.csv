@@ -1,52 +1,22 @@
 Puesto / ítem,Lo usa,Cant.,Ancho (m),Largo (m),Alto (m),Huella (m²),Medidas internas / uso,Fuente,A confirmar
-CORTE — 2 guillotinas en L · Manuales 2 + 3 y Carros 2,,,,,,30.64,suma de las huellas de lo que va adentro (sin circulación),,
-Corte G1 — Manuales 2 (y Carros 2) · 1 máq. · 1 turno,,,,,,,,Balanceo,
-   Guillotina 1 Ermaksan CNC HGS 2600-6,Los dos,1,3.4,1.9,1.55,6.46,"cuchilla 2.600 mm, espesor máx. 6 mm",Plano · Balanceo · Ficha,Alto tomado de la ficha de reventa del mismo tamaño (2006): confirmar con Ermaksan
-   Tope trasero G1 (zona libre),Los dos,1,3.4,1,—,3.4,"tope trasero 1,0 m → franjas ≤ 1.000 mm",Plano,
-   Brazos de apoyo con rodillos,Los dos,1,1.8,1,a confirmar,1.8,"brazos de 1,0 m",Plano,Alto = mesa de la guillotina
-   Mesa elevadora 1 SJG3.0-1.6 (paquete de hojas),Los dos,1,1.8,2.6,a confirmar,4.68,"paquete 1,5 × 3,0 m, el lado de 1,5 hacia la cuchilla",Plano,Plataforma y alto cerrado/abierto: ficha SJG3.0-1.6
-Corte G2 — Manuales 3 (y Carros 2) · 1 máq. · 1 turno,,,,,,,,Balanceo,
-   Guillotina 2 QC12Y 6 × 2500,Los dos,1,1.61,3.04,1.6,4.89,"cuchilla 2.500 mm, mesa a 0,78 m, garganta 150 mm",Plano · Balanceo · Ficha,"Plano 3,04 m de largo vs 3,10 m de la ficha"
-   Tope trasero G2 (zona libre),Los dos,1,0.8,3.04,—,2.43,"tope trasero 0,8 m",Plano,
-   Mesa elevadora 2 SJG3.0-1.6 = pulmón de franjas,Los dos,1,2.6,1.8,a confirmar,4.68,"franjas en la mesa; 90 franjas como máximo, 0 módulos de estante; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,Plataforma y alto: ficha SJG3.0-1.6
-   Carro de desarrollos manuales → marcado 1,Manuales,1,0.7,1.09,a confirmar,0.76,"1 carro de tránsito, el estante del marcado es el pulmón; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,"Pulmones pide carro porta-bandejas 1,3 × 0,7 m con 3 bandejas; el plano dibuja un FCEP10520 de 1,065 × 0,70 m sin bandejas. Uno solo: la G2 corta por tanda y el estante del marcado es el pulmón (Word de manuales decía 2 alternados)"
-   Carro de cajas: piezas de accesorios de carros → 8.1,Carros,1,0.7,1.09,a confirmar,0.76,"FCEP10520 1.065 × 700 mm, 500 kg; una caja por pieza; 8.1 lo busca 1 vez por día; detalle en hojas Pulmones y Estantes y carros",Plano · Word,"El plano dice «piezas de carros → marcado 2», pero los cuerpos de carros no van en carro: pasan de la rampa de la G2 a la mesa de marcado 2.1 (Word de carros). Es el mismo carro de cajas que el plano dibuja también en 8.1: hay uno solo"
-   Carro de scrap (retazos),Los dos,1,0.7,1.09,a confirmar,0.76,,Plano,
+CORTE — guillotina 1 (franjas) · Manuales 2 y Carros 2,,,,,,0,,,
+   Guillotina 1,Los dos,1,a confirmar,a confirmar,a confirmar,,,"Cotizaciones Molinari HG 6 × 3200, CENA y Machcenter",Molinari no da medidas; CENA y Machcenter son imágenes que no se pueden leer
 ,,,,,,,,,
-MARCADO DEL CUERPO — marcadora 1 · Manuales 6 (puesto único de 2 máq. con Carros 2.1),,,,,,5.3,suma de las huellas de lo que va adentro (sin circulación),,
-   Marcadora 1 (micropercusión Pannier ADP120160D),Manuales,1,1.4,0.95,a confirmar,1.33,montada en columna sobre banco,Plano · Word,
-   Mesa FMT ME500,Manuales,1,1,0.52,a confirmar,0.52,,Plano,
-   Carro de marcados 1 kg → M1,Manuales,1,1.09,0.6,a confirmar,0.65,detalle en hojas Pulmones y Estantes y carros,Plano,
-"   Carro de marcados 2,5–10 kg → M1",Manuales,1,1.09,0.58,a confirmar,0.63,detalle en hojas Pulmones y Estantes y carros,Plano,
-   Estante de desarrollos (pulmón),Manuales,3,3.6,0.6,2,2.16,"estante 1,2 × 0,6 m; último nivel a 1,6 m; 1.505 desarrollos máx., 15 bandejas; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
+CORTE — guillotina 2 (piezas) · Manuales 3 y Carros 2,,,,,,0.91,,,
+   Guillotina 2,Los dos,1,a confirmar,a confirmar,a confirmar,,,Cotización Firesafer (sheet shearing machine),Ninguna cotización de la carpeta da medidas
+   Mesa elevadora 2 = pulmón de franjas,Los dos,1,a confirmar,a confirmar,a confirmar,,90 franjas como máximo (2 hojas),"Balanceo, Parametros (N_HOJAS_FRANJA); Pulmones fila 6",Sin medidas en las fuentes
+   Carro porta-bandejas: desarrollos → marcado del cuerpo,Los dos,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 7",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,,
-MARCADO DEL CUERPO — marcadora 2 · Carros 2.1 (mismo puesto 6 del Balanceo),,,,,,2.35,suma de las huellas de lo que va adentro (sin circulación),,
-   Marcadora 2,Carros,1,0.95,1.4,a confirmar,1.33,,Plano,
-   Mesa FMT ME500,Carros,1,1,0.52,a confirmar,0.52,,Plano,
-   Carro EFE 600 → pulmón 2.2,Carros,1,1,0.5,a confirmar,0.5,detalle en hojas Pulmones y Estantes y carros,Plano,
+MARCADO DEL CUERPO · Manuales 6 y Carros 2.1,,,,,,4.04,,,
+   Marcadora,Los dos,2,0.75,1.25,1.2,1.88,"Firesafer FS-0001 (roll code), 600–700 pzas/h","Cotización Firesafer (ítem 26, coding machine); medidas del catálogo",La cotización trae 1. Balanceo: 2 puestos (uno para el 1 kg). Falta definir el método (micropercusión o láser)
+   Estante: desarrollos (pulmón),Los dos,3,0.6,1.2,2,2.16,Estante: pilas por modelo sobre bandejas; máx. 1505 u en 15 bandejas o cajones,"Pulmones, Parametros B7:B9; Pulmones fila 7",
 ,,,,,,,,,
-PRUEBA HIDRÁULICA + SECADO — un bloque · Manuales 15 + 16 y Carros 9 + 10,,,,,,28.18,suma de las huellas de lo que va adentro (sin circulación),,
-Prueba hidráulica — Manuales 15 · 2 máq. · 2 turnos,,,,,,,,Balanceo,
-   PH manuales FS-JD12A (1),Manuales,1,1.9,1.4,1.35,2.66,,Plano · Cotización Firesafer,"Firesafer FS-0124 (banco de prueba hidráulica): 2,05 × 1,10 × 1,35 m. Confirmar que es el modelo de la FS-JD12A"
-   PH manuales FS-JD12A (2),Manuales,1,1.9,1.4,1.35,2.66,,Plano · Cotización Firesafer,"Firesafer FS-0124 (banco de prueba hidráulica): 2,05 × 1,10 × 1,35 m. Confirmar que es el modelo de la FS-JD12A"
-   Cilindros soldados: 5 carros del tramo (pulmón),Manuales,5,2.3,1.2,a confirmar,2.76,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; sin estante, 5 m²; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Decantación + separador de aceites (común),Los dos,1,1.8,1,a confirmar,1.8,,Plano,
-   Tanque de agua 1.000 l,Los dos,1,1.4,1.4,a confirmar,1.96,"1.000 l, Ø 1,4 m en planta",Plano,
-   Canaleta + pozo (común a las dos PH),Los dos,1,9.9,0.22,a confirmar,2.18,,Plano,Profundidad
-Secado — Manuales 16 · 4 máq. · 2 turnos,,,,,,,,Balanceo,
-   Secado de manuales por boquilla,Manuales,1,4,0.35,a confirmar,1.4,cilindros por boquilla,Plano,
-   Secadora Yukon 1,Los dos,1,1.15,1,a confirmar,1.15,,Plano,
-   Secadora Yukon 2,Los dos,1,1.15,1,a confirmar,1.15,,Plano,
-   Secadora Yukon 3,Los dos,1,1.15,1,a confirmar,1.15,,Plano,
-   Secadora Yukon 4,Los dos,1,1.15,1,a confirmar,1.15,,Plano,
-   Yukon + bomba,Los dos,1,1.6,0.5,a confirmar,0.8,,Plano,
-   Cilindros mojados: 3 carros (pulmón),Manuales,3,3.2,0.9,a confirmar,2.88,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; sin estante, 3 m²; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-Prueba hidráulica — Carros 9 · 1 máq. · 1 turno,,,,,,,,Balanceo,
-"   PH carros, puesto 1",Carros,1,1.2,1.2,1.05,1.44,,Plano · Cotización Yukon,"Yukon M-000200: 0,95 × 0,40 × 1,05 m sin mesa; falta el alto de la mesa"
-"   PH carros, puesto 2",Carros,1,1.2,1.2,1.05,1.44,,Plano · Cotización Yukon,"Yukon M-000200: 0,95 × 0,40 × 1,05 m sin mesa; falta el alto de la mesa"
-Secado — Carros 10 · 1 máq. · 1 turno,,,,,,,,Balanceo,
-   Secadora Melisam MR011 + lugar del matafuego rodante que se seca,Carros,1,1.6,1,a confirmar,1.6,"secadora ≈ 0,6 × 0,5 m; el recipiente se para frente a ella en 1,2 × 1,0 m con la lanza en la boca",Plano · Word,"Alto de la secadora. El Word suma 0,6 + 1,2 = 1,8 m de largo y el plano dibuja 1,6 × 1,0 m"
+PRUEBA HIDRÁULICA · Manuales 15 y Carros 9,,,,,,3.87,,,
+   Máquina de PH Yukon M-000200 (manuales),Los dos,2,0.4,0.95,1.05,0.76,sin mesa,Cotización Yukon (Prueba Hidráulica),"Falta el alto de la mesa. Alternativa Firesafer FS-0124 2,05 × 1,10 × 1,35"
+   Máquina de PH Yukon M-000200 (carros),Los dos,1,0.4,0.95,1.05,0.38,sin mesa,Cotización Yukon (Prueba Hidráulica),Falta el alto de la mesa
+   Carro porta-bandejas: cilindros mojados → secado,Los dos,3,0.7,1.3,a confirmar,2.73,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 17",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,,
-INSUMOS DE MONTAJE — al lado del 13 de Carros; la estantería A va al ensamblaje de Manuales,,,,,,8.2,suma de las huellas de lo que va adentro (sin circulación),,
-   Estantería A: 4 col. × 4 niv. = 16 pos. (manuales → M13),Manuales,4,4.85,1.1,a confirmar,5.33,"válvulas, manómetros, mangueras, soportes; 1 semana pico",Plano,
-   Estantería B: 8 pos. (carros → 13 y ruedas → 12),Carros,2,2.6,1.1,a confirmar,2.86,"válvulas, manómetros, mangas, lanzas, ruedas",Plano,
+SECADO · Manuales 16 y Carros 10,,,,,,2.73,,,
+   Secadora (manuales),Los dos,4,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
+   Secadora (carros),Los dos,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
+   Carro porta-bandejas: cilindros secos → granallado,Los dos,3,0.7,1.3,a confirmar,2.73,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 18",Alto del carro (3 niveles a la altura del estante)

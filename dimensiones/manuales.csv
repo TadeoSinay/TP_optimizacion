@@ -1,147 +1,93 @@
 Puesto / ítem,Cant.,Ancho (m),Largo (m),Alto (m),Huella (m²),Medidas internas / uso,Fuente,A confirmar
-4. CORTE DE DISCO Y EMBUTIDO + supermercado de fondos y cúpulas · 1 máq. · 2 turnos,,,,,23.88,suma de las huellas de lo que va adentro (sin circulación),,
-   Desbobinador + carro porta-bobinas,1,1.5,1.7,a confirmar,2.55,rollo Ø ≤ 1.100 mm,Plano · Cotización CENA,"CENA TC-200 / 300 / 400: 1,0 × 0,8 × 1,1 m · 1,1 × 1,0 × 1,3 m · 1,2 × 1,0 × 1,3 m. El modelo depende del ancho del fleje"
-   Enderezadora + lubricante,1,1.6,0.9,a confirmar,1.44,,Plano · Cotización CENA,"CENA TC-500 / 600: 1,4 × 1,2 × 1,3 m · 1,5 × 1,2 × 1,3 m. El modelo depende del ancho del fleje"
-   Alimentador Cena PRE-1,1,1.3,0.9,a confirmar,1.17,,Plano · ,La cotización de CENA no da el alto del alimentador
-   Prensa Sangiacomo,1,2.4,2.2,a confirmar,5.28,,Plano,Alto y foso
-   Portamatrices,1,1.2,0.9,a confirmar,1.08,,Plano,
-   Estantería de matrices (8 juegos),1,2.3,0.85,a confirmar,1.96,8 juegos,Plano,
-   Contenedor scrap esqueleto 1.000 l,1,1.6,1.25,a confirmar,2,1.000 l; uñas para el autoelevador,Plano,
-   Rack selectivo de fondos y cúpulas (supermercado),2,5.4,1.2,a confirmar,6.48,"2 vanos de 2,7 m × fondo 1,2 m × 3 niveles, 1.er nivel a 400 mm; 17 pallets 1.200 × 800 de 12 cajones, 1.045 mm de alto; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,Alto del rack
-   Pallet de cúpulas en armado (piso),1,0.8,1.2,a confirmar,0.96,pallet 1.200 × 800; detalle en hojas Pulmones y Estantes y carros,Plano,
-   Pallet de fondos en armado (piso),1,0.8,1.2,a confirmar,0.96,pallet 1.200 × 800; detalle en hojas Pulmones y Estantes y carros,Plano,
+4. Corte de disco y embutido (cúpula y fondo) · 1 máq. · 2 turnos,,,,,8.3,,,
+   Prensa de embutido,1,a confirmar,a confirmar,a confirmar,,corta el disco y embute cúpula y fondo,Cotizaciones Shimeq PHM 300 y Firesafer Power Press,"Ninguna cotización de la carpeta da medidas. Shimeq da mesa 1.800 × 1.300 y abertura 900 mm, no la máquina"
+   Desbobinador + enderezadora / alimentador,1,a confirmar,a confirmar,a confirmar,,alimenta el fleje a la prensa,"Cotizaciones CENA, Shimeq (alimentador 900 mm) y Firesafer (servo feeding)","CENA da medidas según el ancho del fleje (desbobinador TC-200/300/400: 0,8–1,0 × 1,0–1,2 × 1,1–1,3 m; enderezadora TC-500/600: 1,2 × 1,4–1,5 × 1,3 m). Falta definir el ancho del fleje"
+"   Rack de fondos y cúpulas (supermercado, pulmón)",2,1.2,2.7,a confirmar,6.48,"vano de 2,7 m × 3 niveles, 3 pallets 1.200 × 800 por nivel; 17 pallets de 12 cajones","Pulmones, Parametros B53:B57 y Equipos fila 11; Pulmones filas 10 y 11","Alto del rack (primer nivel a 400 mm, pallet de 1.045 mm de alto)"
+   Carro de 12 cajones: fondos,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"Pulmones, Parametros B38; Pulmones fila 10","Fran pide confirmar que el carro tenga 4 niveles de 3 cajones; si no, se pide igual al porta-bandejas (1,3 × 0,7 m) con 4 niveles. Alto del carro"
+   Carro de 12 cajones: cúpulas,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"Pulmones, Parametros B38; Pulmones fila 11","Fran pide confirmar que el carro tenga 4 niveles de 3 cajones; si no, se pide igual al porta-bandejas (1,3 × 0,7 m) con 4 niveles. Alto del carro"
 ,,,,,,,,
-5. PREPARACIÓN DE CUELLO (muesca ×2) · 2 máq. · 2 turnos,,,,,3.25,suma de las huellas de lo que va adentro (sin circulación),,
-   Prensa de banco Pannier MB-21 (1),1,0.75,0.6,0.66,0.45,"3.500 kg de fuerza, cuño de muesca, bloque en V",Plano · Ficha,El rect del plano incluye el banco: alto del banco
-   Prensa de banco Pannier MB-21 (2),1,0.75,0.6,0.66,0.45,ídem,Plano · Ficha,Alto del banco
-   Estante de cajones: cúpulas de la ola,2,2.4,0.6,2,1.44,"3 cajones 600 × 400 × 300 por nivel, 4 niveles; 15 cajones de cúpulas de la ola; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Carro de 12 cajones: cúpulas preparadas → M6b,1,1.3,0.7,a confirmar,0.91,carro de 12 cajones 600 × 400 × 300; detalle en hojas Pulmones y Estantes y carros,Plano,
+5. Preparación de cuello · 2 máq. · 2 turnos,,,,,0,,,
+   Prensa de muesca del cuello,2,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
 ,,,,,,,,
-7. SOLDADURA DEL CUELLO A LA CÚPULA · 1 máq. · 2 turnos,,,,,4.2,suma de las huellas de lo que va adentro (sin circulación),,
-   Soldadora de cuello FS-HFM1,1,1.7,1.4,1.58,2.38,,Plano · Cotización Firesafer,"Firesafer FS-HPM (soldadora con plato divisor): 1,20 × 1,40 × 1,58 m. Confirmar que es la misma máquina que la FS-HFM1"
-   Carro de 12 cajones: cúpulas preparadas (llega del M6a),1,1.3,0.7,a confirmar,0.91,carro de 12 cajones 600 × 400 × 300,Plano,
-   Carro de cúpulas con cuello → M7,1,0.7,1.3,a confirmar,0.91,carro de 12 cajones 600 × 400 × 300; detalle en hojas Pulmones y Estantes y carros,Plano,
+7. Soldadura del cuello a la cúpula · 1 máq. · 2 turnos,,,,,4.03,,,
+   Soldadora de cuello,1,1.4,1.2,1.58,1.68,"Firesafer FS-HPM: plato divisor, 12 pzas/min",Catálogo Firesafer (FS Cylinder Production),Está en el catálogo pero no en la cotización Firesafer. Confirmar el modelo
+   Estante: cúpulas (pulmón),2,0.6,1.2,2,1.44,Rack de pallets al lado de la prensa (la tanda) + estante en el puesto con la ola de mañana; máx. 6765 u en 80 bandejas o cajones,"Pulmones, Parametros B7:B9; Pulmones fila 11",
+   Carro de 12 cajones: cúpulas con cuello,1,0.7,1.3,a confirmar,0.91,4 niveles de 3 cajones 600 × 400 × 300,"Pulmones, Parametros B38; Pulmones fila 13","Fran pide confirmar que el carro tenga 4 niveles de 3 cajones; si no, se pide igual al porta-bandejas (1,3 × 0,7 m) con 4 niveles. Alto del carro"
 ,,,,,,,,
-8. CILINDRADO 1 – 10 kg (única roladora) · 1 máq. · 1 turno,,,,,5.42,suma de las huellas de lo que va adentro (sin circulación),,
-   Roladora 1 – 10 kg,1,2.4,1.1,1.25,2.64,,Plano · Cotización Firesafer,"Firesafer FS-PM01: 1,80 × 1,30 × 1,25 m (el Word dice FS-RM01). Otras dos cotizaciones: AK-BEND AS 70-10 (Bästlein) 1,70 × 0,70 × 1,10 m y OSTAS SM 700 × 76 (WMT) 1,30 × 0,80 × 1,30 m. Falta elegir la máquina"
-   Carro de desarrollos marcados (pulmón pegado),1,1.2,0.8,a confirmar,0.96,"pila al alcance; 201 desarrollos máx., 0 módulos; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-"   Carro de virolas 2,5–10 kg → M3",1,1.3,0.7,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano,
-   Carro de virolas 1 kg → M3b,1,1.3,0.7,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano,
+8. Cilindrado · 1 máq. · 1 turno,,,,,3.25,,,
+   Roladora (cilindradora de manuales),1,1.3,1.8,1.25,2.34,"Firesafer FS-PM01: Ø 50–163 mm, 10 pzas/min",Catálogo Firesafer (FS Cylinder Production); la cotización Firesafer cotiza 2 roladoras,"Hay 4 opciones: Firesafer FS-PM01 1,80 × 1,30 × 1,25 · Bästlein AK-BEND AS 70-10 1,70 × 0,70 × 1,10 · WMT OSTAS SM 700 × 76 1,30 × 0,80 × 1,30 · Getweld 2 rodillos (sin medidas). Se pone la más grande. Balanceo: 1 máquina; en Rueda se toman 2 (roladora propia del 1 kg)"
+   Carro porta-bandejas: virolas → soldadura longitudinal,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 8",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-"9. SOLDADURA LONGITUDINAL 2,5–10 kg — cuello de botella · 1 máq. · 2 turnos",,,,,9.17,suma de las huellas de lo que va adentro (sin circulación),,
-   Soldadora longitudinal Firesafer,1,2.6,1.4,a confirmar,3.64,,Plano,
-   Brazo de extracción de humos,1,0.5,0.6,a confirmar,0.3,,Plano,Alto del brazo
-   Estante de virolas (N),2,2.4,0.6,2,1.44,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Estante de virolas (O),2,0.6,2.4,2,1.44,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Estante de virolas (E),2,0.6,2.4,2,1.44,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Carros de cuerpos soldados → M4,1,0.7,1.3,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,Pulmones da 2 (el cuello no para); propuesta 1 + soporte fijo. El plano dibuja lugar para 2
+"9. Soldadura longitudinal — 2,5 a 10 kg · 1 máq. · 2 turnos",,,,,5.95,,,
+"   Soldadora longitudinal 2,5 a 10 kg",1,a confirmar,a confirmar,a confirmar,,"MIG, largo de soldadura hasta 500 mm (Getweld ZF-500)","Cotizaciones Getweld ZF-500, Mitusa y Firesafer",Ninguna cotización de la carpeta da medidas
+   Estante: virolas (pulmón),7,0.6,1.2,2,5.04,"Estante: parados en bandejas, un modelo por bandeja; máx. 607 u en 20 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 8",
+   Carro porta-bandejas: cuerpos soldados → encastre de fondo,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 9",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-10. SOLDADURA LONGITUDINAL TIG 1 kg · 1 máq. · 2 turnos,,,,,5.57,suma de las huellas de lo que va adentro (sin circulación),,
-   Soldadora longitudinal TIG 1 kg,1,2.6,1.4,a confirmar,3.64,,Plano,
-   Brazo de extracción de humos,1,0.5,0.6,a confirmar,0.3,,Plano,Alto del brazo
-   Estante de virolas 1 kg,1,1.2,0.6,2,0.72,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Carro de cuerpos 1 kg → M4,1,0.7,1.3,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano,
+10. Soldadura longitudinal TIG — 1 kg · 1 máq. · 2 turnos,,,,,0,,,
+   Soldadora longitudinal TIG 1 kg,1,a confirmar,a confirmar,a confirmar,,,Cotización Firesafer (TIG),Ninguna cotización de la carpeta da medidas
 ,,,,,,,,
-11. ENCASTRE DE FONDO · 1 máq. · 2 turnos,,,,,6.91,suma de las huellas de lo que va adentro (sin circulación),,
-   Prensa Del Fabro 30 t,1,1.4,1.2,a confirmar,1.68,30 t,Plano,
-   Estante de cuerpos soldados (S),3,3.6,0.6,2,2.16,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Estante de cuerpos soldados (E),1,0.6,1.2,2,0.72,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Estante de cajones: fondos de la ola,2,0.6,2.4,2,1.44,"3 cajones 600 × 400 × 300 por nivel, 4 niveles; 13 cajones de fondos de la ola; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Carro de cuerpos con fondo → M5,1,0.7,1.3,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano,
+11. Encastre de fondo · 1 máq. · 2 turnos,,,,,5.23,,,
+   Prensa de encastre de fondo 30 t,1,a confirmar,a confirmar,a confirmar,,Del Fabro 30 t motorizada,Cotización Prensa Hidráulica (link a Del Fabro),La cotización es solo el link; la página no responde
+   Estante: cuerpos soldados (pulmón),4,0.6,1.2,2,2.88,"Estante: parados en bandejas, un modelo por bandeja; máx. 405 u en 10 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 9",
+   Estante: fondos (pulmón),2,0.6,1.2,2,1.44,Rack de pallets al lado de la prensa (la tanda) + estante en el puesto con la ola de mañana; máx. 6609 u en 65 bandejas o cajones,"Pulmones, Parametros B7:B9; Pulmones fila 10",
+   Carro porta-bandejas: cuerpos con fondo → bordoneado,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 14",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-12. BORDONEADO · 1 máq. · 2 turnos,,,,,4.71,suma de las huellas de lo que va adentro (sin circulación),,
-   Bordoneadora Pilman SWM-400,1,1.1,1,a confirmar,1.1,,Plano,
-   Cuerpos con fondo: 1 carro (pulmón),1,1.5,1.8,a confirmar,2.7,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; sin estante, 2 m²; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,Pulmones da 2; entra todo en 1 carro (3 bandejas). Propuesta 1 + soporte fijo
-   Carro de bordoneados → M7,1,0.7,1.3,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano,
+12. Bordoneado · 1 máq. · 2 turnos,,,,,0.91,,,
+   Bordoneadora,1,a confirmar,a confirmar,a confirmar,,,Cotizaciones Prinzing SME 80/3P y Pilman SWM-400,Ninguna cotización de la carpeta da medidas
+   Carro porta-bandejas: cuerpos bordoneados → soldadura circunferencial de cúpula y fondo,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 15",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-13. SOLDADURA CIRCUNFERENCIAL ×2 — marcapasos · 2 máq. · 2 turnos,,,,,12.67,suma de las huellas de lo que va adentro (sin circulación),,
-   Soldadora circunferencial Firesafer 1,1,2,1.5,a confirmar,3,"bastidor 2 × 1,5 m",Plano,
-   Soldadora circunferencial Firesafer 2,1,2,1.5,a confirmar,3,"bastidor 2 × 1,5 m",Plano,
-   Estante de bordoneados (N),3,3.6,0.6,2,2.16,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Estante de bordoneados (O),2,0.6,2.4,2,1.44,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Estante de bordoneados (E),2,0.6,2.4,2,1.44,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Estante de cajones: cúpulas con cuello,1,0.6,1.2,2,0.72,"3 cajones 600 × 400 × 300 por nivel, 4 niveles; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Carro de cilindros soldados → PH,1,0.7,1.3,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano,
+13. Soldadura circunferencial de cúpula y fondo · 2 máq. · 2 turnos,,,,,10.31,,,
+   Soldadora circunferencial,2,a confirmar,a confirmar,a confirmar,,"Getweld ZNC250X2: Ø < 250 mm, 340 pzas/8 h","Cotizaciones Getweld ZNC250X2, SC Welding PRO-WP150 y Firesafer",Ninguna cotización de la carpeta da medidas. PRO-WP150: plato Ø 450 mm
+   Estante: cúpulas con cuello (pulmón),1,0.6,1.2,2,0.72,Estante de cajones al pie de la soldadura circunferencial; máx. 407 u en 9 bandejas o cajones,"Pulmones, Parametros B7:B9; Pulmones fila 13",
+   Estante: cuerpos bordoneados (pulmón),7,0.6,1.2,2,5.04,"Estante: parados en bandejas, un modelo por bandeja; máx. 691 u en 21 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 15",
+   Carro porta-bandejas: cilindros soldados → prueba hidráulica,5,0.7,1.3,a confirmar,4.55,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 16",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-14. CONTROL DE ESPESOR · 1 máq. · 1 turno,,,,,2.08,suma de las huellas de lo que va adentro (sin circulación),,
-   Mesa + medidor de espesores MR017,1,1.6,0.8,a confirmar,1.28,,Plano,
-   Muestra de rotura (2 %),1,1.6,0.5,—,0.8,2 % de la producción,Plano,
+14. Control de calidad — Espesor · 1 máq. · 1 turno,,,,,0,,,
+   Medidor de espesores,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
 ,,,,,,,,
-17 + 18 + 19. GRANALLADO + DETECCIÓN + CORRECCIÓN,,,,,21.2,suma de las huellas de lo que va adentro (sin circulación),,
-17. Granallado · 1 máq. · 2 turnos,,,,,,,Balanceo,
-   Granalladora AirBlast G-100,1,3.2,1.5,2.2,4.8,,Plano · Cotización AirBlast,"La memoria de AirBlast da 4,50 × 1,30 × 2,20 m; el plano dibuja 3,2 × 1,5 m más los rodillos aparte"
-   Rodillos de entrada,1,2,0.7,a confirmar,1.4,,Plano,
-   Rodillos de salida,1,1.9,0.7,a confirmar,1.33,,Plano,
-   Ciclón + filtros,1,1.6,1,a confirmar,1.6,,Plano,
-   Granalla (pallet),1,1.3,1,a confirmar,1.3,,Plano,
-   Cilindros secos: 3 carros del tramo (pulmón),3,3.95,0.8,a confirmar,3.16,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; sin estante, 3 m²; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Rack de insumos de soldadura y superficie,1,2.3,1.2,a confirmar,2.76,"alambre, granalla, pintura; 1 mód.",Plano,
-18. Detección de defectos · 1 máq. · 2 turnos,,,,,,,Balanceo,
-   Mesa de inspección + luz,1,2.15,0.9,a confirmar,1.94,,Plano,
-   Jaula a corrección,1,0.7,0.7,a confirmar,0.49,,Plano,
-   Jaula a re-granallar,1,0.7,0.7,a confirmar,0.49,,Plano,
-   Jaula de descarte,1,0.7,0.7,a confirmar,0.49,,Plano,
-19. Corrección de defectos · 1 máq. · 1 turno,,,,,,,Balanceo,
-   Amoladora + extracción,1,1.8,0.8,a confirmar,1.44,,Plano,
+17. Granallado · 1 máq. · 2 turnos,,,,,6.76,,,
+   Granalladora AirBlast G-100,1,1.3,4.5,2.2,5.85,,Cotización AirBlast (memoria descriptiva),Alternativa CyM ECO 100 sin medidas
+   Carro porta-bandejas: cilindros granallados → pintura en polvo + horno,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 19",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-20. PINTURA EN POLVO + HORNO · 1 máq. · 2 turnos,,,,,66.97,suma de las huellas de lo que va adentro (sin circulación),,
-   Carga a ganchos,1,2.4,2,—,4.8,,Plano,
-   Precalentamiento,1,7.4,2,2.44,14.8,"7,4 × 2 m",Plano · Cotización de pintura,"La cotización da 2 hornos de 6 × 2,44 × 2,44 m (precalentamiento y curado). Comparar con el plano"
-   Cabina electrostática + recuperación,1,7.4,2,2.44,14.8,7 × 2 m,Plano · Cotización de pintura,"Cabina de 2 × 1,5 × 2,44 m. La cotización suma 2 reciprocadores de 1.300 mm y 2 ciclones sin medidas"
-   Horno de curado a gas,1,7.2,3.5,2.44,25.2,180–220 °C · 15–20 min · 4 pasadas (≈ 25 m de riel),Plano · Cotización de pintura,"La cotización da 2 hornos de 6 × 2,44 × 2,44 m (precalentamiento y curado). Comparar con el plano"
-   Enfriamiento,1,0.85,4.2,—,3.57,,Plano,
-   Descarga + tapón,1,1.7,0.85,—,1.45,,Plano,
-   Estante de cilindros granallados,2,2.4,0.6,2,1.44,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Carros a la salida del horno,1,0.7,1.3,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600",Plano · Pulmones,Pulmones da 2 (el horno no para); propuesta 1 + soporte fijo
+18. Detección de defectos · 1 máq. · 2 turnos,,,,,0,,,
+   Puesto de detección de defectos,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
 ,,,,,,,,
-21. CARGA DE POLVO · 1 máq. · 1 turno,,,,,7.52,suma de las huellas de lo que va adentro (sin circulación),,
-   Estación big bag + polipasto,1,1.9,1.5,a confirmar,2.85,big bag de 1 t,Plano,Alto (big bag + polipasto)
-   Cargadora Yukon FS-A10,1,1.3,1,1.2,1.3,,Plano · Cotización Yukon,"Yukon M-000121: 0,51 × 0,62 × 1,20 m (la cotización no dice si va sobre mesa)"
-   Balanza,1,0.75,0.65,a confirmar,0.49,,Plano,
-   Estante de pintados para cargar (E),3,0.6,3.6,2,2.16,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Estante de pintados para cargar (N),1,1.2,0.6,2,0.72,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
+19. Corrección de defectos · 1 máq. · 1 turno,,,,,0,,,
+   Puesto de corrección de defectos,1,a confirmar,a confirmar,a confirmar,,,Cotización Firesafer (sanding machine),Ninguna cotización de la carpeta da medidas
 ,,,,,,,,
-22. ENSAMBLAJE · 1 máq. · 2 turnos,,,,,5.81,suma de las huellas de lo que va adentro (sin circulación),,
-   Mesa + llave dinamométrica,1,1.7,0.8,a confirmar,1.36,,Plano,
-   Válvulas y mangueras,1,0.45,1.9,a confirmar,0.85,,Plano,
-   Precintos,1,0.55,0.95,a confirmar,0.52,,Plano,
-   Estante pasante de cargados de polvo,3,0.6,3.6,2,2.16,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Carro de armados → M14,1,1.3,0.7,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano,
+20. Pintura en polvo + horno · 1 máq. · 2 turnos,,,,,35.54,,,
+   Horno (precalentamiento y curado),2,2.44,6,2.44,29.28,"panelizado con lana de roca 50 mm, a gas",Cotización de pintura (Electricolor),Alternativas: línea Firesafer (sin medidas) o Prymax tercerizado
+   Cabina de pintura,1,1.5,2,2.44,3,con 2 reciprocadores de 1.300 mm y 2 ciclones,Cotización de pintura (Electricolor),Reciprocadores y ciclones sin medidas
+   Estante: cilindros granallados (pulmón),2,0.6,1.2,2,1.44,"Estante: parados en bandejas, un modelo por bandeja; máx. 488 u en 7 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 19",
+   Carro porta-bandejas: cilindros vacíos pintados → embalaje y paletizado,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 20",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
+   Carro porta-bandejas: cilindros pintados para cargar → carga de polvo,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 21",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-23. PRESURIZACIÓN · 1 máq. · 1 turno,,,,,3.99,suma de las huellas de lo que va adentro (sin circulación),,
-   Soporte + pinza Yukon,1,1.5,0.8,a confirmar,1.2,,Plano,
-   Regulador de N₂,1,1.4,0.45,a confirmar,0.63,,Plano,
-   Estante de armados,3,3.6,0.6,2,2.16,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
+21. Carga de polvo · 1 máq. · 1 turno,,,,,4.11,,,
+   Cargadora de polvo Yukon M-000121,1,0.51,0.62,1.2,0.32,,Cotización Yukon (Máquina de llenado),Alternativa Firesafer FS-A10 sin medidas
+   Estante: cilindros pintados para cargar (pulmón),4,0.6,1.2,2,2.88,"Estante: parados en bandejas, un modelo por bandeja; máx. 330 u en 11 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 21",
+   Carro porta-bandejas: cilindros cargados de polvo → ensamblaje,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 22",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-24. ENSAYO DE PÉRDIDAS · 1 máq. · 1 turno,,,,,3.58,suma de las huellas de lo que va adentro (sin circulación),,
-   Tanque de inmersión,1,1.6,1,0.9,1.6,6 matafuegos por tanda,Plano · Cotización Firesafer,"Firesafer FS-SS100 (tanque inoxidable de ensayo de pérdidas): 1,00 × 1,80 × 0,90 m. Confirmar que es este tanque"
-   Rejilla de goteo,1,1.6,0.45,a confirmar,0.72,,Plano,
-   Rechazos,1,0.9,0.6,a confirmar,0.54,,Plano,
-   Estante pasante de presurizados,1,1.2,0.6,2,0.72,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
+22. Ensamblaje · 1 máq. · 2 turnos,,,,,3.4,,,
+   Roscadora de manómetro y tubo Firesafer FS-NGNP,1,0.5,0.65,1.45,0.33,,Cotización Firesafer (ítem 34); medidas del catálogo Filling Line,
+   Estante: cilindros cargados de polvo (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 183 u en 9 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 22",
+   Carro porta-bandejas: matafuegos armados → presurización,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 23",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-25. ETIQUETADO · 1 máq. · 1 turno,,,,,4.72,suma de las huellas de lo que va adentro (sin circulación),,
-   Dispensador + posicionador,1,1.5,0.8,a confirmar,1.2,guía en V con tope de altura,Plano,
-   Impresora de etiquetas,1,1,0.45,a confirmar,0.45,,Plano,
-   Estante pasante de ensayados,3,3.6,0.6,2,2.16,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Carro de etiquetados → M17,1,0.7,1.3,a confirmar,0.91,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; detalle en hojas Pulmones y Estantes y carros",Plano,
+23. Presurización · 1 máq. · 1 turno,,,,,3.07,,,
+   Pinza de presurización Yukon M-000150,1,a confirmar,a confirmar,a confirmar,,"neumática, 2 kg",Cotización Yukon (Presurización),Va sobre un soporte: medidas del soporte
+   Estante: matafuegos armados (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 168 u en 7 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 23",
+   Carro porta-bandejas: matafuegos presurizados → control de calidad,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 24",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-26. EMBALAJE — 17a armado de cajas · 2 máq. · 2 turnos,,,,,3.82,suma de las huellas de lo que va adentro (sin circulación),,
-   Armadora de cajas,1,2.2,0.85,a confirmar,1.87,,Plano,
-   Cajas plegadas (piso),1,1.3,0.75,a confirmar,0.97,,Plano,
-   Cajas armadas (piso),1,1.3,0.75,a confirmar,0.97,,Plano,
+24. Control de calidad — Ensayo de pérdidas · 1 máq. · 1 turno,,,,,3.43,,,
+   Tanque de ensayo de pérdidas Firesafer FS-SS100,1,1.8,1,0.9,1.8,30–40 piezas por tanda,Catálogo Firesafer (Filling Line),La cotización Firesafer dice que el tanque no está incluido
+   Estante: matafuegos presurizados (pulmón),1,0.6,1.2,2,0.72,"Estante: parados en bandejas, un modelo por bandeja; máx. 161 u en 3 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 24",
+   Carro porta-bandejas: matafuegos ensayados → etiquetado,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 25",Alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-26. EMBALAJE Y PALETIZADO · 2 máq. · 2 turnos,,,,,11.1,suma de las huellas de lo que va adentro (sin circulación),,
-   Mesa de encajonado terminados,1,0.8,2.3,a confirmar,1.84,a la altura de trabajo,Plano,
-   Mesa de encajonado vacíos,1,0.8,2.85,a confirmar,2.28,a la altura de trabajo,Plano,
-   Pallet en armado (terminados),1,0.9,0.8,a confirmar,0.72,,Plano,
-   Pallet en armado (vacíos),1,0.9,0.8,a confirmar,0.72,,Plano,
-   Envolvedora EDOS PS 5,1,1.6,1.6,2.5,2.56,"plato Ø 1,6 m en el plano",Plano · Folleto EDOS,"EDOS PS 5: área de instalación 1,50 × 3,00 × 2,50 m; pallet máximo 1,25 × 1,25 × 2,00 m"
-   Estante de vacíos pintados,2,0.6,2.4,2,1.44,"estante 1,2 × 0,6 m; último nivel a 1,6 m; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,
-   Etiquetados: 1 carro (pulmón),1,0.7,2.2,a confirmar,1.54,"carro 1,3 × 0,7 m con 3 bandejas 1.200 × 600; sin estante, 2 m²; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,Pulmones da 2; entra todo en 1 carro (3 bandejas). Propuesta 1 + soporte fijo
+25. Etiquetado · 1 máq. · 1 turno,,,,,3.07,,,
+   Etiquetadora,1,a confirmar,a confirmar,a confirmar,,,Cotizaciones SISA (semiautomática) y Firesafer,Ninguna cotización de la carpeta da medidas
+   Estante: matafuegos ensayados (pulmón),3,0.6,1.2,2,2.16,"Estante: parados en bandejas, un modelo por bandeja; máx. 241 u en 8 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 25",
+   Carro porta-bandejas: matafuegos etiquetados → embalaje y paletizado,1,0.7,1.3,a confirmar,0.91,"3 bandejas 1.200 × 600, hasta 450 kg; espera en el origen","Pulmones, Parametros B37 y B42; Pulmones fila 26",Pulmones da 2; propuesta 1 + soporte fijo para la bandeja en llenado (con tandas no hace falta el segundo). alto del carro (3 niveles a la altura del estante)
 ,,,,,,,,
-26. EMBALAJE — 17b insumos de embalaje e identificación (al pie del puesto) · 2 máq. · 2 turnos,,,,,8.78,suma de las huellas de lo que va adentro (sin circulación),,
-   Pallets vacíos (piso),1,1.35,1.4,a confirmar,1.89,,Plano,
-   Cajas plegadas (piso),1,1.5,1.4,a confirmar,2.1,,Plano,
-   Film y esquineros (piso),1,1.35,0.9,a confirmar,1.22,,Plano,
-   Apilador + cargador,1,0.85,1.9,a confirmar,1.61,,Plano,
-   Identificación (precintos y etiquetas),1,1.35,1.45,a confirmar,1.96,,Plano,
+26. Embalaje y paletizado · 2 máq. · 2 turnos,,,,,8.81,,,
+   Envolvedora EDOS PS 5,1,3,1.5,2.5,4.5,"área de instalación; pallet máx. 1,25 × 1,25 × 2,00 m",Folleto EDOS (Embaladora de pallet),
+   Cerradora de cajas Firesafer FS-DDP50,1,1.42,2.02,1.55,2.87,,Catálogo Firesafer (Filling Line),No está en la cotización Firesafer
+   Estante: cilindros vacíos pintados (pulmón),2,0.6,1.2,2,1.44,"Estante: parados en bandejas, un modelo por bandeja; máx. 421 u en 5 bandejas o cajones","Pulmones, Parametros B7:B9; Pulmones fila 20",
