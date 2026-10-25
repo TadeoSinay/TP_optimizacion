@@ -1,9 +1,0 @@
-DIMENSIONES POR PUESTO,
-Qué es,"Lo que va dentro de cada puesto (máquinas y muebles de pulmón) con su huella y su alto, para dimensionar los puestos. Sin almacenes."
-Fuentes,Los Excel de la carpeta EXTRA FRAN (Balanceo-FLAMA2035.xlsx y PULMONES-FLAMA2035.xlsx) y las cotizaciones de Drive (Cotizaciones/Maquinaria). No se usan el plano ni los Word de proceso.
-Cómo leer la fuente,«Archivo › hoja celda (valor)». Ej.: PULMONES-FLAMA2035 › Parametros B7 (frente 1.200) = el frente del estante está en esa celda. La fila gris de cada puesto cita de dónde salen las máquinas y los turnos.
-Qué sale de cada una,"Balanceo: puestos, máquinas, turnos y jaulas de recargas · Pulmones: estantes, bandejas, cajones, carros, rack y pisos demarcados · Cotizaciones: medidas de cada máquina."
-Hojas,"Resumen · Compartidos (corte, marcado, PH y secado: los usan manuales y carros) · Manuales · Carros · Recargas · Pulmones (qué espera entre puestos y cuántos carros) · Estantes y carros (cómo va cada pieza en cada nivel)."
-Ancho / Largo,Ancho = W y largo = L de la cotización (L × W × H). Huella = cantidad × ancho × largo.
-Rojo,"No está en esas fuentes: hay que pedirlo al proveedor, medirlo o decidirlo. Varias cotizaciones no traen medidas."
-Carros de tránsito,Donde Pulmones da 2 carros por tramo se pone 1 + un soporte fijo para la bandeja que se está llenando: con tandas alcanza uno (detalle en la hoja Pulmones).

@@ -1,96 +1,96 @@
 Puesto / ítem,Cant.,Ancho (m),Largo (m),Alto (m),Huella (m²),Medidas internas / uso,Fuente,A confirmar
 R1. Recepción y registro · 2 máq. · 1 turno,,,,,2.4,,Balanceo-FLAMA2035 › Carga F104 (máq.) y G104 (turnos),
    Equipo de recepción y registro,2,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),2,1,1.2,a confirmar,2.4,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M104 (jaulas) y L104 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),2,1,1.2,a confirmar,2.4,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M104 (jaulas) y L104 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R2. Inspección visual · 2 máq. · 2 turnos,,,,,1.2,,Balanceo-FLAMA2035 › Carga F105 (máq.) y G105 (turnos),
    Equipo de inspección visual,2,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M105 (jaulas) y L105 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M105 (jaulas) y L105 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R3. Descarga ABC — ruta recuperable · 1 máq. · 2 turnos,,,,,1.52,,Balanceo-FLAMA2035 › Carga F106 (máq.) y G106 (turnos),
    Recuperadora / cargadora de polvo Firesafer FS-ZR01,1,0.4,0.8,1.35,0.32,recupera y carga 1–12 kg,Catálogo Firesafer de service (FS 2026 Service Lists),Opción por función: confirmar. Alternativa FS-SDP-1 sin medidas
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M106 (jaulas) y L106 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M106 (jaulas) y L106 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 "R4. Descarga a descarte (ABC, BC y Clase D) · 1 máq. · 1 turno",,,,,1.2,,Balanceo-FLAMA2035 › Carga F107 (máq.) y G107 (turnos),
 "   Equipo de descarga a descarte (abc, bc y clase d)",1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M107 (jaulas) y L107 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M107 (jaulas) y L107 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R5. Descarga y carga de agua / AFFF / sales K · 1 máq. · 1 turno,,,,,1.55,,Balanceo-FLAMA2035 › Carga F108 (máq.) y G108 (turnos),
    Cargadora de agua y espuma Firesafer FS-SJML01,1,0.58,0.6,0.95,0.35,,Catálogo Firesafer de service (FS 2026 Service Lists),Opción por función: confirmar
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M108 (jaulas) y L108 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M108 (jaulas) y L108 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R6. Recuperación y carga de CO₂ · 1 máq. · 1 turno,,,,,1.56,,Balanceo-FLAMA2035 › Carga F109 (máq.) y G109 (turnos),
    Cargadora de CO₂ Firesafer FS-CO2E,1,0.55,0.65,1.05,0.36,,Catálogo Firesafer de service (FS 2026 Service Lists),"Opción por función: confirmar. Alternativa FS-CO2M 0,70 × 0,55 × 0,60"
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M109 (jaulas) y L109 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M109 (jaulas) y L109 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R7. Recuperación y carga de halogenado · 1 máq. · 1 turno,,,,,1.2,,Balanceo-FLAMA2035 › Carga F110 (máq.) y G110 (turnos),
    Cargadora de agente limpio Firesafer FS-FM2,1,a confirmar,a confirmar,a confirmar,,,Catálogo Firesafer de service (FS 2026 Service Lists),Sin medidas en el catálogo
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M110 (jaulas) y L110 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M110 (jaulas) y L110 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R8. Desarme y limpieza — recinto · 2 máq. · 2 turnos,,,,,1.2,,Balanceo-FLAMA2035 › Carga F111 (máq.) y G111 (turnos),
    Equipo de desarme y limpieza,2,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M111 (jaulas) y L111 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M111 (jaulas) y L111 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R9. Desarme e inspección interior — zona general · 1 máq. · 1 turno,,,,,1.2,,Balanceo-FLAMA2035 › Carga F112 (máq.) y G112 (turnos),
    Equipo de desarme e inspección interior,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M112 (jaulas) y L112 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M112 (jaulas) y L112 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R10. Laboratorio — Puffer y mufla · 1 máq. · 1 turno,,,,,1.2,,Balanceo-FLAMA2035 › Carga F113 (máq.) y G113 (turnos),
    Equipo de laboratorio,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M113 (jaulas) y L113 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M113 (jaulas) y L113 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R11. Prueba hidráulica · 1 máq. · 2 turnos,,,,,2.31,,Balanceo-FLAMA2035 › Carga F114 (máq.) y G114 (turnos),
    Bomba de PH Firesafer FS-HPT1,1,0.59,0.93,0.98,0.55,,Catálogo Firesafer de service (FS 2026 Service Lists),Opción por función: confirmar
    Banco de PH de 3 puestos Firesafer FS-HPT1,1,0.56,1.01,1.2,0.57,,Catálogo Firesafer de service (FS 2026 Service Lists),Opción por función: confirmar
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M114 (jaulas) y L114 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M114 (jaulas) y L114 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R12. Secado · 1 máq. · 2 turnos,,,,,1.66,,Balanceo-FLAMA2035 › Carga F115 (máq.) y G115 (turnos),
    Secadora de 4 bocas Firesafer FS-D4,1,0.46,1,1.1,0.46,,Catálogo Firesafer de service (FS 2026 Service Lists),Opción por función: confirmar
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M115 (jaulas) y L115 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M115 (jaulas) y L115 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R13. Inspección interior con videoscopio · 1 máq. · 1 turno,,,,,1.2,,Balanceo-FLAMA2035 › Carga F116 (máq.) y G116 (turnos),
    Equipo de inspección interior con videoscopio,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M116 (jaulas) y L116 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M116 (jaulas) y L116 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R14. Pintura · 2 máq. · 2 turnos,,,,,1.2,,Balanceo-FLAMA2035 › Carga F117 (máq.) y G117 (turnos),
    Equipo de pintura,2,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M117 (jaulas) y L117 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M117 (jaulas) y L117 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 "R15. Carga de polvo ABC, BC y Clase D · 2 máq. · 2 turnos",,,,,1.83,,Balanceo-FLAMA2035 › Carga F118 (máq.) y G118 (turnos),
    Cargadora de polvo Yukon M-000121,2,0.51,0.62,1.2,0.63,,Cotización Yukon (Máquina de llenado),"Alternativa Firesafer FS-ZR01 0,80 × 0,40 × 1,35"
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M118 (jaulas) y L118 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M118 (jaulas) y L118 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R16. Ensamblaje y marbete — recinto · 2 máq. · 2 turnos,,,,,1.73,,Balanceo-FLAMA2035 › Carga F119 (máq.) y G119 (turnos),
    Morsa manual Firesafer FS-MC,2,0.35,0.76,0.32,0.53,,Catálogo Firesafer de service (FS 2026 Service Lists),Opción por función: confirmar
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M119 (jaulas) y L119 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M119 (jaulas) y L119 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R17. Presurización — recinto · 1 máq. · 2 turnos,,,,,1.49,,Balanceo-FLAMA2035 › Carga F120 (máq.) y G120 (turnos),
    Presurizadora de N₂ Firesafer FS-N2,1,0.5,0.58,1,0.29,,Catálogo Firesafer de service (FS 2026 Service Lists),Opción por función: confirmar
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M120 (jaulas) y L120 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M120 (jaulas) y L120 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R18. Ensamblaje y presurización — zona general · 1 máq. · 1 turno,,,,,1.2,,Balanceo-FLAMA2035 › Carga F121 (máq.) y G121 (turnos),
    Equipo de ensamblaje y presurización,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M121 (jaulas) y L121 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M121 (jaulas) y L121 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R19. Control de peso (CO₂ y halogenados sin recarga) · 1 máq. · 1 turno,,,,,1.2,,Balanceo-FLAMA2035 › Carga F122 (máq.) y G122 (turnos),
    Equipo de control de peso (co₂ y halogenados sin recarga),1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M122 (jaulas) y L122 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M122 (jaulas) y L122 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R20. Ensayo de pérdidas · 2 máq. · 1 turno,,,,,6,,Balanceo-FLAMA2035 › Carga F123 (máq.) y G123 (turnos),
    Tanque de ensayo de pérdidas Firesafer FS-SS100,2,1.8,1,0.9,3.6,,Catálogo Firesafer (Filling Line),Opción por función: confirmar
-   Jaula en espera (pulmón),2,1,1.2,a confirmar,2.4,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M123 (jaulas) y L123 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),2,1,1.2,a confirmar,2.4,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M123 (jaulas) y L123 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 "R21. Precinto, etiqueta y despacho · 2 máq. · 2 turnos",,,,,1.2,,Balanceo-FLAMA2035 › Carga F124 (máq.) y G124 (turnos),
 "   Equipo de precinto, etiqueta y despacho",2,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M124 (jaulas) y L124 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M124 (jaulas) y L124 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R22. Inutilización y disposición final · 1 máq. · 1 turno,,,,,1.2,,Balanceo-FLAMA2035 › Carga F125 (máq.) y G125 (turnos),
    Equipo de inutilización y disposición final,1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M125 (jaulas) y L125 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M125 (jaulas) y L125 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 R23. PH de mangueras (CO₂ y rodantes) · 1 máq. · 1 turno,,,,,1.2,,Balanceo-FLAMA2035 › Carga F126 (máq.) y G126 (turnos),
    Equipo de ph de mangueras (co₂ y rodantes),1,a confirmar,a confirmar,a confirmar,,,,No hay cotización en la carpeta para este puesto
-   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; equipos en el puesto por ley de Little,"Balanceo-FLAMA2035 › Carga M126 (jaulas) y L126 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
+   Jaula en espera (pulmón),1,1,1.2,a confirmar,1.2,28 equipos por jaula; los equipos que se juntan = los que llegan por hora × las horas que pasa cada uno en el puesto (trabajo + ½ h de espera),"Balanceo-FLAMA2035 › Carga M126 (jaulas) y L126 (equipos) · jaula 1,2 × 1,0 m y 28 equipos: Parametros A52:B52",Alto de la jaula
 ,,,,,,,,
 PULMONES DE ENTRADA Y SALIDA DE RECARGAS,,,,,24,,,
    Pulmón de recepción (lote retirado que espera entrar),10,1,1.2,a confirmar,12,"½ día de recargas, 271 equipos",Balanceo-FLAMA2035 › Carga M128 (10 jaulas) y L128 (271 equipos) · jaula: Parametros A52:B52,Alto de la jaula

@@ -1,13 +1,13 @@
 Puesto,Huella de lo que va adentro (m²)
 MANUALES,
-4. Corte de disco y embutido (cúpula y fondo) · 1 máq. · 2 turnos,8.3
+4. Corte de disco y embutido (cúpula y fondo) · 1 máq. · 2 turnos,10.93
 5. Preparación de cuello · 2 máq. · 2 turnos,0
 7. Soldadura del cuello a la cúpula · 1 máq. · 2 turnos,4.03
 8. Cilindrado · 1 máq. · 1 turno,3.25
-"9. Soldadura longitudinal — 2,5 a 10 kg · 1 máq. · 2 turnos",5.95
-10. Soldadura longitudinal TIG — 1 kg · 1 máq. · 2 turnos,0
-11. Encastre de fondo · 1 máq. · 2 turnos,5.23
-12. Bordoneado · 1 máq. · 2 turnos,0.91
+"9. Soldadura longitudinal — 2,5 a 10 kg · 1 máq. · 2 turnos",7.27
+10. Soldadura longitudinal TIG — 1 kg · 1 máq. · 2 turnos,1.32
+11. Encastre de fondo · 1 máq. · 2 turnos,6.29
+12. Bordoneado · 1 máq. · 2 turnos,1.75
 13. Soldadura circunferencial de cúpula y fondo · 2 máq. · 2 turnos,10.31
 14. Control de calidad — Espesor · 1 máq. · 1 turno,0
 17. Granallado · 1 máq. · 2 turnos,6.76
@@ -18,24 +18,24 @@ MANUALES,
 22. Ensamblaje · 1 máq. · 2 turnos,3.4
 23. Presurización · 1 máq. · 1 turno,3.07
 24. Control de calidad — Ensayo de pérdidas · 1 máq. · 1 turno,3.43
-25. Etiquetado · 1 máq. · 1 turno,3.07
+25. Etiquetado · 1 máq. · 1 turno,3.36
 26. Embalaje y paletizado · 2 máq. · 2 turnos,8.81
-Total Manuales,106.16
+Total Manuales,113.62
 ,
 CARROS,
-3. Cilindrado · 1 máq. · 1 turno,5.25
-4. Punteo del cuerpo · 1 máq. · 1 turno,0.35
+3. Cilindrado · 1 máq. · 1 turno,9.26
+4. Punteo del cuerpo · 1 máq. · 1 turno,0.58
 5. Soldadura longitudinal · 1 máq. · 1 turno,3
 6. Soldadura de cupla en la cúpula · 1 máq. · 1 turno,0.47
-7. Armado y soldadura circunferencial · 1 máq. · 1 turno,2.2
-8. Soldadura de accesorios · 1 máq. · 1 turno,0.18
+7. Armado y soldadura circunferencial · 1 máq. · 1 turno,2.42
+8. Soldadura de accesorios · 1 máq. · 1 turno,0.4
 8.1. Fabricación de accesorios · 1 máq. · 1 turno,0
 11. Pulmón de despacho y carga a pintura · 1 máq. · 1 turno,12.65
 12. Recepción de pintados y cambio de juego · 1 máq. · 1 turno,12.65
 13 B. Carga de polvo y presurización · 1 máq. · 1 turno,0.32
 "13 A-C / 15. Montaje, manga, precinto y etiquetado · 1 máq. · 1 turno",0
 "14-17. Calidad: pérdidas, inspección final, liberación y ensayos de lote · 1 máq. · 1 turno",0
-Total Carros,37.07
+Total Carros,41.74
 ,
 RECARGAS,
 R1. Recepción y registro · 2 máq. · 1 turno,2.4
@@ -65,11 +65,11 @@ PULMONES DE ENTRADA Y SALIDA DE RECARGAS,24
 Total Recargas,61.66
 ,
 COMPARTIDOS,
-CORTE — guillotina 1 (franjas) · Manuales 2 y Carros 2,0
-CORTE — guillotina 2 (piezas) · Manuales 3 y Carros 2,0.91
+CORTE — guillotina 1 (franjas) · Manuales 2 y Carros 2,6.28
+CORTE — guillotina 2 (piezas) · Manuales 3 y Carros 2,10.44
 MARCADO DEL CUERPO · Manuales 6 y Carros 2.1,4.04
 PRUEBA HIDRÁULICA · Manuales 15 y Carros 9,3.87
-SECADO · Manuales 16 y Carros 10,2.73
-Total Compartidos,11.54
+SECADO · Manuales 16 y Carros 10,5.04
+Total Compartidos,29.66
 ,
-TOTAL SIN ALMACENES,216.43
+TOTAL SIN ALMACENES,246.68
