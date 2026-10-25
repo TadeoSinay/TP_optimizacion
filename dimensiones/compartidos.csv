@@ -9,8 +9,8 @@ Corte G2 — Manuales 3 (y Carros 2) · 1 máq. · 1 turno,,,,,,,,Balanceo,
    Guillotina 2 QC12Y 6 × 2500,Los dos,1,1.61,3.04,1.6,4.89,"cuchilla 2.500 mm, mesa a 0,78 m, garganta 150 mm",Plano · Balanceo · Ficha,"Plano 3,04 m de largo vs 3,10 m de la ficha"
    Tope trasero G2 (zona libre),Los dos,1,0.8,3.04,—,2.43,"tope trasero 0,8 m",Plano,
    Mesa elevadora 2 SJG3.0-1.6 = pulmón de franjas,Los dos,1,2.6,1.8,a confirmar,4.68,"franjas en la mesa; 90 franjas como máximo, 0 módulos de estante; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,Plataforma y alto: ficha SJG3.0-1.6
-   Carro FCEP10520 desarrollos manuales → marcado,Manuales,1,0.7,1.09,a confirmar,0.76,carro de estantes Storage Compat; detalle en hojas Pulmones y Estantes y carros,Plano,
-   Carro FCEP10520 piezas de carros → marcado 2,Carros,1,0.7,1.09,a confirmar,0.76,carro de estantes Storage Compat; detalle en hojas Pulmones y Estantes y carros,Plano,
+   Carro de desarrollos manuales → marcado 1,Manuales,1,0.7,1.09,a confirmar,0.76,"1 carro de tránsito, el estante del marcado es el pulmón; detalle en hojas Pulmones y Estantes y carros",Plano · Pulmones,"Pulmones pide carro porta-bandejas 1,3 × 0,7 m con 3 bandejas; el plano dibuja un FCEP10520 de 1,065 × 0,70 m sin bandejas. Uno solo: la G2 corta por tanda y el estante del marcado es el pulmón (Word de manuales decía 2 alternados)"
+   Carro de cajas: piezas de accesorios de carros → 8.1,Carros,1,0.7,1.09,a confirmar,0.76,"FCEP10520 1.065 × 700 mm, 500 kg; una caja por pieza; 8.1 lo busca 1 vez por día; detalle en hojas Pulmones y Estantes y carros",Plano · Word,"El plano dice «piezas de carros → marcado 2», pero los cuerpos de carros no van en carro: pasan de la rampa de la G2 a la mesa de marcado 2.1 (Word de carros). Es el mismo carro de cajas que el plano dibuja también en 8.1: hay uno solo"
    Carro de scrap (retazos),Los dos,1,0.7,1.09,a confirmar,0.76,,Plano,
 ,,,,,,,,,
 MARCADO DEL CUERPO — marcadora 1 · Manuales 6 (puesto único de 2 máq. con Carros 2.1),,,,,,5.3,suma de las huellas de lo que va adentro (sin circulación),,
@@ -45,7 +45,7 @@ Prueba hidráulica — Carros 9 · 1 máq. · 1 turno,,,,,,,,Balanceo,
 "   PH carros, puesto 1",Carros,1,1.2,1.2,1.05,1.44,,Plano · Cotización Yukon,"Yukon M-000200: 0,95 × 0,40 × 1,05 m sin mesa; falta el alto de la mesa"
 "   PH carros, puesto 2",Carros,1,1.2,1.2,1.05,1.44,,Plano · Cotización Yukon,"Yukon M-000200: 0,95 × 0,40 × 1,05 m sin mesa; falta el alto de la mesa"
 Secado — Carros 10 · 1 máq. · 1 turno,,,,,,,,Balanceo,
-   Carro de carros que se seca,Carros,1,1.6,1,a confirmar,1.6,,Plano,
+   Secadora Melisam MR011 + lugar del matafuego rodante que se seca,Carros,1,1.6,1,a confirmar,1.6,"secadora ≈ 0,6 × 0,5 m; el recipiente se para frente a ella en 1,2 × 1,0 m con la lanza en la boca",Plano · Word,"Alto de la secadora. El Word suma 0,6 + 1,2 = 1,8 m de largo y el plano dibuja 1,6 × 1,0 m"
 ,,,,,,,,,
 INSUMOS DE MONTAJE — al lado del 13 de Carros; la estantería A va al ensamblaje de Manuales,,,,,,8.2,suma de las huellas de lo que va adentro (sin circulación),,
    Estantería A: 4 col. × 4 niv. = 16 pos. (manuales → M13),Manuales,4,4.85,1.1,a confirmar,5.33,"válvulas, manómetros, mangueras, soportes; 1 semana pico",Plano,

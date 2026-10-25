@@ -64,7 +64,7 @@ Puesto / ítem,Cant.,Ancho (m),Largo (m),Alto (m),Huella (m²),Medidas internas 
    Banco,1,1.5,0.7,a confirmar,1.05,,Plano,
    Prensa 20 t,1,1.5,0.6,a confirmar,0.9,20 t,Plano,
    Banco de kits,1,1.5,0.6,a confirmar,0.9,,Plano,
-   Carro de cajas,1,1.2,0.6,a confirmar,0.72,,Plano,
+   Carro de cajas,1,1.2,0.6,a confirmar,0.72,,Plano,"Es el mismo carro de cajas que espera detrás de la G2 (hoja Compartidos, corte): hay uno solo según el Word de carros"
    Carro de kits,1,1.1,0.6,a confirmar,0.66,,Plano,
 ,,,,,,,,
 8.1 BUFFER DE SEMIELABORADOS (al pie de 8.1) · 1 máq. · 1 turno,,,,,2.38,suma de las huellas de lo que va adentro (sin circulación),,
