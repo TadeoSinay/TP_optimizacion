@@ -1,0 +1,13 @@
+DIMENSIONES POR PUESTO,
+Para qué,"Medidas de cada puesto de Manuales, Carros y Recargas para dibujar el plano. Sin almacenes."
+Cómo leer cada hoja,"Fila gris oscuro = área del plano (envolvente, superficie, cuánto ocupan los equipos y cómo está dispuesta). Fila gris claro = puesto del Balanceo (N°, máquinas y turnos). Filas blancas = cada rectángulo del plano."
+Ancho E-O / Largo N-S,"Medidas del rectángulo tal como está en el plano: ancho = lado este-oeste, largo = lado norte-sur. Si el rectángulo agrupa varias unidades (módulos de estante, carros), las medidas son las del grupo y Cant. dice cuántas hay."
+Huella,Ancho × Largo (fórmula). Σ huellas del área y % ocupado: lo que no ocupan los equipos es circulación y espacio de uso dentro del área.
+"X, Y","Esquina noroeste del rectángulo, en metros. Origen (0,0) = esquina noroeste de la nave de carros; X crece hacia el este, Y hacia el sur (las áreas al norte de la nave tienen Y negativa). Mismo sistema que layout_rev23.yaml."
+Alto,"Solo donde una fuente lo da: estante de carga media 2,0 m (Pulmones, Parametros B9) y fichas de máquinas citadas en la columna Fuente. El resto está en rojo: no figura en ninguna fuente y hay que pedirlo al proveedor o medirlo."
+Rojo,"Falta el dato en las fuentes, o dos fuentes no coinciden (se dice cuáles)."
+Fuentes de verdad,"1) Plano rev23 (layout_rev23.yaml): medidas y posiciones. 2) Balanceo (Word y Excel, carpeta de Fran): puestos, máquinas y turnos. 3) Pulmones (Excel, carpeta de Fran): módulos, m², carros de tránsito y parámetros de estantes, cajones, bandejas y rack. 4) Word de procesos (Manuales, Carros, Recargas): solo la lógica (qué hace cada puesto, en qué orden, con qué equipo)."
+Fichas de alto usadas,Guillotina 2 QC12Y-6X2500: https://www.goldsupplier.com/provide/p106252035.html · Guillotina 1 (ficha de reventa ERMAK HGS 2600 × 6): https://resale.info/en/ermak-hgs-2600-x-6-листові-ножиці/No-164666861 · Prensa de banco MB21: https://www.wagener-gmbh.com/wp-content/uploads/2021/05/Praegegeraete.pdf
+No se incluye,"Almacén y recepción de MP (p01, Balanceo N° 1), almacén de casquetes y accesorios (8.0), polvo químico en big bags (mp_polvo), almacén y andén de PT (p16, p16_pt_carros, anden_pt), depósito transitorio de residuos de recargas, administración y servicios."
+Recargas: jaulas,"La fila gris de cada puesto trae los equipos que esperan en él por la ley de Little y las jaulas y m² que pide el Balanceo (Carga, columnas L a N). Donde el plano no dibuja esa jaula dentro del área, se marca en rojo."
+Compartidos,"Corte (G1 + G2), marcadora 2 y el bloque PH + secado son de Manuales y Carros: las máquinas están en la hoja Manuales y en Carros se repite solo lo que usa esa línea. En el Resumen esas áreas suman una sola vez."
