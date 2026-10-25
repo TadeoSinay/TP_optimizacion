@@ -1,8 +1,8 @@
 DIMENSIONES POR PUESTO,
 Qué es,Las medidas de cada puesto para dibujar el plano: el área del puesto y cada cosa que va adentro. Sin almacenes.
 Hojas,"Resumen (superficie por puesto) · Compartidos (corte, marcado, PH + secado e insumos de montaje: los usan dos líneas y no se repiten) · Manuales · Carros · Recargas · Pulmones (qué se junta entre puestos, cómo espera, cuántos carros: Pulmones y propuesta) · Estantes y carros (medidas de estantes, bandejas, cajones, carros y rack, y cómo va cada pieza en cada nivel)."
-Ancho / Largo,Ancho = lado este-oeste del plano; largo = lado norte-sur. En m.
-Huella,"Ancho × largo. En la fila gris, la del área del puesto y cuánto ocupan los equipos."
+Ancho / Largo,"Medidas de cada equipo, estante o carro en m (ancho = lado este-oeste, largo = norte-sur, como está orientado en el plano rev23)."
+Huella,"Ancho × largo de cada cosa. En la fila gris, la suma de lo que va dentro del puesto. No se da la superficie del puesto: se dimensiona después a partir de estas huellas, la circulación y el espacio de trabajo."
 Rojo,"No está en las fuentes: hay que pedirlo al proveedor, medirlo o decidirlo."
 Fuente,"Plano = plano rev23 · Balanceo = Excel de Balanceo (puestos, máquinas, turnos, jaulas) · Pulmones = Excel de Pulmones (estantes, cajones, bandejas, carros) · Ficha = ficha del equipo · Word = Word del proceso (solo lógica)."
 Fichas de alto,"G2 QC12Y-6X2500: goldsupplier.com/provide/p106252035.html · G1 (reventa ERMAK HGS 2600 × 6): resale.info n.º 164666861 · MB21: wagener-gmbh.com/wp-content/uploads/2021/05/Praegegeraete.pdf · Estante 2,0 m: Pulmones, Parametros B9."
