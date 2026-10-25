@@ -1,6 +1,6 @@
 Puesto / ítem,Cant.,Ancho (m),Largo (m),Alto (m),Huella (m²),Ubicación en el puesto,Medidas internas / uso,Fuente,A confirmar
 R1 ×2. RECEPCIÓN Y REGISTRO · 2 máq. · 1 turno,,3.2,1.8,,5.76,,Los equipos ocupan 1.5 m² (26%),Plano,
-   Jaula en registro,1,1.05,0.75,a confirmar,0.79,O,"jaula 1,2 × 1,0 m (28 equipos)",Plano,"Plano 1,05 × 0,75 m vs jaula de 1,2 × 1,0 m del Word; alto de la jaula"
+   Jaula en registro,1,1.05,0.75,a confirmar,0.79,O,"jaula 1,2 × 1,0 m (28 equipos); detalle en hojas Pulmones y Estantes y carros",Plano,"Plano 1,05 × 0,75 m vs jaula de 1,2 × 1,0 m del Word; alto de la jaula"
    Tablet 1,1,0.7,0.5,a confirmar,0.35,E,tablet + impresora portátil de etiquetas,Plano,
    Tablet 2,1,0.7,0.5,a confirmar,0.35,E,,Plano,
 ,,,,,,,,,
@@ -116,7 +116,7 @@ R20 ×2. ENSAYO DE PÉRDIDAS · 2 máq. · 1 turno,,4,2.7,,10.8,,Los equipos ocu
 "R21 ×2. PRECINTO, ETIQUETA Y DESPACHO · 2 máq. · 2 turnos",,4,1.8,,7.2,,Los equipos ocupan 1.9 m² (26%),Plano,
    Dispensador + posicionador 1,1,0.95,0.6,a confirmar,0.57,O,,Plano,
    Dispensador + posicionador 2,1,0.95,0.6,a confirmar,0.57,centro,,Plano,
-   Jaula en armado,1,0.95,0.75,a confirmar,0.71,E,"jaula 1,2 × 1,0 m (28 equipos)",Plano,"Plano 0,95 × 0,75 m vs jaula de 1,2 × 1,0 m del Word; alto de la jaula"
+   Jaula en armado,1,0.95,0.75,a confirmar,0.71,E,"jaula 1,2 × 1,0 m (28 equipos); detalle en hojas Pulmones y Estantes y carros",Plano,"Plano 0,95 × 0,75 m vs jaula de 1,2 × 1,0 m del Word; alto de la jaula"
 ,,,,,,,,,
 R22. INUTILIZACIÓN · 1 máq. · 1 turno,,3.2,2.5,,8,,Los equipos ocupan 1.4 m² (18%),Plano,
    Prensa en V,1,0.7,0.6,a confirmar,0.42,E,,Plano,
@@ -126,8 +126,8 @@ R22. INUTILIZACIÓN · 1 máq. · 1 turno,,3.2,2.5,,8,,Los equipos ocupan 1.4 m�
    Contenedor válvulas,1,0.45,0.4,a confirmar,0.18,S,,Plano,
 ,,,,,,,,,
 PL. PULMÓN A RECINTO (espera de jaulas),,4,4.5,,16.72,,Los equipos ocupan 1.5 m² (9%),Plano,
-   Lugar verde,1,1,0.75,a confirmar,0.75,NO,"jaula 1,2 × 1,0 m (28 equipos)",Plano,"Plano 1,0 × 0,75 m vs jaula de 1,2 × 1,0 m del Word; alto"
-   Lugar amarillo,1,1,0.75,a confirmar,0.75,N,"jaula 1,2 × 1,0 m (28 equipos)",Plano,"Plano 1,0 × 0,75 m vs jaula de 1,2 × 1,0 m del Word; alto"
+   Lugar verde,1,1,0.75,a confirmar,0.75,NO,"jaula 1,2 × 1,0 m (28 equipos); detalle en hojas Pulmones y Estantes y carros",Plano,"Plano 1,0 × 0,75 m vs jaula de 1,2 × 1,0 m del Word; alto"
+   Lugar amarillo,1,1,0.75,a confirmar,0.75,N,"jaula 1,2 × 1,0 m (28 equipos); detalle en hojas Pulmones y Estantes y carros",Plano,"Plano 1,0 × 0,75 m vs jaula de 1,2 × 1,0 m del Word; alto"
 ,,,,,,,,,
 CLIMA DEL RECINTO DE POLVO,,2,0.95,,1.9,,Los equipos ocupan 0.9 m² (48%),Plano,
    Deshumidificador,1,0.8,0.55,a confirmar,0.44,O,,Plano,Alto y caudal
@@ -141,13 +141,13 @@ REPUESTOS (al pie de R16 y R17) · 2 máq. · 2 turnos,,2,1.95,,3.9,,Los equipos
    Estante de o-rings y marbetes,1,0.95,1.15,a confirmar,1.09,E,,Plano,
 ,,,,,,,,,
 PULMÓN DE ENTRADA (E) — jaulas de clientes,,8.5,2.5,,21.25,,Los equipos ocupan 20.0 m² (94%),Plano,
-   Posiciones de jaulas E1 a E16 (apiladas a 2),16,8.35,2.4,a confirmar,20.04,todo el sector,"cada posición 1,0 × 1,2 m; jaula 1,2 × 1,0 m (28 equipos)",Plano · Balanceo,"El plano da 26 jaulas; el Balanceo pide ½ día = 10 jaulas, 24 m². Alto de 2 jaulas apiladas"
+   Posiciones de jaulas E1 a E16 (apiladas a 2),16,8.35,2.4,a confirmar,20.04,todo el sector,"cada posición 1,0 × 1,2 m; jaula 1,2 × 1,0 m (28 equipos); detalle en hojas Pulmones y Estantes y carros",Plano · Balanceo,"El plano da 26 jaulas; el Balanceo pide ½ día = 10 jaulas, 24 m². Alto de 2 jaulas apiladas"
 ,,,,,,,,,
 PULMÓN DE SALIDA (D) — jaulas listas por cliente y ruta,,8.5,2.5,,21.25,,Los equipos ocupan 20.0 m² (94%),Plano,
-   Posiciones de jaulas D1 a D16 (apiladas a 2),16,8.35,2.4,a confirmar,20.04,todo el sector,"cada posición 1,0 × 1,2 m; jaula 1,2 × 1,0 m (28 equipos)",Plano · Balanceo,"El plano da 26 jaulas; el Balanceo pide ½ día = 10 jaulas, 24 m². Alto de 2 jaulas apiladas"
+   Posiciones de jaulas D1 a D16 (apiladas a 2),16,8.35,2.4,a confirmar,20.04,todo el sector,"cada posición 1,0 × 1,2 m; jaula 1,2 × 1,0 m (28 equipos); detalle en hojas Pulmones y Estantes y carros",Plano · Balanceo,"El plano da 26 jaulas; el Balanceo pide ½ día = 10 jaulas, 24 m². Alto de 2 jaulas apiladas"
 ,,,,,,,,,
 JAULAS VACÍAS,,1.1,2.5,,2.75,,Los equipos ocupan 2.4 m² (87%),Plano,
-   Jaulas vacías V1 y V2 (apiladas a 2),2,1,2.4,a confirmar,2.4,todo el sector,"cada posición 1,0 × 1,2 m",Plano,
+   Jaulas vacías V1 y V2 (apiladas a 2),2,1,2.4,a confirmar,2.4,todo el sector,"cada posición 1,0 × 1,2 m; detalle en hojas Pulmones y Estantes y carros",Plano,
 ,,,,,,,,,
 CARGA DE BATERÍAS + TRAZABILIDAD,,1.5,2.5,,3.75,,Los equipos ocupan 2.8 m² (74%),Plano,
 "   Apilador 1,5 t",1,0.8,1.9,a confirmar,1.52,O,,Plano,

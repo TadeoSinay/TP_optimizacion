@@ -1,6 +1,6 @@
 DIMENSIONES POR PUESTO,
 Qué es,Las medidas de cada puesto para dibujar el plano: el área del puesto y cada cosa que va adentro. Sin almacenes.
-Hojas,"Resumen (superficie por puesto) · Manuales · Carros · Recargas · Compartidos (corte, marcado, PH + secado e insumos de montaje: los usan dos líneas y por eso no se repiten en Manuales ni en Carros)."
+Hojas,"Resumen (superficie por puesto) · Compartidos (corte, marcado, PH + secado e insumos de montaje: los usan dos líneas y no se repiten) · Manuales · Carros · Recargas · Pulmones (qué se junta entre puestos, cómo espera, cuántos carros: Pulmones y propuesta) · Estantes y carros (medidas de estantes, bandejas, cajones, carros y rack, y cómo va cada pieza en cada nivel)."
 Ancho / Largo,Ancho = lado este-oeste del plano; largo = lado norte-sur. En m.
 Huella,"Ancho × largo. En la fila gris, la del área del puesto y cuánto ocupan los equipos."
 Rojo,"No está en las fuentes: hay que pedirlo al proveedor, medirlo o decidirlo."

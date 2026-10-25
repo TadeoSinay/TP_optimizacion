@@ -1,0 +1,42 @@
+Pulmón,De → a,Dónde espera,Máximo (u),Cómo espera,Bandejas / cajones,Módulos de estante,Carros (Pulmones),Por qué,m² (Pulmones),Carros (propuesta),m² (propuesta),Comentario
+MANUALES,,,,,,,,,,,,
+Franjas,"Corte de chapa — 1.er corte en franjas (guillotina 1, manuales + carros) → Corte de chapa — 2.º corte en piezas (guillotina 2, manuales + carros)",Guillotina 2 (mesa elevadora 2),90,"Sobre la mesa elevadora 2 (fija), en la guillotina 2",0,0,0,No se traslada en carro,0,0,0,
+Desarrollos,"Corte de chapa — 2.º corte en piezas (guillotina 2, manuales + carros) → Marcado del cuerpo (manuales + carros)",Marcado (manuales),1505,Estante: pilas por modelo sobre bandejas,15,3,1,1 carro por tramo,5.32,1,5.32,
+Virolas,"Cilindrado → Soldadura longitudinal — 2,5 a 10 kg","Sold. longitudinal 2,5–10 y TIG 1 kg",607,"Estante: parados en bandejas, un modelo por bandeja",20,7,1,1 carro por tramo,11.08,1,11.08,
+Cuerpos soldados,"Soldadura longitudinal — 2,5 a 10 kg → Encastre de fondo",Encastre de fondo,405,"Estante: parados en bandejas, un modelo por bandeja",10,4,2,El que entrega no puede parar (es el cuello (soldadura longitudinal)): uno recibe mientras el otro viaja,6.76,1,6.76,Con tandas alcanza 1: la bandeja en llenado queda en el soporte fijo mientras el carro viaja
+Fondos,Corte de disco y embutido (cúpula y fondo) → Encastre de fondo,Rack junto a la prensa + encastre,6609,Rack de pallets al lado de la prensa (la tanda) + estante en el puesto con la ola de mañana,65,2,1,1 carro por tramo,11.38,1,11.38,
+Cúpulas,Corte de disco y embutido (cúpula y fondo) → Soldadura del cuello a la cúpula,Rack junto a la prensa + prep. de cuello,6765,Rack de pallets al lado de la prensa (la tanda) + estante en el puesto con la ola de mañana,80,2,1,1 carro por tramo,12.31,1,12.31,
+Desarrollos marcados,Marcado del cuerpo (manuales + carros) → Cilindrado,Cilindrado,201,Pila al alcance entre el marcado y la cilindradora (pegados),0,0,0,No se traslada en carro,0,0,0,
+Cúpulas con cuello,Soldadura del cuello a la cúpula → Soldadura circunferencial de cúpula y fondo,Sold. circunferencial,407,Estante de cajones al pie de la soldadura circunferencial,9,1,1,1 carro por tramo,2.44,1,2.44,
+Cuerpos con fondo,Encastre de fondo → Bordoneado,Bordoneado,315,Sin estante: el que consume no es más lento; lo que llega espera en los carros del tramo,3,0,2,Sin estante: ↑(3 bandejas ÷ 3) + 1 (mínimo 2),2,1,1,Entra todo en 1 carro (3 bandejas): ese carro es el pulmón; la bandeja en llenado espera en el soporte fijo
+Cuerpos bordoneados,Bordoneado → Soldadura circunferencial de cúpula y fondo,Sold. circunferencial,691,"Estante: parados en bandejas, un modelo por bandeja",21,7,1,1 carro por tramo,11.08,1,11.08,
+Cilindros soldados,Soldadura circunferencial de cúpula y fondo → Prueba hidráulica,PH (bloque PH + secado),371,Sin estante: el que consume no es más lento; lo que llega espera en los carros del tramo,11,0,5,Sin estante: ↑(11 bandejas ÷ 3) + 1,5,5,5,Lo que queda al cerrar el turno espera en carros estacionados (no son de tránsito). Alternativa: estante al pie del que consume
+Cilindros mojados,Prueba hidráulica → Secado,Secado,346,Sin estante: el que consume no es más lento; lo que llega espera en los carros del tramo,5,0,3,Sin estante: ↑(5 bandejas ÷ 3) + 1,3,3,3,Lo que queda al cerrar el turno espera en carros estacionados (no son de tránsito). Alternativa: estante al pie del que consume
+Cilindros secos,Secado → Granallado,Granallado,336,Sin estante: el que consume no es más lento; lo que llega espera en los carros del tramo,6,0,3,Sin estante: ↑(6 bandejas ÷ 3) + 1,3,3,3,Lo que queda al cerrar el turno espera en carros estacionados (no son de tránsito). Alternativa: estante al pie del que consume
+Cilindros granallados,Granallado → Pintura en polvo + horno,Pintura (carga a ganchos),488,"Estante: parados en bandejas, un modelo por bandeja",7,2,1,1 carro por tramo,3.88,1,3.88,
+Cilindros vacíos pintados,Pintura en polvo + horno → Embalaje y paletizado,Embalaje,421,"Estante: parados en bandejas, un modelo por bandeja",5,2,2,El que entrega no puede parar (sale del horno de pintura): uno recibe mientras el otro viaja,3.88,1,3.88,Con tandas alcanza 1: la bandeja en llenado queda en el soporte fijo mientras el carro viaja
+Cilindros pintados para cargar,Pintura en polvo + horno → Carga de polvo,Carga de polvo,330,"Estante: parados en bandejas, un modelo por bandeja",11,4,2,El que entrega no puede parar (sale del horno de pintura): uno recibe mientras el otro viaja,6.76,1,6.76,Con tandas alcanza 1: la bandeja en llenado queda en el soporte fijo mientras el carro viaja
+Cilindros cargados de polvo,Carga de polvo → Ensamblaje,Ensamblaje,183,"Estante: parados en bandejas, un modelo por bandeja",9,3,1,1 carro por tramo,5.32,1,5.32,
+Matafuegos armados,Ensamblaje → Presurización,Presurización,168,"Estante: parados en bandejas, un modelo por bandeja",7,3,1,1 carro por tramo,5.32,1,5.32,
+Matafuegos presurizados,Presurización → Control de calidad — Ensayo de pérdidas,Ensayo de pérdidas,161,"Estante: parados en bandejas, un modelo por bandeja",3,1,1,1 carro por tramo,2.44,1,2.44,
+Matafuegos ensayados,Control de calidad — Ensayo de pérdidas → Etiquetado,Etiquetado,241,"Estante: parados en bandejas, un modelo por bandeja",8,3,1,1 carro por tramo,5.32,1,5.32,
+Matafuegos etiquetados,Etiquetado → Embalaje y paletizado,Embalaje,161,Sin estante: el que consume no es más lento; lo que llega espera en los carros del tramo,3,0,2,Sin estante: ↑(3 bandejas ÷ 3) + 1 (mínimo 2),2,1,1,Entra todo en 1 carro (3 bandejas): ese carro es el pulmón; la bandeja en llenado espera en el soporte fijo
+Total manuales,,,,,298,44,32,,108.29,27,106.29,
+"Supermercado de fondos y cúpulas: rack de 2 vanos × 3 niveles, 17 pallets de 12 cajones (ya contado en fondos y cúpulas)",,,,,,,,,,,,
+,,,,,,,,,,,,
+CARROS,,,,,,,,,,,,
+Cuerpos planos grabados,Guillotinas → Cilindrado de carros,2.2 pulmón de cuerpos planos,52,"Sobre la mesa móvil de la guillotina, apilados (tanda de corte)",,,,La mesa móvil rueda hasta la cilindradora de carros,7.36,,7.36,
+Virolas,Cilindrado → Punteo,Punteo (4),2,"Piso demarcado de 1,8 × 1,2 m al pie del punteo, paradas",,,,Rodando acostadas por el piso (11 a 41 kg): no se levantan,0.49,,0.49,
+Cuerpos soldados,Soldadura longitudinal → Armado (7),Armado (7),11,"Piso demarcado al pie del armado (7), parados",,,,Rodando acostados hasta el virador del armado,3.07,,3.07,
+Cúpulas con cupla,Soldadura de cupla (6) → Armado (7),Carro canasto entre 6 y 7,13,En el carro canasto entre la soldadura de cupla y el armado,,,,"El carro canasto (pulmón y traslado a la vez, puestos pegados)",0.66,,0.66,
+Cilindros cerrados,Armado (7) → Accesorios (8),Accesorios (8),1,"Piso demarcado al pie de accesorios (8), parados",,,,Rodando acostados hasta la mesa de accesorios,0.25,,0.25,
+Recipientes esperando la pintura,PH y secado → Pintura tercerizada,11 espera del pintor,29,"Espera del pintor: piso demarcado junto al portón, parados con un taco atrás",,,,Carro de manipulación hasta la espera y hasta la Master (rampa),17.71,,17.71,
+Carros pintados,Recepción de pintados (12) → Carga (13),12 recepción de pintados,29,"Piso demarcado de pintados: sin ruedas, parados sobre un taco de madera",,,,Carro de manipulación hasta la carga de polvo (13); las ruedas se ponen en el montaje,17.71,,17.71,
+Total carros,,,,,,,,,47.25,,47.25,
+"Carros: piezas de 11 a 61 kg, esperan paradas en el piso (Ø + 100 mm)² × 1,4, sin estante ni carro de tránsito.",,,,,,,,,,,,
+,,,,,,,,,,,,
+RECARGAS,,,,,,,,,,,,
+Jaulas en los 23 puestos,dentro de cada puesto,en cada puesto,238,jaulas de 28 equipos (ley de Little por puesto),25,,,"Balanceo, Carga filas 104 a 130",60,,60,El plano solo dibuja la jaula de R1 y la de R21
+Pulmón de entrada,camión → recepción,Pulmón de entrada (E),271,jaulas apiladas a 2 (½ día),10,,,"Balanceo, Carga filas 104 a 130",24,,24,El plano dibuja 16 posiciones = 26 jaulas
+Pulmón de salida,despacho → camión,Pulmón de salida (D),271,jaulas apiladas a 2 (½ día),10,,,"Balanceo, Carga filas 104 a 130",24,,24,El plano dibuja 16 posiciones = 26 jaulas
+Total recargas,,,,,,,,,108,,108,
